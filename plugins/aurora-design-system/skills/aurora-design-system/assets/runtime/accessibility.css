@@ -1,0 +1,59 @@
+/* Native/white-theme accessibility adaptation. Upstream declarations remain in
+   themes/white.css with their original source hashes in source-manifest.json.
+   Reuse Aurora ink for normal-size text and focus; retain brand fills, geometry
+   and raw Figma visual paints. Disabled states are intentionally exempt. */
+.aurora-root {
+  --cta-primary-text: var(--color-curefit-pink, #FF3278);
+  --aurora-primary-label-color: var(--color-curefit-pink, #FF3278);
+  --cta-twins-primary-text: var(--color-curefit-pink, #FF3278);
+}
+.aurora-root.theme-white,
+.aurora-root .theme-white {
+  --cta-primary-text: var(--color-text-1);
+  --aurora-primary-label-color: var(--color-text-1);
+  --cta-twins-primary-text: var(--color-text-1);
+  --cta-secondary-text: var(--color-text-1);
+  --cta-secondary-booked-text: var(--color-text-1);
+  --cta-secondary-waitlist-badge: var(--color-text-1);
+  --cta-secondary-waitlisted-badge: var(--color-text-1);
+  --cta-secondary-full-text: var(--color-text-1);
+  --cta-secondary-negative-text: var(--color-text-1);
+  --cta-tertiary-text: var(--color-text-1);
+  --color-focus-ring: var(--color-text-1);
+  --shadow-focus: 0 0 0 3px var(--color-text-1);
+}
+/* Upstream primary has a literal white declaration; use the adapted token. */
+.aurora-root.theme-white .aurora-cta--primary:not(:disabled):not([aria-disabled="true"]),
+.aurora-root .theme-white .aurora-cta--primary:not(:disabled):not([aria-disabled="true"]) {
+  color: var(--cta-primary-text);
+}
+/* State modifiers must not visually reactivate a disabled secondary. */
+.aurora-root .aurora-cta--secondary:is(:disabled, [aria-disabled="true"]) {
+  background-color: var(--cta-secondary-disabled-bg);
+  color: var(--cta-secondary-disabled-text);
+  border-color: var(--cta-secondary-disabled-border);
+}
+
+/* Aurora card policy: 1px neutral fading stroke, exactly 20% at its peak.
+   Surface alpha and blur remain independent. A borderless nested card is opt-in. */
+.aurora-root :is(.aurora-card, .aurora-popup-card, .aurora-fading-card, .aurora-questionnaire-sheet, .aurora-widget-counter-card) {
+  position: relative;
+}
+.aurora-root :is(.aurora-card, .aurora-popup-card, .aurora-fading-card, .aurora-questionnaire-sheet, .aurora-widget-counter-card)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(90deg, transparent 0%, color-mix(in srgb, var(--color-text-1) 20%, transparent) 50%, transparent 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+}
+.aurora-root [data-aurora-stroke="none"]::before { display: none; }
+
+/* The previous Aurora page gradient remains the default. */
+.aurora-root { min-block-size: 100svh; background: var(--bg-app-gradient); }

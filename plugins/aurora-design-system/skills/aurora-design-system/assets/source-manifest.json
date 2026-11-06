@@ -1,0 +1,720 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/curefit/curefit-design-system",
+  "ref": "main",
+  "commit": "29ae6058c6a93319dcdf6247578024be60b1ece9",
+  "retrievedOn": "2026-11-06",
+  "status": "pinned-source-snapshot; limited-web-runtime",
+  "retrieval": "Authenticated Dia GitHub Code > Download ZIP; archive comment confirmed revision",
+  "figma": {
+    "fileKey": "jD7tZtVeQCMRlIHN7L8umI",
+    "inspectedOn": "2026-11-06",
+    "entryNode": "3875:26646"
+  },
+  "transformations": [
+    "Replace top-level Tailwind v4 @theme blocks with .aurora-root without changing declarations; add aurora-root to the application or requested surface wrapper.",
+    "Provide plain CSS imports; omit Tailwind, remote fonts, app body resets, feature pages and handbook skins.",
+    "Add scoped box-sizing:border-box compatibility for CTA/twins/card utilities previously relying on Tailwind preflight.",
+    "Require aurora-bg-global class for body/root background pseudo-elements; explicit aurora-bg children use absolute position inside their container.",
+    "Remove legacy card blur utility aliases; scope white theme declarations to an Aurora root or its descendant.",
+    "Restore existing disabled-primary token values after theme/twins gradient selectors; fix selector specificity without changing the token values.",
+    "Dark primary/twins CTA labels use solid Aurora pink #FF3278. White-theme labels and focus use Aurora ink; preserve upstream source hashes, brand gradient/fills and geometry. Native controls use the same primary-label adaptation while raw Figma source visual scenes remain unchanged. Disabled states remain exempt.",
+    "User preference: dark primary CTA labels use solid Aurora pink #FF3278 without text gradients; white-theme and disabled treatments remain separate."
+  ],
+  "coverage": [
+    "tokens",
+    "cta-css-utilities",
+    "card-css-utility",
+    "aurora-background-css",
+    "white-theme-overrides",
+    "prebuilt-react-library"
+  ],
+  "limitations": [
+    "Code/Figma Primary mismatch; see source contract",
+    "No complete state/theme or accessibility certification",
+    "The plain CSS adapter alone covers the core token/CTA/card/background subset; React coverage is recorded separately in libraries.react.",
+    "React includes native controls plus static source compositions; complete product workflows, all behaviors, all themes and accessibility are not certified.",
+    "Local licensed Inter font faces are included for React; other source font families may require licensed font assets or the glyph rendering option.",
+    "Static Figma source-screen render exports are excluded from this lightweight profile. Use catalog entries marked compiled-export; source-metadata-only entries require implementation from the linked Aurora source."
+  ],
+  "upstream": [
+    {
+      "path": "my-app/src/styles/tokens/primitives.css",
+      "sha256": "5335a7f793a8404dcbc2b751f8512b8ca0d7df48d48e2d9b67bfab927712003f"
+    },
+    {
+      "path": "my-app/src/styles/tokens/semantics.css",
+      "sha256": "ac290e3bf076a1317f23ea173b03d2e5f833af057fd7f62f0984349e8c58a158"
+    },
+    {
+      "path": "my-app/src/styles/tokens/typography.css",
+      "sha256": "1d2e55168c016b10cf2e1c01e99eda16d1f678f2ecdaa5307299a06e9e65e480"
+    },
+    {
+      "path": "my-app/src/styles/tokens/spacing.css",
+      "sha256": "35d62fcd6a86d0c8a60a8c340418825b5d2db455ce608b9138b20bacc400ae8f"
+    },
+    {
+      "path": "my-app/src/styles/tokens/motion.css",
+      "sha256": "c214d581b934cb5d8b11876572a5b5b29b2981dbcbcad5ce9311a8b2cdd59e22"
+    },
+    {
+      "path": "my-app/src/styles/components/cta.css",
+      "sha256": "1ad1245789de0f1e18a2a8f9cd7745bc1318deaac3889bd8c38548eda4f93bd1"
+    },
+    {
+      "path": "my-app/src/styles/components/card.css",
+      "sha256": "1337d46ebc0791665f9ec36bdbb87333d4f81b0312435258be0d30be86161585"
+    },
+    {
+      "path": "my-app/src/styles/components/aurora-bg.css",
+      "sha256": "a5dab131a858eb5125dacefa829f8196e606a73936726d4c2735100c21fa584f"
+    },
+    {
+      "path": "my-app/src/styles/themes/white.css",
+      "sha256": "ea3158325dc09ea9d4ae4a2723dfd42b73b15407b165f2dda5eb93536c415fd4"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "TOKENS.md",
+      "sha256": "dc3d98abfd17660cd09165bf64d9ff3b49c4d6f8b26690c71812c35ea037cfcd"
+    },
+    {
+      "path": "aurora.flat.json",
+      "sha256": "96ef870ae383b011a88aeaca883c72af2e45bdfbbd22ca8ba769d186505e8bde"
+    },
+    {
+      "path": "design-tokens/aurora.tokens.json",
+      "sha256": "b6a973d44e1b4420c9daadf4c97ae770c084e95e66381175ac962b5c72853875"
+    }
+  ],
+  "runtime": [
+    {
+      "path": "accessibility.css",
+      "sha256": "874d9e1e372d6dad175aeeb3209b3dcb9634775393626ad6cd2e28cf3fc7f932",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "aurora.css",
+      "sha256": "13c42a82593aa64a12a9f4ca08bc324c15f450c7faf27b55c8b923f5aee3d102",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "compatibility.css",
+      "sha256": "fb1ead0853b199b4c42ede3dc2e324d0329dffa6424c9d3365fd813ad1beb59a",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "components/aurora-bg.css",
+      "sha256": "367c6d20a8a72377b99e5445ca9fdbfe432c03a9d90312d69cc3f8ae8ebac0a7",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "components/card.css",
+      "sha256": "4a42b5c7711ae5d5c6b847e4c9a8cf5ea672acd9eeeeff5bbd97b4a4018298ed",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "components/cta.css",
+      "sha256": "5fa6a43578225c2e383695bc96e09efef6eaac0d069c26099abad9b511e97184",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/003ba3ada342f9e439552af6.svg",
+      "sha256": "003ba3ada342f9e439552af683a9c778719935538f0f6f31a5da75402c6f3b14",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/0b7e11a4a20ac5a39daae234.svg",
+      "sha256": "0b7e11a4a20ac5a39daae234ed2591efc0c8e3d733c61aa2bce4033bd2a65fe6",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/11346c1cf7703a33dab7d86c.svg",
+      "sha256": "11346c1cf7703a33dab7d86cccb47ab83d517a77bdaa3f270291d8b273ab888e",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/11ce9d19e4484529f4cc93fe.svg",
+      "sha256": "11ce9d19e4484529f4cc93feffdf737bc9486f92345ca650cf5e11833a59adea",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/12665b532908c4e92d7504d7.svg",
+      "sha256": "12665b532908c4e92d7504d770fe70490df61764ca81d1242c55f72d1ffa063b",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/150d9c508100cd29d599cc65.svg",
+      "sha256": "150d9c508100cd29d599cc650a88a568af8b680f0989f6621c757b165d50819f",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/16dde5ceef66608fd1c9fead.svg",
+      "sha256": "16dde5ceef66608fd1c9feadac61623814b27170f12bf17fb0e7f1b5d0102f75",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/1a63b71c4b5ba6b89b0a8661.svg",
+      "sha256": "1a63b71c4b5ba6b89b0a8661129b42e038a83749c7fddb4c7cf689366fb82369",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/25bba7262eeca6c7d2fa29d6.svg",
+      "sha256": "25bba7262eeca6c7d2fa29d62fdafa07b628696db653a61866affbe881b045a4",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/262a720330d4ecfeb6ef0f9d.svg",
+      "sha256": "262a720330d4ecfeb6ef0f9d7c2d3171ff5688defe81053b9d61b9d74e1ca362",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/27555caab9fbe2595282c962.svg",
+      "sha256": "27555caab9fbe2595282c962194b0b769435134c089283762b52645489703cd3",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/2a0c212c39aa2d26bd5c54cb.svg",
+      "sha256": "2a0c212c39aa2d26bd5c54cbf33c4f76a143b71587efea76161b7eabd590f619",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/2f3dffc96f54d485eeb689f8.svg",
+      "sha256": "2f3dffc96f54d485eeb689f8530b5032700e43823b723be067cabfe59d27f8f2",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/32ece1a777ad188f72397fc6.svg",
+      "sha256": "32ece1a777ad188f72397fc649c7ec6df74bc983fb1b675316cd3c90a6d434e1",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/340e41a2b8205c8d648cea63.svg",
+      "sha256": "340e41a2b8205c8d648cea636e5da35fe2ba9dc371001f29cbeca1f4f4c97246",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/353a10d1ef36314b81428432.svg",
+      "sha256": "353a10d1ef36314b81428432d7018aac7f05a1b3c07430a8914d66e3c3076731",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/36db67341d1fd72a9d8ec591.svg",
+      "sha256": "36db67341d1fd72a9d8ec59125a8e16fdd345e7bf07324b79b7f664f01d70d77",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/41112ad8a12ef941d9e9fa94.svg",
+      "sha256": "41112ad8a12ef941d9e9fa94350836a1442b875caa2d62a42d12d6923df0170d",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/42e1f325551852f1387facc1.svg",
+      "sha256": "42e1f325551852f1387facc1b92c6c74f7a4954b6082e32a978712191acc3228",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/42e708f2665e06b0a26503ba.svg",
+      "sha256": "42e708f2665e06b0a26503bada40dda59a1b69ad3ae5f29d77a0f2401a4a78b2",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/43ae17752084460f87f6e90f.svg",
+      "sha256": "43ae17752084460f87f6e90fa15d7a16153194e52f6ff6411812e2e4046db589",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/485c17188e31d5d3b36a77e5.svg",
+      "sha256": "485c17188e31d5d3b36a77e5fa43506c320aef8e1db6c23ff98fac8a3b81d1b1",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/4ccdcb1e53537a7c828d996b.svg",
+      "sha256": "4ccdcb1e53537a7c828d996b3b5cebed9f028b5b95902f87288cce71901e606b",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/5490394d9daac49bb289dbc6.png",
+      "sha256": "5490394d9daac49bb289dbc6549bcc8e881a1dfbb83fc8d0d371f2ca500b859a",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/5557ae104cc5bd135d332e87.svg",
+      "sha256": "5557ae104cc5bd135d332e8757ec89723d89b3df4012db418af652164f2efa19",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/5c1e6539cd9aa279b9d0ff70.svg",
+      "sha256": "5c1e6539cd9aa279b9d0ff709f4ff8b0183d317b03a66a31586e1d446bc5dcdb",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/5c4b13a285e47ca101bdced4.svg",
+      "sha256": "5c4b13a285e47ca101bdced42aba87aa9f1246486141fa589d575bd789af95dc",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/67bc8a30732ae26c52fd6ab1.svg",
+      "sha256": "67bc8a30732ae26c52fd6ab175a69964e652bd95f14d87d63749303acee7388a",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/6adcfe877f2ffd2a6c4ee845.svg",
+      "sha256": "6adcfe877f2ffd2a6c4ee84543d9fef10e5c09e49b8a56e457d7b4b515c42a24",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/6b74ce518f65a7a8c0b417af.svg",
+      "sha256": "6b74ce518f65a7a8c0b417af755b8ab5ad0cf0baadeb5d1cd99411671b6bc1aa",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/6d8349dd42202426b49a3914.svg",
+      "sha256": "6d8349dd42202426b49a3914651b944b6389dd7d5825aa1920ddbb14e83eef14",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/73dfb68f6af3163f3117fb0d.svg",
+      "sha256": "73dfb68f6af3163f3117fb0d27c3702584623cf9cf01be8778d9b018f457e57b",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/741b3fde0172a0ef192704c4.svg",
+      "sha256": "741b3fde0172a0ef192704c4a78ee2b074983990d1fb0c11ec2cf78f7d9ac255",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/771432495bf52d2afe338afd.svg",
+      "sha256": "771432495bf52d2afe338afdef010cdedbd5953b77ab42a89c96a25ead944b9c",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/78f9cd3c0b214d7f20bea059.svg",
+      "sha256": "78f9cd3c0b214d7f20bea05970ada4ed73836125b65729965894843603e4b283",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/88c7ca39163c5b9507df823c.svg",
+      "sha256": "88c7ca39163c5b9507df823c108e3d1be18b58fd899ebb9c4ee52262e625c7e3",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/8e6e749431d3847302246bb3.svg",
+      "sha256": "8e6e749431d3847302246bb3e320658c3fdebceedd5cd38585960d4e0bc02571",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/8feb46dbe67706029688ed97.svg",
+      "sha256": "8feb46dbe67706029688ed97b0236215b151ea64b7ac577fa10c791017e3bd80",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/95ee761d917bb342ccbade44.svg",
+      "sha256": "95ee761d917bb342ccbade44bd1cdc8ad6f395dedb0fa751f81a95be83df431e",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/9c216aa49577fb026e4d939b.svg",
+      "sha256": "9c216aa49577fb026e4d939b0f0d43666b6d8c97ef88671c5cc7a3538e9a4873",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/9eb58e89f81cc3296111dce6.png",
+      "sha256": "9eb58e89f81cc3296111dce672af3fedcf16365a7b1b5795e3b7326a2cb50163",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/a0a8f59a7e04e1659a82d21d.svg",
+      "sha256": "a0a8f59a7e04e1659a82d21d96c501c2a45eff9448b422acac1542d7bf823e4f",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/a3b15ac3ee54945d27b3e4a6.svg",
+      "sha256": "a3b15ac3ee54945d27b3e4a604dd5cd7ebf518b4011412f28108ebb3828ca469",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/a6ffdf909e58926e4a0edb87.svg",
+      "sha256": "a6ffdf909e58926e4a0edb87a2f476d852434c4a620bef809d4a483fd79f7573",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/a7d7978c3d74405dff73bf06.svg",
+      "sha256": "a7d7978c3d74405dff73bf06f976a340a05bc5b1ba14aba2a6a222a03b2f0c93",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/a922f0ea7b9a1f87d3d747eb.svg",
+      "sha256": "a922f0ea7b9a1f87d3d747eb0de2a7e96b4c1b69a61c176abc64673c9ae01484",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/af3fc19afc8ec8486206a07b.svg",
+      "sha256": "af3fc19afc8ec8486206a07b39db1f53ab1fdc082a09cb79349ae9ce9782ac27",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/af797d355dc156ae142e7734.svg",
+      "sha256": "af797d355dc156ae142e77343745a562f682c17a46dc956c968d19bf569c4964",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/b09300085fe56811ee91a579.svg",
+      "sha256": "b09300085fe56811ee91a5796c5732dee0acad2c9cb07874b0033b9eb2682742",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/b0c2bed2fc5c538d0974a1bd.svg",
+      "sha256": "b0c2bed2fc5c538d0974a1bd3e0d394799459c20109e0123f3d48368cacd663e",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/b579a4305ebd8ace0e6d5474.svg",
+      "sha256": "b579a4305ebd8ace0e6d5474a60c586cee8f8d713e2040cd7171db4ac1643158",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/b603e2d6fa8147bc8e99d632.svg",
+      "sha256": "b603e2d6fa8147bc8e99d63254efa207e1f167ec46a4568f0bbf75942fb4436d",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/bb38d52ab9facfe25efb9df4.svg",
+      "sha256": "bb38d52ab9facfe25efb9df457239b0219e20339f0c792c239d0a7f236b74e2f",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/bb717b76538a7b291a5bcaea.svg",
+      "sha256": "bb717b76538a7b291a5bcaeae73010cab98dae6a336037b5f1d9b8ec95320da9",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/bddd458849d2fd2c4b2f2843.svg",
+      "sha256": "bddd458849d2fd2c4b2f284372f460e37196b38cc39d38db748ec61009e3de3c",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/bf1edb518e0a8c24b68fed42.svg",
+      "sha256": "bf1edb518e0a8c24b68fed42c7c2e680c74664bc92e3f45319a75cd8facc6edb",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/c84a14d162a7b3ca9e56477e.png",
+      "sha256": "c84a14d162a7b3ca9e56477e44522c2e3d720a9f51aee361c8a506f245ffbed7",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/c8aeec50af95ac5cac4e5424.svg",
+      "sha256": "c8aeec50af95ac5cac4e5424ed252e11e7aa35a1d9e844b7b2d9fa153569af51",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/ca38f34159cc7aeab26b5fb5.svg",
+      "sha256": "ca38f34159cc7aeab26b5fb5769486720404da846dc181db5f8b74138bc913cc",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/cc4bbbbbe3f5dfa39af443ee.svg",
+      "sha256": "cc4bbbbbe3f5dfa39af443eeaf4c76f6c4b04e08d889ea361493d86b45fdbefe",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/d2d4a967ba9c8d7d08b938c8.svg",
+      "sha256": "d2d4a967ba9c8d7d08b938c8c975dcd59a1731b21e77a1f8a0faffa78e85aecc",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/d2ea0675abd9abf7783ac3ee.svg",
+      "sha256": "d2ea0675abd9abf7783ac3eecf954dd922318020184543a465a1286264683baa",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/df52d889fb517147e97dd2fc.svg",
+      "sha256": "df52d889fb517147e97dd2fc6cdbb008eb5f034fb8c9fe97b520d63ff387604d",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/e359fbac1be75cab67eb81d6.svg",
+      "sha256": "e359fbac1be75cab67eb81d630aa8d6178809c38cfcae8e14af6dab98be097bb",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/e3d4a39f81771abf9a277870.svg",
+      "sha256": "e3d4a39f81771abf9a277870aad4e53d412f22935e7000ec96fc39e80d1bd7a3",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/e9aa05151c25759c17c4185d.svg",
+      "sha256": "e9aa05151c25759c17c4185d3fde2c1cab10680c9a055051c5107b4d29317849",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/f1cef41f0627660374cb6b5e.svg",
+      "sha256": "f1cef41f0627660374cb6b5e285e90552815d1b62725df05ebe2066f6ce94a85",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/f254199ee38996be2d8ae8a3.svg",
+      "sha256": "f254199ee38996be2d8ae8a3daff0a78bc94cfb9e9a7a7be459d8a4980a9edad",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/f87aac86036203f6e1ee638d.svg",
+      "sha256": "f87aac86036203f6e1ee638d18e5181076c13ba306ce979ff632c6d7fadf4e35",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/faf53038c0b4e89d01e75269.svg",
+      "sha256": "faf53038c0b4e89d01e752695ea2e0b6165ca43215726a89242c2f352720aaf3",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/fc9ea7a388df467fdf724936.svg",
+      "sha256": "fc9ea7a388df467fdf724936cf1d46123997b1f4cc5e270bbcf7f3a1facb0f01",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/assets/ff6682d4783a0ab911b905d0.svg",
+      "sha256": "ff6682d4783a0ab911b905d0b47d9c06bec14fd86a4d3cfab280dde95714dba7",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/build-manifest.json",
+      "sha256": "614535c2e700b09ee5391c86a9e0c123a8eea697fdf63e4aaaee9f5edbaf9764",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/catalog.json",
+      "sha256": "aeb658124adebd5f77bde41ed6fd57c6a63c5af63416a72a215c6d3bd4978e89",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/code-connect-status.json",
+      "sha256": "5156cb1bf940e0d01374984a77caa72941129c2b4ffdb27b16da701aa91193d8",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/coverage.json",
+      "sha256": "78079cbb2edf07de7a1abbac0e8908c79f26b012d18fb87c4907c1d343d88a69",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/OFL-Inter.txt",
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-0.ttf",
+      "sha256": "5dcea0643d98c3b9aa1cb1269da7bda17007eef92f47e2c9a001ca8d75b2f1f0",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-1.ttf",
+      "sha256": "ef8f755d933b9310804cc9152f1f18cb2ac460d6b05054ec913d889c9f11f79e",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-10.ttf",
+      "sha256": "eec66af7f2337bd34fe6e801cf92ededcb57a20c0d7bc40a61d4eefcbe3dd40c",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-11.ttf",
+      "sha256": "1be2b11bc5c1e0f78deeeb4e8049b2f5cca9c476b77bb1912aac748ba4a37312",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-12.ttf",
+      "sha256": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-13.ttf",
+      "sha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-14.ttf",
+      "sha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-15.ttf",
+      "sha256": "3428fd01a45310781cfc06d8957c5485de2432132b405ebe6e53efec0719c229",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-16.ttf",
+      "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-17.ttf",
+      "sha256": "d0f4bc7faca468376e3db9b5e57afcdc2192134c9ac82a9511f32767b56853a4",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-2.ttf",
+      "sha256": "f0f1d28363e3a64ef7ed59937b268494ad5e55e76b2c77eaab2f94c80cce17c9",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-3.ttf",
+      "sha256": "5b6f0c6f26e5c554a64cdcc3a9b5d802b7f9aec6206f1dbcfcdcad7b5860a2a9",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-4.ttf",
+      "sha256": "c1811d32ac0f6eed1bbf57529f2ecdfc6c717d48a969dd864942436315a1b198",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-5.ttf",
+      "sha256": "bfaead52c6371b644ff234459211097e2f90441dc3ffd50987516d5acab0c9ea",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-6.ttf",
+      "sha256": "43650eb9c3a23ddc6fc1f499d1e74892fa573119ae1ae3d83975918b10fa22a7",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-7.ttf",
+      "sha256": "7c1999c303b4d292f039630440d717f58edb8139f9f1e3b25074e4e07f95b441",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-8.ttf",
+      "sha256": "e59f6349bc74d1f9f46d50d47d6c12a57a51eb56d632c03642d678b2e7b054eb",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter-variable-9.ttf",
+      "sha256": "5b717029a2c4cfca2167e97be1157edb24151591e5ec96eb484745c392817a7a",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts/inter.css",
+      "sha256": "83f4198c7f0efc95b8110470737389d7cdc8ba51e9f21f7097d77e881c290c42",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts.css",
+      "sha256": "ac83d57e43a25a9ac0de7b602992ca0eceec3074b9fe958b29cfcfc7b73b8b1a",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/fonts.css.d.ts",
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/index.d.ts",
+      "sha256": "967cc656ed23fde22c390eae11ffc5c90cde1672804d0b9c3c53316ca7ccc75b",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/index.js",
+      "sha256": "967cc656ed23fde22c390eae11ffc5c90cde1672804d0b9c3c53316ca7ccc75b",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/native.d.ts",
+      "sha256": "bcae048e778cf71e3585e498c55e5a9ec27eddfd55b9e1c8a8a02cf5863f5d53",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/native.js",
+      "sha256": "5ae440c7d3fceeadb1bbde9fd3911387b28fa269f91a507d01883d844a2dde75",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/package.json",
+      "sha256": "7bab8f682798b5e1b535e0e5b76ec321a06fb6d49879213cdabdbe78a78c50de",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/styles.css",
+      "sha256": "c55e19c75422de992aeb619394a9934d9ec951f7d7bfb00f69b6f8082dc0e34b",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "react/styles.css.d.ts",
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "themes/white.css",
+      "sha256": "7f872ef1667353d350240b0d29f30c4b0afe4158f4ad1719b7f0d34d356a112f",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "tokens/motion.css",
+      "sha256": "b8b50df62f1a9def7fd9d4fb1d3dc4c3fce53258d03799a3572196650bddf686",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "tokens/primitives.css",
+      "sha256": "6880a29955a6c9b7fc59e611fc87655a9c9eab028069056c720133649ee6faf5",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "tokens/semantics.css",
+      "sha256": "d226890140a2fcdb49e37b951c3c3d11fad42673fc4ad2198873d61ac66f3275",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "tokens/spacing.css",
+      "sha256": "0682f5fcc75174ea87cd66c724149b470eb233ac6d36fa4677f8f6061521d65b",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "tokens/typography.css",
+      "sha256": "5197318bde1605984754e62a031f5714d71d8939690194b47d88d7078c64fc78",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    }
+  ],
+  "libraries": {
+    "react": {
+      "catalogSha256": "aeb658124adebd5f77bde41ed6fd57c6a63c5af63416a72a215c6d3bd4978e89",
+      "codeConnectStatusSha256": "5156cb1bf940e0d01374984a77caa72941129c2b4ffdb27b16da701aa91193d8",
+      "counts": {
+        "exports": 106,
+        "interactive": 218,
+        "functional": 61,
+        "visualVerified": 0,
+        "behaviorVerified": 0,
+        "mcpEvidence": 80,
+        "archiveEvidence": 1191
+      },
+      "coverageSha256": "78079cbb2edf07de7a1abbac0e8908c79f26b012d18fb87c4907c1d343d88a69",
+      "entry": "react/index.js",
+      "manifestSha256": "39e9e0f335997a7c44ee63396c9b9451b0447370c7cc24154579cbffb62d266f",
+      "nativeEntry": "react/native.js",
+      "optionalFonts": "react/fonts.css",
+      "package": "@curefit/aurora-library",
+      "peerDependencies": {
+        "react": ">=18.2.0 <20"
+      },
+      "schema": 1,
+      "scope": "Working native components, tokens, fonts and required component assets only. Static Figma screen renders are excluded; catalog metadata is retained.",
+      "sourceArchiveIncluded": false,
+      "stylesheet": "react/styles.css",
+      "version": "2.0.10",
+      "distributionProfile": "components-only",
+      "sourceSnapshotCounts": {
+        "archiveEvidence": 1191,
+        "behaviorVerified": 0,
+        "exports": 1271,
+        "functional": 61,
+        "interactive": 218,
+        "mcpEvidence": 80,
+        "visualVerified": 0
+      }
+    }
+  },
+  "archiveSha256": "b4588dd69845929f38031c88e85c0e7b2391c707e4476c409b6c2b15dc6ef2b1",
+  "distributionProfile": "components-only"
+}

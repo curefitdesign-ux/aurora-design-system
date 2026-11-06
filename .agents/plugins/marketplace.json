@@ -1,0 +1,20 @@
+{
+  "name": "aurora",
+  "interface": {
+    "displayName": "Aurora Design System 2.0"
+  },
+  "plugins": [
+    {
+      "name": "aurora-design-system",
+      "source": {
+        "source": "local",
+        "path": "./plugins/aurora-design-system"
+      },
+      "policy": {
+        "installation": "INSTALLED_BY_DEFAULT",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
