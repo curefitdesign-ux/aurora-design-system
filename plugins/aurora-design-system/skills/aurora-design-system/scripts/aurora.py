@@ -93,7 +93,7 @@ def design_contract(source: dict, copied_runtime: bool, internal: bool = False) 
     runtime = f"Import `{prefix}runtime/aurora.css` once at the application entrypoint and add `aurora-root` to the requested UI wrapper (plus `theme-white` on the same wrapper for white mode). The path here is relative to this document; resolve the import from the actual application entrypoint." if copied_runtime else "The runtime was not copied. Use the project's verified Aurora implementation, or review this binding before upgrading it to include the runtime."
     react = ""
     if copied_runtime and source.get("libraries", {}).get("react"):
-        react = f"\nFor React buttons, form controls, `AuroraScope`, `AuroraCard` and `AuroraBackground`, import from the lightweight `{prefix}runtime/react/native.js` entry. Import compiled styles from `{prefix}runtime/react/styles.css` and optional local Inter faces from `{prefix}runtime/react/fonts.css`; wrap the UI in `AuroraScope`, which automatically supplies the main Aurora gradient. Keep its default `background=\"previous\"`; Figma alternatives are `new`, `old`, `earthy`, and `pilate`. Keep app page containers transparent so the gradient remains visible. The full source composition catalog uses `{prefix}runtime/react/index.js` and is indexed by `{prefix}runtime/react/catalog.json`. Use that larger entry only when its source compositions are needed. Adapt Code Connect package imports to these copied project-local exports; never import authoring files by an absolute path into another checkout. Larger visual compositions need the product's handlers and native behavior.\n"
+        react = f"\nFor React buttons, form controls, `AuroraScope`, `AuroraCard` and `AuroraBackground`, import from the lightweight `{prefix}runtime/react/native.js` entry. Import compiled styles from `{prefix}runtime/react/styles.css` and optional local Inter faces from `{prefix}runtime/react/fonts.css`; wrap the UI in `AuroraScope`, which automatically supplies the main Aurora gradient. Keep its default `background=\"previous\"`; Figma alternatives are `new`, `old`, `earthy`, and `pilate`. Keep app page containers transparent so the gradient remains visible. The metadata catalog uses `{prefix}runtime/react/index.js` and is indexed by `{prefix}runtime/react/catalog.json`. In the components-only profile, index.js re-exports native.js; static screen renders are omitted. Import only catalog entries marked compiled-export. Adapt Code Connect package imports to these copied project-local exports; never import authoring files by an absolute path into another checkout. Larger visual compositions need the product's handlers and native behavior.\n"
     return f"""{START}
 # Aurora Design Contract
 
@@ -121,7 +121,7 @@ def agent_block() -> str:
     return f"""{START}
 ## Aurora UI
 
-For UI work in this project, read `DESIGN.md` and `.aurora/source-manifest.json` first, then `.aurora/runtime/react/catalog.json` when the React library is present. Prefer `.aurora/runtime/react/native.js` for React controls and surfaces; use the full `index.js` only for source compositions. Use the Aurora design system's pinned tokens and components, verify missing coverage against Aurora Figma, and preserve product behavior. Apply no other design system's visual defaults. Snapshot integrity checks do not replace testing the running UI.
+For UI work in this project, read `DESIGN.md` and `.aurora/source-manifest.json` first, then `.aurora/runtime/react/catalog.json` when the React library is present. Prefer `.aurora/runtime/react/native.js` for React controls and surfaces; index.js re-exports native.js. Import only catalog entries marked compiled-export; other entries are source metadata. Use the Aurora design system's pinned tokens and components, verify missing coverage against Aurora Figma, and preserve product behavior. Apply no other design system's visual defaults. Snapshot integrity checks do not replace testing the running UI.
 {END}"""
 
 
@@ -265,7 +265,7 @@ def initialize(args: argparse.Namespace) -> dict:
     if args.runtime:
         next_step = "For CSS-only UI, import .aurora/runtime/aurora.css and add aurora-root to the wrapper; then verify the running UI."
         if source.get("libraries", {}).get("react"):
-            next_step = "For React controls/surfaces, import .aurora/runtime/react/native.js and styles.css, then wrap the UI in AuroraScope. Use react/index.js only for full source compositions. CSS-only projects use aurora.css and aurora-root. Resolve paths from the actual entrypoint and verify the running UI."
+            next_step = "For React controls/surfaces, import .aurora/runtime/react/native.js and styles.css, then wrap the UI in AuroraScope. react/index.js re-exports native controls; static screen renders are excluded. CSS-only projects use aurora.css and aurora-root. Resolve paths from the actual entrypoint and verify the running UI."
     return {"status": "initialized", "project": str(project), "runtime_copied": args.runtime, "bound_agent": args.bind_agent, "next": next_step}
 
 

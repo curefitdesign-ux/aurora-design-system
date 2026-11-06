@@ -56,13 +56,13 @@ Projects with a copied `.aurora` runtime remain pinned to their installed snapsh
 
 ## Included
 
-- Aurora App and Aurora Web sources only: 1,271 exports across 682 browse targets.
-- 60 native component APIs, including slider, questionnaire sheet, accordion and categories popup.
+- Aurora App and Aurora Web only: searchable source metadata retained; static screen render exports excluded.
+- 60 working native component APIs with source aliases, including slider, questionnaire sheet, accordion and categories popup.
 - Previous Aurora gradient/cloud composition as the default background; New, Old, Earthy and Pilate Figma backgrounds remain optional.
 - Neutral 20% fading card strokes, 80px popup blur, and solid pink dark primary CTA labels.
 - Dark and white themes, local fonts, portable assets and source coverage reports.
 
-Source render availability is distinct from verified product workflows. Supply application callbacks and verify final compositions in your target application.
+The component-only package excludes heavy reference images and needs no asset bootstrap download. Catalog entries marked `source-metadata-only` are references, not bundled code. Component availability is distinct from verified product workflows. Supply application callbacks and verify final compositions in your target application.
 
 ## Standalone project skill
 

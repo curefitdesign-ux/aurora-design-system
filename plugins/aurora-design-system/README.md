@@ -1,8 +1,8 @@
 # Aurora Design System 2.0 Plugin
 
-A portable Codex plugin containing one skill, **Aurora Design System 2.0** (`$aurora-design-system`), source evidence, implementation assets and the component explorer.
+Version 2.0.12 is an offline component-only package. It includes 60 native APIs (with source aliases), Aurora tokens, CSS, fonts, vector backgrounds, icons and small assets required by controls. Heavy reference images and static Figma screen renders are excluded. There is no bootstrap or required download. React 18.2–19 and Python 3.9+ are supplied by the consuming environment.
 
-Aurora's main source is [curefit/curefit-design-system](https://github.com/curefit/curefit-design-system). This plugin packages the Codex integration. Use Aurora's own visual and component rules; external references may inform documentation quality only.
+The full source catalog remains searchable, but only entries marked `compiled-export` are bundled code. `source-metadata-only` entries link to Aurora sources for implementation; they are not functioning components. Both `index.js` and `native.js` expose the native API.
 
 ## Public installation
 

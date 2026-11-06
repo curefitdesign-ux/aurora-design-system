@@ -8,4 +8,4 @@ Your Codex host processes prompts and project context according to that host's s
 
 Contact the distribution maintainer through the repository's issue tracker: https://github.com/curefitdesign-ux/aurora-design-system/issues
 
-The OpenAI Directory profile performs a one-time download of the complete, pinned Aurora snapshot from the public GitHub release before binding a project. GitHub receives the network request, including normal connection information such as the request IP address and user agent; project source files and prompts are not included in that download request. The snapshot is retained locally in `~/.cache/aurora-design-system` until you remove it. An offline archive option avoids this download. The distribution maintainer does not run a collection endpoint or retain user telemetry. GitHub and your host retain their own service data under their policies.
+Version 2.0.12 and later are component-only offline packages and perform no first-use asset download. Older directory profile 2.0.11 optionally restores its pinned snapshot from GitHub into a local cache; GitHub receives the ordinary download request, not project files or prompts.

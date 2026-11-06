@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build and validate Aurora distributions from the maintained source tree."""
 import argparse
+import importlib.util
 import hashlib
 import json
 import os
@@ -66,6 +67,13 @@ def bundled_explorer_html(source):
     return source.replace("../skills/aurora-design-system/", "../../skills/aurora-design-system/")
 
 
+def component_profile(plugin):
+    spec = importlib.util.spec_from_file_location('aurora_lightweight', ROOT / 'scripts/lightweight-aurora.py')
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.slim(plugin)
+
+
 def sync_plugin():
     require((ROOT / "dashboard/index.html").is_file(), "Sync must run from the source repository")
     validate_skills(ROOT)
@@ -79,12 +87,15 @@ def sync_plugin():
     # that might contain retired entrypoints or unrelated future work.
     for name in SKILLS:
         shutil.copytree(ROOT / "skills" / name, skill_dest / name, ignore=IGNORE)
-    for source, dest in ((ROOT / "dashboard", plugin / "assets/handbook"),):
+    component_profile(plugin)
+    for source, dest in ((ROOT / "distribution/lightweight-handbook", plugin / "assets/handbook"),):
         if dest.exists():
             shutil.rmtree(dest)
         shutil.copytree(source, dest, ignore=IGNORE)
     index_file = plugin / "assets/handbook/index.html"
-    index_file.write_text(bundled_explorer_html((ROOT / "dashboard/index.html").read_text()))
+    # The consumer explorer uses only bundled native controls.
+    for file in (plugin / "assets/handbook").glob("*.tsx"):
+        file.unlink()
     for name in ("aurora_distribution.py", "install-aurora-skill.sh", "package-aurora-skill.sh", "serve-aurora-preview.py"):
         shutil.copy2(ROOT / "scripts" / name, plugin / "scripts" / name)
     manifest = plugin / ".codex-plugin/plugin.json"
@@ -114,11 +125,16 @@ def verify_plugin(plugin):
         require((plugin / relative).is_file(), f"Missing plugin resource: {relative}")
     repo = plugin.parent.parent
     if (repo / "dashboard/index.html").is_file() and plugin == repo / "plugins" / PLUGIN:
-        expected_skills = {str(Path(name) / relative): digest
-                           for name in SKILLS for relative, digest in digest_tree(repo / "skills" / name).items()}
-        require(expected_skills == digest_tree(plugin / "skills"), "Plugin skills drift: run sync-plugin.sh")
-        expected_explorer = digest_tree(repo / "dashboard")
-        expected_explorer["index.html"] = hashlib.sha256(bundled_explorer_html((repo / "dashboard/index.html").read_text()).encode()).hexdigest()
+        with tempfile.TemporaryDirectory(prefix="aurora-profile-parity-") as temporary:
+            expected = Path(temporary)
+            
+            for name in SKILLS:
+                shutil.copytree(repo / "skills" / name, expected / "skills" / name, ignore=IGNORE)
+            shutil.copy2(plugin / "VERSION", expected / "VERSION")
+            component_profile(expected)
+            require(digest_tree(expected / "skills") == digest_tree(plugin / "skills"), "Plugin skills drift: run sync-plugin.sh")
+        expected_explorer = digest_tree(repo / "distribution/lightweight-handbook")
+        expected_explorer = {key: value for key, value in expected_explorer.items() if not key.endswith('.tsx')}
         require(expected_explorer == digest_tree(plugin / "assets/handbook"), "Bundled explorer drift: run sync-plugin.sh")
     print(f"Verified all skill links, plugin assets, version and source parity: {plugin}")
 

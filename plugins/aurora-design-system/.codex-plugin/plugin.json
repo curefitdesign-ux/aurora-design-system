@@ -1,6 +1,6 @@
 {
   "name": "aurora-design-system",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "description": "Aurora Design System 2.0: one portable skill for Aurora App and Web UI.",
   "author": {
     "name": "curefitdesign-ux",
@@ -20,9 +20,9 @@
   "interface": {
     "displayName": "Aurora Design System 2.0",
     "shortDescription": "Aurora App and Web UI only",
-    "longDescription": "Use Aurora-only tokens, native React controls, source-backed Figma components and variants, gradient backgrounds, fading card strokes, and inspectable Code Connect evidence across projects.",
+    "longDescription": "Build Aurora App and Web UI with offline native React components, tokens, CSS, fonts, vector backgrounds and icons. Includes sliders, buttons, inputs, cards, popups and source catalog metadata. Heavy reference images and static screen renders are excluded; no asset download is required.",
     "developerName": "curefitdesign-ux",
-    "category": "Design",
+    "category": "Productivity",
     "capabilities": [
       "Interactive",
       "Write",

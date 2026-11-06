@@ -1,9 +1,9 @@
 {
   "name": "aurora-design-system",
   "displayName": "Aurora Design System 2.0",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "repository": "https://github.com/curefitdesign-ux/aurora-design-system",
-  "release": "https://github.com/curefitdesign-ux/aurora-design-system/releases/tag/v2.0.11",
-  "zip": "https://github.com/curefitdesign-ux/aurora-design-system/releases/download/v2.0.11/aurora-design-system-2.0.11.zip",
+  "release": "https://github.com/curefitdesign-ux/aurora-design-system/releases/tag/v2.0.12",
+  "zip": "https://github.com/curefitdesign-ux/aurora-design-system/releases/download/v2.0.12/aurora-design-system-2.0.12.zip",
   "marketplace": "aurora"
 }

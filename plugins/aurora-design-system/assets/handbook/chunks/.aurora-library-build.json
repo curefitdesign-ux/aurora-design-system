@@ -1,9 +1,0 @@
-{
-  "schema": 1,
-  "type": "gallery-lazy-source-chunks",
-  "manifestSha256": "39e9e0f335997a7c44ee63396c9b9451b0447370c7cc24154579cbffb62d266f",
-  "files": [
-    "chunk-7HIJYDCG.js",
-    "dist-ULA6IUQM.js"
-  ]
-}

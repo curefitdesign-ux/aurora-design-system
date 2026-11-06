@@ -1,3 +1,9 @@
+
+
+## Component-only offline package
+
+This installation includes the working native React APIs, tokens, CSS, fonts, vector backgrounds, icons and small assets needed by controls. Static Figma screen renders and heavy reference images are excluded. No bootstrap download is performed. `react/index.js` re-exports `native.js`. Search the retained catalog, but import only entries marked `codeAvailability: compiled-export`; `source-metadata-only` entries describe Aurora sources and are not bundled code. Use product content for images. The source authoring inventory counts are not the number of bundled native APIs.
+
 # Complete Aurora library source and code
 
 ## Choose the correct layer
@@ -32,7 +38,7 @@ import '../.aurora/runtime/react/styles.css';
 
 Load the bundled licensed Inter fonts using `react/fonts.css` if the app does not already load Inter through its font pipeline. Other font roles remain their own font families. Exact archive glyph geometry is available for static fidelity and missing font assets; do not substitute a new visual font silently.
 
-Use the independent `react/native.js` entry for the 60 native component APIs, `AuroraScope`, `AuroraBackground` and `AuroraCard`. Its module includes the four approved background vector scenes but no full-screen product scenes or archive image resolver, so a small form does not emit the full source catalog's raster assets. For larger source compositions, import the selected export from `react/index.js`. Both entries use the same `styles.css`; load it once. The catalog records the correct `runtimeModule` and preview props for each entry.
+Use the independent `react/native.js` entry for the 60 native component APIs, `AuroraScope`, `AuroraBackground` and `AuroraCard`. Its module includes the four approved background vector scenes but no full-screen product scenes or archive image resolver, so a small form does not emit the full source catalog's raster assets. Static source compositions are omitted from this package; implement them from their linked Aurora sources when needed. Both entries use the same `styles.css`; load it once. The catalog records the correct `runtimeModule` and preview props for each entry.
 
 ## Gradient and fading strokes
 
@@ -48,9 +54,9 @@ The native entry includes 59 interactive APIs and one dynamic review summary. Th
 
 Search aliases in `catalog.json`, not only component names. The actual slider is `AuroraSlider`, Figma `7899:49440` Range Selector, with min/max and two values. The source named “filter slider” (`4410:29253`) is an adjustment icon. The “All Categories Tab” is a complete screen composition, not a button. `AuroraRating` displays aggregate reviews; `AuroraFloatingRating` and `AuroraMoodRating` support sentiment choice. Read the typed declarations for the exact callback and controlled/uncontrolled props.
 
-The explorer provides searchable categories, a live-control filter, exact source-state selection, fit/100%/200% previews, copyable examples, foundations, and a coverage page. The complete component inventories contain 1,271 source exports and 682 browse targets: 1,063 public App states plus 167 App families, and 33 Web states plus 8 Web families. All actual component states are represented. Placed instances and detached documentation/layout frames are inventoried separately; they are not extra published components.
+The bundled explorer provides native control demos, theme switching and searchable working component entries. The retained full catalog is source metadata; its original inventory counts do not describe this component-only runtime.
 
-The remaining source components preserve their actual design trees: vectors, gradients, geometry, text, images, masks, variants and nested instances. Their code availability does not certify every interaction, responsive state, advanced effect or product flow. For an archived action visual, use its native `as="button"`, accessible label, disabled state and handler props where appropriate; typing and selection controls should use native adapters rather than a static SVG field. Use their explicit props and source node text overrides, and add the product's behavior. A rendering export must never be described as a completed checkout, login or booking workflow.
+Static source compositions are not bundled. Read their linked Aurora Figma nodes before implementing those compositions with the provided native APIs.
 
 Variant selectors must select an actual source variant. Invalid or ambiguous combinations must be reported, not approximated with a guessed style. Prefer native adapters for interactive controls even when a matching static archive variant is available.
 

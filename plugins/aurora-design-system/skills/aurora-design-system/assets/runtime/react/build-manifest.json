@@ -1,16 +1,16 @@
 {
-  "catalogSha256": "16ec0ce9f05c116d37ae61019d12e8b779e104ea7d8e8fac76ee4dbd941bda22",
+  "catalogSha256": "aeb658124adebd5f77bde41ed6fd57c6a63c5af63416a72a215c6d3bd4978e89",
   "codeConnectStatusSha256": "5156cb1bf940e0d01374984a77caa72941129c2b4ffdb27b16da701aa91193d8",
   "counts": {
-    "archiveEvidence": 1191,
-    "behaviorVerified": 0,
-    "exports": 1271,
-    "functional": 61,
+    "exports": 106,
     "interactive": 218,
+    "functional": 61,
+    "visualVerified": 0,
+    "behaviorVerified": 0,
     "mcpEvidence": 80,
-    "visualVerified": 0
+    "archiveEvidence": 1191
   },
-  "coverageSha256": "a01d9914818585bb6cb21c96f8049781983fecf244582cfb941304623c99a81f",
+  "coverageSha256": "78079cbb2edf07de7a1abbac0e8908c79f26b012d18fb87c4907c1d343d88a69",
   "entry": "react/index.js",
   "manifestSha256": "39e9e0f335997a7c44ee63396c9b9451b0447370c7cc24154579cbffb62d266f",
   "nativeEntry": "react/native.js",
@@ -20,8 +20,18 @@
     "react": ">=18.2.0 <20"
   },
   "schema": 1,
-  "scope": "Prebuilt React exports only. Build, source, visual and behavior coverage remain distinct in coverage.json.",
+  "scope": "Working native components, tokens, fonts and required component assets only. Static Figma screen renders are excluded; catalog metadata is retained.",
   "sourceArchiveIncluded": false,
   "stylesheet": "react/styles.css",
-  "version": "2.0.11"
+  "version": "2.0.12",
+  "distributionProfile": "components-only",
+  "sourceSnapshotCounts": {
+    "archiveEvidence": 1191,
+    "behaviorVerified": 0,
+    "exports": 1271,
+    "functional": 61,
+    "interactive": 218,
+    "mcpEvidence": 80,
+    "visualVerified": 0
+  }
 }

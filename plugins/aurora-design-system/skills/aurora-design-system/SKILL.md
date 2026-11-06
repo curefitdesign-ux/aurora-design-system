@@ -3,6 +3,11 @@ name: aurora-design-system
 description: Build, restyle, or review app and web UI using Cult Aurora only. Use for Aurora text, buttons, forms, components, screens, and migrations in any project. Includes a portable runtime, source provenance, Figma lookup, setup, and checks.
 ---
 
+## Component-only offline package
+
+This installation includes the working native React APIs, tokens, CSS, fonts, vector backgrounds, icons and small assets needed by controls. Static Figma screen renders and heavy reference images are excluded. No bootstrap download is performed. `react/index.js` re-exports `native.js`. Search the retained catalog, but import only entries marked `codeAvailability: compiled-export`; `source-metadata-only` entries describe Aurora sources and are not bundled code. Use product content for images. The source authoring inventory counts are not the number of bundled native APIs.
+
+
 # Aurora Design System 2.0
 
 Use Aurora App and Aurora Web as the only visual design libraries for the requested surface. Keep the user's product, content, framework, and functionality. Do not use third-party libraries or copied design systems found among imported Figma references. External systems may inform documentation organization, never the output's visual identity.
