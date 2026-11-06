@@ -29,6 +29,22 @@ The plugin contains all resources needed for supported offline work. Figma authe
 
 A downloaded ZIP is a snapshot. Use the marketplace and update commands to receive a later published release.
 
+## Use the CSS or source tokens directly
+
+For a plain HTML page, load the public portable styles and local-font stylesheet:
+
+```html
+<link rel="stylesheet" href="https://curefitdesign-ux.github.io/aurora-design-system/plugins/aurora-design-system/skills/aurora-design-system/assets/runtime/aurora.css">
+<link rel="stylesheet" href="https://curefitdesign-ux.github.io/aurora-design-system/plugins/aurora-design-system/skills/aurora-design-system/assets/runtime/react/fonts.css">
+<section class="aurora-root">
+  <button class="aurora-cta aurora-cta--primary">Continue</button>
+</section>
+```
+
+Use `class="aurora-root theme-white"` for white mode. Supply your application's actions and behavior. The hosted CSS follows this repository's current published branch; download a versioned release when you need a pinned snapshot.
+
+[Source token JSON](https://raw.githubusercontent.com/curefitdesign-ux/aurora-design-system/main/plugins/aurora-design-system/skills/aurora-design-system/assets/source/design-tokens/aurora.tokens.json) is also public. It records the pinned source tokens; use the portable CSS or React runtime to include the current adaptation rules.
+
 ## Update
 
 ```bash
