@@ -1,0 +1,6 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="veg">
+<path id="Rectangle" d="M2.4 0.6H9.6C10.5941 0.6 11.4 1.40589 11.4 2.4V9.6C11.4 10.5941 10.5941 11.4 9.6 11.4H2.4C1.40589 11.4 0.6 10.5941 0.6 9.6V2.4C0.6 1.40589 1.40589 0.6 2.4 0.6Z" stroke-width="1.2" stroke="#0FE498"/>
+<circle id="Oval" cx="6" cy="6" r="2.4" fill="#0FE498"/>
+</g>
+</svg>

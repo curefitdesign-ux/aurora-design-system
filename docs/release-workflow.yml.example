@@ -1,0 +1,36 @@
+name: Publish Aurora release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify version and plugin
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          version=Path('plugins/aurora-design-system/VERSION').read_text().strip()
+          if os.environ['RELEASE_TAG']!='v'+version: raise SystemExit('Tag/version mismatch')
+          PY
+          python3 plugins/aurora-design-system/scripts/aurora_distribution.py verify
+      - name: Package plugin and standalone skill
+        run: |
+          python3 plugins/aurora-design-system/scripts/aurora_distribution.py package-plugin --output dist
+          python3 plugins/aurora-design-system/scripts/aurora_distribution.py package-skill --output dist
+      - name: Publish release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          gh release view "$RELEASE_TAG" >/dev/null 2>&1 || gh release create "$RELEASE_TAG" --title "Aurora Design System 2.0 — $RELEASE_TAG" --generate-notes
+          gh release upload "$RELEASE_TAG" dist/* --clobber

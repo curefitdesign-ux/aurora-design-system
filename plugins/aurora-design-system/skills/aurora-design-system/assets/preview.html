@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aurora portable runtime check</title>
+<link rel="stylesheet" href="./runtime/aurora.css">
+<style>
+body { margin:0; background:var(--color-bg-dark); color:var(--color-text-1); font-family:var(--font-primary); }
+main { max-width:900px; margin:auto; padding:var(--spacing-8) var(--spacing-4); }
+h1 { font-size:var(--text-h1-size); font-weight:var(--text-h1-weight); line-height:var(--text-h1-lh); letter-spacing:var(--text-h1-ls); }
+h2 { font-size:var(--text-h2-size); font-weight:var(--text-h2-weight); line-height:var(--text-h2-lh); }
+p, output, li { font-size:var(--text-p5-size); font-weight:var(--text-p5-weight); line-height:var(--text-p5-lh); }
+section { margin-block:var(--spacing-6); padding:var(--spacing-4); }
+.row { display:flex; flex-wrap:wrap; align-items:center; gap:var(--spacing-3); }
+.aurora-cta-twins { max-width:400px; padding:0; }
+#checks { padding-left:var(--spacing-4); }
+code { font-family:var(--font-mono); }
+</style>
+</head>
+<body class="aurora-root"><main>
+<h1>Aurora portable runtime</h1>
+<p>Source revision 29ae605. This preview checks the packaged CSS utilities without Tailwind. It does not certify the full Figma library.</p>
+<div class="row"><button id="theme" class="aurora-cta aurora-cta--secondary" type="button" aria-pressed="false">Switch to white theme</button><output id="font">Fonts are not bundled; verify the rendered font during product integration.</output></div>
+<section class="aurora-card"><h2>Actions</h2>
+<div class="row">
+<button id="primary" class="aurora-cta aurora-cta--primary" type="button">Continue</button>
+<button id="small" class="aurora-cta aurora-cta--primary aurora-cta--sm" type="button">Continue</button>
+<button id="secondary" class="aurora-cta aurora-cta--secondary" type="button">Details</button>
+<button id="tertiary" class="aurora-cta aurora-cta--tertiary" type="button">Later</button>
+<button id="disabled" class="aurora-cta aurora-cta--primary" type="button" disabled>Unavailable</button>
+</div>
+<p><output id="interaction" aria-live="polite">Choose an action to check its handler.</output></p>
+<p>Primary uses the pinned code's solid pink label. Figma's gradient label and tracking differ; see the source contract before implementing exact Figma fidelity.</p>
+</section>
+<section class="aurora-card"><h2>Paired actions</h2><div class="aurora-cta-twins"><button class="aurora-cta aurora-cta--secondary" type="button">Back</button><button class="aurora-cta aurora-cta--primary" type="button">Confirm</button></div></section>
+<section class="aurora-card"><h2>Runtime checks</h2><output id="result" aria-live="polite">Checking…</output><ul id="checks"></ul></section>
+<p>No font files ship with this runtime. This preview deliberately reports fallback rendering. Product integration must load the required Aurora fonts.</p>
+</main>
+<script>
+const checks=document.querySelector('#checks');
+function check(){
+ checks.replaceChildren();
+ const css=id=>getComputedStyle(document.getElementById(id));
+ const conditions=[
+ ['Primary height 50px', css('primary').height==='50px'],
+ ['Small primary height 40px', css('small').height==='40px'],
+ ['Secondary height 40px', css('secondary').height==='40px'],
+ ['Tertiary height 40px', css('tertiary').height==='40px'],
+ ['Primary radius 5px', css('primary').borderRadius==='5px'],
+ ['CTA type 14px / 700 / uppercase', css('primary').fontSize==='14px'&&css('primary').fontWeight==='700'&&css('primary').textTransform==='uppercase'],
+ ['No build tool required for tokens', css('primary').getPropertyValue('--color-curefit-pink').trim()==='#FF3278'],
+ ['Native disabled state', document.querySelector('#disabled').disabled],
+ ['Disabled primary has no active gradient', css('disabled').backgroundImage==='none'&&css('disabled').backgroundColor!==css('primary').backgroundColor],
+ ['No automatic body background blobs', getComputedStyle(document.body,'::before').content==='none'],
+ ['Theme override loaded', getComputedStyle(document.body).backgroundColor===(document.body.classList.contains('theme-white')?'rgb(247, 246, 250)':'rgb(26, 26, 26)')]
+ ];
+ for(const [label,passed] of conditions){const li=document.createElement('li');li.textContent=(passed?'PASS — ':'FAIL — ')+label;checks.append(li);}
+ const pass=conditions.filter(x=>x[1]).length;document.querySelector('#result').textContent=pass+' / '+conditions.length+' CSS and setup checks passed';
+ document.querySelector('#font').textContent='Fonts are not bundled; actual Inter rendering is unverified.';
+}
+document.querySelector('#theme').addEventListener('click',e=>{const white=document.body.classList.toggle('theme-white');e.currentTarget.setAttribute('aria-pressed',String(white));e.currentTarget.textContent=white?'Switch to dark theme':'Switch to white theme';check();});
+document.querySelectorAll('button:not(#theme)').forEach(button=>button.addEventListener('click',()=>{document.querySelector('#interaction').textContent=button.textContent+' action received.';}));
+check();
+</script></body></html>

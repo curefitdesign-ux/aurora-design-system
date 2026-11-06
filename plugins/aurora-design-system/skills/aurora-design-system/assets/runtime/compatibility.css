@@ -1,0 +1,12 @@
+/* Web adapter: replace Tailwind preflight sizing only for Aurora utilities.
+   Values and component selectors in the source files are preserved. */
+.aurora-cta, .aurora-cta-twins, .aurora-card, .aurora-card::before {
+  box-sizing: border-box;
+}
+.aurora-bg > .aurora-bg-blob { position: absolute; }
+/* Disabled must win over theme and twins gradient selectors. */
+.aurora-root .aurora-cta--primary:is(:disabled, [aria-disabled="true"]) {
+  background-image: none;
+  background-color: var(--cta-primary-disabled-bg);
+  color: var(--cta-primary-disabled-text);
+}

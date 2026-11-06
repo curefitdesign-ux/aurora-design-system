@@ -1,0 +1,40 @@
+/* ============================================================
+   Aurora — Typography tokens
+   Fonts + type scale. Aurora-only stack (Inter / Bw Modelica /
+   Roboto Mono / Bebas Neue). No handwritten / label stacks.
+   ============================================================ */
+.aurora-root {
+  /* --- Font families --- */
+  --font-primary: "Inter", "Helvetica Neue", "Arial", sans-serif;
+  --font-display: "Bw Modelica SS01", "Inter", sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+  --font-bebas: "Bebas Neue", sans-serif;
+
+  /* --- Headings --- */
+  --text-h1-size: 20px;   --text-h1-weight: 700; --text-h1-lh: 1.2;   --text-h1-ls: -0.25px;
+  --text-h2-size: 18px;   --text-h2-weight: 700; --text-h2-lh: 1.222; --text-h2-ls: -0.2px;
+  --text-h3-size: 18px;   --text-h3-weight: 500; --text-h3-lh: 1.222; --text-h3-ls: -0.2px;
+  --text-h4-size: 16px;   --text-h4-weight: 700; --text-h4-lh: 1.25;  --text-h4-ls: 0px;
+  --text-h5-size: 50px;   --text-h5-weight: 900; --text-h5-lh: 1.2;   --text-h5-ls: 0.5px;
+  --text-h6-size: 40px;   --text-h6-weight: 400; --text-h6-lh: 1.0;   --text-h6-ls: 0px;    /* Bebas Neue / fitness SKU titles */
+  --text-h7-size: 38px;   --text-h7-weight: 900; --text-h7-lh: 1.263; --text-h7-ls: -0.3px;
+  --text-h8-size: 40px;   --text-h8-weight: 500; --text-h8-lh: 1.1;   --text-h8-ls: -1.0px;
+  --text-h9-size: 24px;   --text-h9-weight: 800; --text-h9-lh: 1.25;  --text-h9-ls: -0.3px;
+  --text-h10-size: 30px;  --text-h10-weight: 700; --text-h10-lh: 1.2; --text-h10-ls: -0.5px;
+
+  /* --- Body / paragraph --- */
+  --text-p1-size: 16px;   --text-p1-weight: 500; --text-p1-lh: 1.25;  --text-p1-ls: 0px;
+  --text-p2-size: 16px;   --text-p2-weight: 400; --text-p2-lh: 1.25;  --text-p2-ls: 0px;
+  --text-p3-size: 14px;   --text-p3-weight: 700; --text-p3-lh: 1.286; --text-p3-ls: 0.5px;
+  --text-p4-size: 14px;   --text-p4-weight: 500; --text-p4-lh: 1.571; --text-p4-ls: 0px;
+  --text-p5-size: 14px;   --text-p5-weight: 400; --text-p5-lh: 1.429; --text-p5-ls: 0px;
+  --text-p6-size: 12px;   --text-p6-weight: 700; --text-p6-lh: 1.333; --text-p6-ls: 0.5px;
+  --text-p7-size: 12px;   --text-p7-weight: 500; --text-p7-lh: 1.333; --text-p7-ls: 0px;
+  --text-p8-size: 12px;   --text-p8-weight: 400; --text-p8-lh: 1.333; --text-p8-ls: 0px;
+  --text-p9-size: 14px;   --text-p9-weight: 400; --text-p9-lh: 1.571; --text-p9-ls: 0px;    /* italic testimonials */
+  --text-p10-size: 10px;  --text-p10-weight: 400; --text-p10-lh: 1.2; --text-p10-ls: 0px;
+
+  /* --- CTA + tag --- */
+  --text-cta-size: 14px;  --text-cta-weight: 700; --text-cta-lh: 1.286; --text-cta-ls: 0.5px;
+  --text-tag-size: 10px;  --text-tag-weight: 700; --text-tag-lh: 1.2;   --text-tag-ls: 0.5px;
+}

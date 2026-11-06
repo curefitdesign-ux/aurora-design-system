@@ -1,0 +1,1623 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/curefit/curefit-design-system",
+  "ref": "main",
+  "commit": "29ae6058c6a93319dcdf6247578024be60b1ece9",
+  "retrievedOn": "2026-11-06",
+  "status": "pinned-source-snapshot; limited-web-runtime",
+  "retrieval": "Authenticated Dia GitHub Code > Download ZIP; archive comment confirmed revision",
+  "figma": {
+    "fileKey": "jD7tZtVeQCMRlIHN7L8umI",
+    "inspectedOn": "2026-11-06",
+    "entryNode": "3875:26646"
+  },
+  "transformations": [
+    "Replace top-level Tailwind v4 @theme blocks with .aurora-root without changing declarations; add aurora-root to the application or requested surface wrapper.",
+    "Provide plain CSS imports; omit Tailwind, remote fonts, app body resets, feature pages and handbook skins.",
+    "Add scoped box-sizing:border-box compatibility for CTA/twins/card utilities previously relying on Tailwind preflight.",
+    "Require aurora-bg-global class for body/root background pseudo-elements; explicit aurora-bg children use absolute position inside their container.",
+    "Remove legacy card blur utility aliases; scope white theme declarations to an Aurora root or its descendant.",
+    "Restore existing disabled-primary token values after theme/twins gradient selectors; fix selector specificity without changing the token values.",
+    "Dark primary/twins CTA labels use solid Aurora pink #FF3278. White-theme labels and focus use Aurora ink; preserve upstream source hashes, brand gradient/fills and geometry. Native controls use the same primary-label adaptation while raw Figma source visual scenes remain unchanged. Disabled states remain exempt.",
+    "User preference: dark primary CTA labels use solid Aurora pink #FF3278 without text gradients; white-theme and disabled treatments remain separate."
+  ],
+  "coverage": [
+    "tokens",
+    "cta-css-utilities",
+    "card-css-utility",
+    "aurora-background-css",
+    "white-theme-overrides",
+    "prebuilt-react-library"
+  ],
+  "limitations": [
+    "Code/Figma Primary mismatch; see source contract",
+    "No complete state/theme or accessibility certification",
+    "The plain CSS adapter alone covers the core token/CTA/card/background subset; React coverage is recorded separately in libraries.react.",
+    "React includes native controls plus static source compositions; complete product workflows, all behaviors, all themes and accessibility are not certified.",
+    "Local licensed Inter font faces are included for React; other source font families may require licensed font assets or the glyph rendering option."
+  ],
+  "upstream": [
+    {
+      "path": "my-app/src/styles/tokens/primitives.css",
+      "sha256": "5335a7f793a8404dcbc2b751f8512b8ca0d7df48d48e2d9b67bfab927712003f"
+    },
+    {
+      "path": "my-app/src/styles/tokens/semantics.css",
+      "sha256": "ac290e3bf076a1317f23ea173b03d2e5f833af057fd7f62f0984349e8c58a158"
+    },
+    {
+      "path": "my-app/src/styles/tokens/typography.css",
+      "sha256": "1d2e55168c016b10cf2e1c01e99eda16d1f678f2ecdaa5307299a06e9e65e480"
+    },
+    {
+      "path": "my-app/src/styles/tokens/spacing.css",
+      "sha256": "35d62fcd6a86d0c8a60a8c340418825b5d2db455ce608b9138b20bacc400ae8f"
+    },
+    {
+      "path": "my-app/src/styles/tokens/motion.css",
+      "sha256": "c214d581b934cb5d8b11876572a5b5b29b2981dbcbcad5ce9311a8b2cdd59e22"
+    },
+    {
+      "path": "my-app/src/styles/components/cta.css",
+      "sha256": "1ad1245789de0f1e18a2a8f9cd7745bc1318deaac3889bd8c38548eda4f93bd1"
+    },
+    {
+      "path": "my-app/src/styles/components/card.css",
+      "sha256": "1337d46ebc0791665f9ec36bdbb87333d4f81b0312435258be0d30be86161585"
+    },
+    {
+      "path": "my-app/src/styles/components/aurora-bg.css",
+      "sha256": "a5dab131a858eb5125dacefa829f8196e606a73936726d4c2735100c21fa584f"
+    },
+    {
+      "path": "my-app/src/styles/themes/white.css",
+      "sha256": "ea3158325dc09ea9d4ae4a2723dfd42b73b15407b165f2dda5eb93536c415fd4"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "TOKENS.md",
+      "sha256": "dc3d98abfd17660cd09165bf64d9ff3b49c4d6f8b26690c71812c35ea037cfcd"
+    },
+    {
+      "path": "aurora.flat.json",
+      "sha256": "96ef870ae383b011a88aeaca883c72af2e45bdfbbd22ca8ba769d186505e8bde"
+    },
+    {
+      "path": "design-tokens/aurora.tokens.json",
+      "sha256": "b6a973d44e1b4420c9daadf4c97ae770c084e95e66381175ac962b5c72853875"
+    }
+  ],
+  "runtime": [
+    {
+      "path": "accessibility.css",
+      "sha256": "874d9e1e372d6dad175aeeb3209b3dcb9634775393626ad6cd2e28cf3fc7f932",
+      "sourcePath": "portable adapter"
+    },
+    {
+      "path": "aurora.css",
+      "sha256": "13c42a82593aa64a12a9f4ca08bc324c15f450c7faf27b55c8b923f5aee3d102",
+      "sourcePath": "portable adapter"
+    },
+    {
+      "path": "compatibility.css",
+      "sha256": "fb1ead0853b199b4c42ede3dc2e324d0329dffa6424c9d3365fd813ad1beb59a",
+      "sourcePath": "portable adapter"
+    },
+    {
+      "path": "components/aurora-bg.css",
+      "sha256": "367c6d20a8a72377b99e5445ca9fdbfe432c03a9d90312d69cc3f8ae8ebac0a7",
+      "sourcePath": "my-app/src/styles/components/aurora-bg.css"
+    },
+    {
+      "path": "components/card.css",
+      "sha256": "4a42b5c7711ae5d5c6b847e4c9a8cf5ea672acd9eeeeff5bbd97b4a4018298ed",
+      "sourcePath": "my-app/src/styles/components/card.css"
+    },
+    {
+      "path": "components/cta.css",
+      "sha256": "5fa6a43578225c2e383695bc96e09efef6eaac0d069c26099abad9b511e97184",
+      "sourcePath": "my-app/src/styles/components/cta.css"
+    },
+    {
+      "path": "react/assets/003ba3ada342f9e439552af6.svg",
+      "sha256": "003ba3ada342f9e439552af683a9c778719935538f0f6f31a5da75402c6f3b14",
+      "sourcePath": "packages/aurora-library/dist/assets/003ba3ada342f9e439552af6.svg"
+    },
+    {
+      "path": "react/assets/0b7e11a4a20ac5a39daae234.svg",
+      "sha256": "0b7e11a4a20ac5a39daae234ed2591efc0c8e3d733c61aa2bce4033bd2a65fe6",
+      "sourcePath": "packages/aurora-library/dist/assets/0b7e11a4a20ac5a39daae234.svg"
+    },
+    {
+      "path": "react/assets/11346c1cf7703a33dab7d86c.svg",
+      "sha256": "11346c1cf7703a33dab7d86cccb47ab83d517a77bdaa3f270291d8b273ab888e",
+      "sourcePath": "packages/aurora-library/dist/assets/11346c1cf7703a33dab7d86c.svg"
+    },
+    {
+      "path": "react/assets/11ce9d19e4484529f4cc93fe.svg",
+      "sha256": "11ce9d19e4484529f4cc93feffdf737bc9486f92345ca650cf5e11833a59adea",
+      "sourcePath": "packages/aurora-library/dist/assets/11ce9d19e4484529f4cc93fe.svg"
+    },
+    {
+      "path": "react/assets/12665b532908c4e92d7504d7.svg",
+      "sha256": "12665b532908c4e92d7504d770fe70490df61764ca81d1242c55f72d1ffa063b",
+      "sourcePath": "packages/aurora-library/dist/assets/12665b532908c4e92d7504d7.svg"
+    },
+    {
+      "path": "react/assets/150d9c508100cd29d599cc65.svg",
+      "sha256": "150d9c508100cd29d599cc650a88a568af8b680f0989f6621c757b165d50819f",
+      "sourcePath": "packages/aurora-library/dist/assets/150d9c508100cd29d599cc65.svg"
+    },
+    {
+      "path": "react/assets/1569ee076cac918a15e31fd1.svg",
+      "sha256": "1569ee076cac918a15e31fd13e67b8217c48606a588a28035703ac39a18b0783",
+      "sourcePath": "packages/aurora-library/dist/assets/1569ee076cac918a15e31fd1.svg"
+    },
+    {
+      "path": "react/assets/16dde5ceef66608fd1c9fead.svg",
+      "sha256": "16dde5ceef66608fd1c9feadac61623814b27170f12bf17fb0e7f1b5d0102f75",
+      "sourcePath": "packages/aurora-library/dist/assets/16dde5ceef66608fd1c9fead.svg"
+    },
+    {
+      "path": "react/assets/1a19390c60362f787b40907a.svg",
+      "sha256": "1a19390c60362f787b40907a9dd82cbca6290bcabcb3dba42a062483d9145dae",
+      "sourcePath": "packages/aurora-library/dist/assets/1a19390c60362f787b40907a.svg"
+    },
+    {
+      "path": "react/assets/1a63b71c4b5ba6b89b0a8661.svg",
+      "sha256": "1a63b71c4b5ba6b89b0a8661129b42e038a83749c7fddb4c7cf689366fb82369",
+      "sourcePath": "packages/aurora-library/dist/assets/1a63b71c4b5ba6b89b0a8661.svg"
+    },
+    {
+      "path": "react/assets/22b67365171fbe61192a67db.svg",
+      "sha256": "22b67365171fbe61192a67dbc6f8d2440b0038b526dfde07415a4d2c2e11e3eb",
+      "sourcePath": "packages/aurora-library/dist/assets/22b67365171fbe61192a67db.svg"
+    },
+    {
+      "path": "react/assets/23d8d79a7a2a523502dbfbda.svg",
+      "sha256": "23d8d79a7a2a523502dbfbda6b814515020cc1c11f7180e683fb1c6fec893451",
+      "sourcePath": "packages/aurora-library/dist/assets/23d8d79a7a2a523502dbfbda.svg"
+    },
+    {
+      "path": "react/assets/248bc2de7c4364ad0c3b4f1b.svg",
+      "sha256": "248bc2de7c4364ad0c3b4f1bcdb0838e133c5f6ce657cbc8a51f19bd02ea619a",
+      "sourcePath": "packages/aurora-library/dist/assets/248bc2de7c4364ad0c3b4f1b.svg"
+    },
+    {
+      "path": "react/assets/25bba7262eeca6c7d2fa29d6.svg",
+      "sha256": "25bba7262eeca6c7d2fa29d62fdafa07b628696db653a61866affbe881b045a4",
+      "sourcePath": "packages/aurora-library/dist/assets/25bba7262eeca6c7d2fa29d6.svg"
+    },
+    {
+      "path": "react/assets/262a720330d4ecfeb6ef0f9d.svg",
+      "sha256": "262a720330d4ecfeb6ef0f9d7c2d3171ff5688defe81053b9d61b9d74e1ca362",
+      "sourcePath": "packages/aurora-library/dist/assets/262a720330d4ecfeb6ef0f9d.svg"
+    },
+    {
+      "path": "react/assets/27555caab9fbe2595282c962.svg",
+      "sha256": "27555caab9fbe2595282c962194b0b769435134c089283762b52645489703cd3",
+      "sourcePath": "packages/aurora-library/dist/assets/27555caab9fbe2595282c962.svg"
+    },
+    {
+      "path": "react/assets/282c8ecfc1cd3e6e2ad177dd.svg",
+      "sha256": "282c8ecfc1cd3e6e2ad177ddf31f16e0a987924fa44d67f26fd38b4904d3c7be",
+      "sourcePath": "packages/aurora-library/dist/assets/282c8ecfc1cd3e6e2ad177dd.svg"
+    },
+    {
+      "path": "react/assets/2a0c212c39aa2d26bd5c54cb.svg",
+      "sha256": "2a0c212c39aa2d26bd5c54cbf33c4f76a143b71587efea76161b7eabd590f619",
+      "sourcePath": "packages/aurora-library/dist/assets/2a0c212c39aa2d26bd5c54cb.svg"
+    },
+    {
+      "path": "react/assets/2a1764daccb57df6dca33dc0.svg",
+      "sha256": "2a1764daccb57df6dca33dc0474ea48418e47e83d139ca1db4951ab987874a84",
+      "sourcePath": "packages/aurora-library/dist/assets/2a1764daccb57df6dca33dc0.svg"
+    },
+    {
+      "path": "react/assets/2b2eaef791226a2f30a308d5.png",
+      "sha256": "2b2eaef791226a2f30a308d5368d0b277fa47584195806e9d3e8bfa65763f534",
+      "sourcePath": "packages/aurora-library/dist/assets/2b2eaef791226a2f30a308d5.png"
+    },
+    {
+      "path": "react/assets/2f3dffc96f54d485eeb689f8.svg",
+      "sha256": "2f3dffc96f54d485eeb689f8530b5032700e43823b723be067cabfe59d27f8f2",
+      "sourcePath": "packages/aurora-library/dist/assets/2f3dffc96f54d485eeb689f8.svg"
+    },
+    {
+      "path": "react/assets/32ece1a777ad188f72397fc6.svg",
+      "sha256": "32ece1a777ad188f72397fc649c7ec6df74bc983fb1b675316cd3c90a6d434e1",
+      "sourcePath": "packages/aurora-library/dist/assets/32ece1a777ad188f72397fc6.svg"
+    },
+    {
+      "path": "react/assets/340e41a2b8205c8d648cea63.svg",
+      "sha256": "340e41a2b8205c8d648cea636e5da35fe2ba9dc371001f29cbeca1f4f4c97246",
+      "sourcePath": "packages/aurora-library/dist/assets/340e41a2b8205c8d648cea63.svg"
+    },
+    {
+      "path": "react/assets/353a10d1ef36314b81428432.svg",
+      "sha256": "353a10d1ef36314b81428432d7018aac7f05a1b3c07430a8914d66e3c3076731",
+      "sourcePath": "packages/aurora-library/dist/assets/353a10d1ef36314b81428432.svg"
+    },
+    {
+      "path": "react/assets/36db67341d1fd72a9d8ec591.svg",
+      "sha256": "36db67341d1fd72a9d8ec59125a8e16fdd345e7bf07324b79b7f664f01d70d77",
+      "sourcePath": "packages/aurora-library/dist/assets/36db67341d1fd72a9d8ec591.svg"
+    },
+    {
+      "path": "react/assets/41112ad8a12ef941d9e9fa94.svg",
+      "sha256": "41112ad8a12ef941d9e9fa94350836a1442b875caa2d62a42d12d6923df0170d",
+      "sourcePath": "packages/aurora-library/dist/assets/41112ad8a12ef941d9e9fa94.svg"
+    },
+    {
+      "path": "react/assets/42e1f325551852f1387facc1.svg",
+      "sha256": "42e1f325551852f1387facc1b92c6c74f7a4954b6082e32a978712191acc3228",
+      "sourcePath": "packages/aurora-library/dist/assets/42e1f325551852f1387facc1.svg"
+    },
+    {
+      "path": "react/assets/42e708f2665e06b0a26503ba.svg",
+      "sha256": "42e708f2665e06b0a26503bada40dda59a1b69ad3ae5f29d77a0f2401a4a78b2",
+      "sourcePath": "packages/aurora-library/dist/assets/42e708f2665e06b0a26503ba.svg"
+    },
+    {
+      "path": "react/assets/43ae17752084460f87f6e90f.svg",
+      "sha256": "43ae17752084460f87f6e90fa15d7a16153194e52f6ff6411812e2e4046db589",
+      "sourcePath": "packages/aurora-library/dist/assets/43ae17752084460f87f6e90f.svg"
+    },
+    {
+      "path": "react/assets/485c17188e31d5d3b36a77e5.svg",
+      "sha256": "485c17188e31d5d3b36a77e5fa43506c320aef8e1db6c23ff98fac8a3b81d1b1",
+      "sourcePath": "packages/aurora-library/dist/assets/485c17188e31d5d3b36a77e5.svg"
+    },
+    {
+      "path": "react/assets/4ccdcb1e53537a7c828d996b.svg",
+      "sha256": "4ccdcb1e53537a7c828d996b3b5cebed9f028b5b95902f87288cce71901e606b",
+      "sourcePath": "packages/aurora-library/dist/assets/4ccdcb1e53537a7c828d996b.svg"
+    },
+    {
+      "path": "react/assets/5018e83fe6c0ab39ad243609.svg",
+      "sha256": "5018e83fe6c0ab39ad243609694afc7a69495c6b2c14660c52e10dbe5b95ed72",
+      "sourcePath": "packages/aurora-library/dist/assets/5018e83fe6c0ab39ad243609.svg"
+    },
+    {
+      "path": "react/assets/518612c61936b1f0e51df410.svg",
+      "sha256": "518612c61936b1f0e51df4108fec33409523d2a78a14714322fcd409065fcea2",
+      "sourcePath": "packages/aurora-library/dist/assets/518612c61936b1f0e51df410.svg"
+    },
+    {
+      "path": "react/assets/5490394d9daac49bb289dbc6.png",
+      "sha256": "5490394d9daac49bb289dbc6549bcc8e881a1dfbb83fc8d0d371f2ca500b859a",
+      "sourcePath": "packages/aurora-library/dist/assets/5490394d9daac49bb289dbc6.png"
+    },
+    {
+      "path": "react/assets/5557ae104cc5bd135d332e87.svg",
+      "sha256": "5557ae104cc5bd135d332e8757ec89723d89b3df4012db418af652164f2efa19",
+      "sourcePath": "packages/aurora-library/dist/assets/5557ae104cc5bd135d332e87.svg"
+    },
+    {
+      "path": "react/assets/5c1e6539cd9aa279b9d0ff70.svg",
+      "sha256": "5c1e6539cd9aa279b9d0ff709f4ff8b0183d317b03a66a31586e1d446bc5dcdb",
+      "sourcePath": "packages/aurora-library/dist/assets/5c1e6539cd9aa279b9d0ff70.svg"
+    },
+    {
+      "path": "react/assets/5c4b13a285e47ca101bdced4.svg",
+      "sha256": "5c4b13a285e47ca101bdced42aba87aa9f1246486141fa589d575bd789af95dc",
+      "sourcePath": "packages/aurora-library/dist/assets/5c4b13a285e47ca101bdced4.svg"
+    },
+    {
+      "path": "react/assets/5c60735acca2cd7d8a7595b8.png",
+      "sha256": "5c60735acca2cd7d8a7595b8e1155357cc75a19ac972860b2f53e5df4f52cbdf",
+      "sourcePath": "packages/aurora-library/dist/assets/5c60735acca2cd7d8a7595b8.png"
+    },
+    {
+      "path": "react/assets/5d272bada8b65459b1d82d06.svg",
+      "sha256": "5d272bada8b65459b1d82d068b91fd73c905534881d2b22ff62198c87b770ed2",
+      "sourcePath": "packages/aurora-library/dist/assets/5d272bada8b65459b1d82d06.svg"
+    },
+    {
+      "path": "react/assets/602a1f2a53134dccb9b5ef61.svg",
+      "sha256": "602a1f2a53134dccb9b5ef61d490eabe00d72b6479781fe2b003b53446f41fe6",
+      "sourcePath": "packages/aurora-library/dist/assets/602a1f2a53134dccb9b5ef61.svg"
+    },
+    {
+      "path": "react/assets/63452870e593ed480addecbf.svg",
+      "sha256": "63452870e593ed480addecbff0aca1e3581bc0844c144d755e39e9ca1f747ab3",
+      "sourcePath": "packages/aurora-library/dist/assets/63452870e593ed480addecbf.svg"
+    },
+    {
+      "path": "react/assets/652d9db0e5e2a55ee6a3f978.svg",
+      "sha256": "652d9db0e5e2a55ee6a3f978f7d13c82c7a3bc09812f87815700d90564111312",
+      "sourcePath": "packages/aurora-library/dist/assets/652d9db0e5e2a55ee6a3f978.svg"
+    },
+    {
+      "path": "react/assets/67bc8a30732ae26c52fd6ab1.svg",
+      "sha256": "67bc8a30732ae26c52fd6ab175a69964e652bd95f14d87d63749303acee7388a",
+      "sourcePath": "packages/aurora-library/dist/assets/67bc8a30732ae26c52fd6ab1.svg"
+    },
+    {
+      "path": "react/assets/6adcfe877f2ffd2a6c4ee845.svg",
+      "sha256": "6adcfe877f2ffd2a6c4ee84543d9fef10e5c09e49b8a56e457d7b4b515c42a24",
+      "sourcePath": "packages/aurora-library/dist/assets/6adcfe877f2ffd2a6c4ee845.svg"
+    },
+    {
+      "path": "react/assets/6b74ce518f65a7a8c0b417af.svg",
+      "sha256": "6b74ce518f65a7a8c0b417af755b8ab5ad0cf0baadeb5d1cd99411671b6bc1aa",
+      "sourcePath": "packages/aurora-library/dist/assets/6b74ce518f65a7a8c0b417af.svg"
+    },
+    {
+      "path": "react/assets/6d8349dd42202426b49a3914.svg",
+      "sha256": "6d8349dd42202426b49a3914651b944b6389dd7d5825aa1920ddbb14e83eef14",
+      "sourcePath": "packages/aurora-library/dist/assets/6d8349dd42202426b49a3914.svg"
+    },
+    {
+      "path": "react/assets/7236b28bac73e44471163ca9.png",
+      "sha256": "7236b28bac73e44471163ca9fbe47778210c331bd23d45f65e037aaeba913915",
+      "sourcePath": "packages/aurora-library/dist/assets/7236b28bac73e44471163ca9.png"
+    },
+    {
+      "path": "react/assets/72ce25307af70567219078f0.png",
+      "sha256": "72ce25307af70567219078f02d9abf35a4ca456cdd1ac80fa1d255f4140b7d4f",
+      "sourcePath": "packages/aurora-library/dist/assets/72ce25307af70567219078f0.png"
+    },
+    {
+      "path": "react/assets/73c20fec2cbae0a8829b8cfb.svg",
+      "sha256": "73c20fec2cbae0a8829b8cfb785b17b6634504c8e71bd46b68089b4443dec94a",
+      "sourcePath": "packages/aurora-library/dist/assets/73c20fec2cbae0a8829b8cfb.svg"
+    },
+    {
+      "path": "react/assets/73dfb68f6af3163f3117fb0d.svg",
+      "sha256": "73dfb68f6af3163f3117fb0d27c3702584623cf9cf01be8778d9b018f457e57b",
+      "sourcePath": "packages/aurora-library/dist/assets/73dfb68f6af3163f3117fb0d.svg"
+    },
+    {
+      "path": "react/assets/73e7d52463b4449ea146de09.svg",
+      "sha256": "73e7d52463b4449ea146de09d543bc630e50aa1e1ff63c2f4a5c0a593d77bbd1",
+      "sourcePath": "packages/aurora-library/dist/assets/73e7d52463b4449ea146de09.svg"
+    },
+    {
+      "path": "react/assets/741b3fde0172a0ef192704c4.svg",
+      "sha256": "741b3fde0172a0ef192704c4a78ee2b074983990d1fb0c11ec2cf78f7d9ac255",
+      "sourcePath": "packages/aurora-library/dist/assets/741b3fde0172a0ef192704c4.svg"
+    },
+    {
+      "path": "react/assets/771432495bf52d2afe338afd.svg",
+      "sha256": "771432495bf52d2afe338afdef010cdedbd5953b77ab42a89c96a25ead944b9c",
+      "sourcePath": "packages/aurora-library/dist/assets/771432495bf52d2afe338afd.svg"
+    },
+    {
+      "path": "react/assets/78f9cd3c0b214d7f20bea059.svg",
+      "sha256": "78f9cd3c0b214d7f20bea05970ada4ed73836125b65729965894843603e4b283",
+      "sourcePath": "packages/aurora-library/dist/assets/78f9cd3c0b214d7f20bea059.svg"
+    },
+    {
+      "path": "react/assets/7a1926d8c68d70b9e27dae7e.svg",
+      "sha256": "7a1926d8c68d70b9e27dae7eb30bd194b990735550cbc9a9418d11ab5fd9150a",
+      "sourcePath": "packages/aurora-library/dist/assets/7a1926d8c68d70b9e27dae7e.svg"
+    },
+    {
+      "path": "react/assets/7ce1a1782ae9f67483996a8b.svg",
+      "sha256": "7ce1a1782ae9f67483996a8b5172a17311f0207be465b5fe8416b70ad13bc2da",
+      "sourcePath": "packages/aurora-library/dist/assets/7ce1a1782ae9f67483996a8b.svg"
+    },
+    {
+      "path": "react/assets/80039e26f5c2a59301c1113d.svg",
+      "sha256": "80039e26f5c2a59301c1113dadb76d133d6c0996e839c643e04ea158f9f6570b",
+      "sourcePath": "packages/aurora-library/dist/assets/80039e26f5c2a59301c1113d.svg"
+    },
+    {
+      "path": "react/assets/815ecb0871152db8a6d92b16.svg",
+      "sha256": "815ecb0871152db8a6d92b160f2a24c536855801c27571fbf5a4536542a682f1",
+      "sourcePath": "packages/aurora-library/dist/assets/815ecb0871152db8a6d92b16.svg"
+    },
+    {
+      "path": "react/assets/83584edd0972c11076203402.svg",
+      "sha256": "83584edd0972c1107620340230b38ce1d1d5a9064136531a1ae8f29f5580cad1",
+      "sourcePath": "packages/aurora-library/dist/assets/83584edd0972c11076203402.svg"
+    },
+    {
+      "path": "react/assets/88c7ca39163c5b9507df823c.svg",
+      "sha256": "88c7ca39163c5b9507df823c108e3d1be18b58fd899ebb9c4ee52262e625c7e3",
+      "sourcePath": "packages/aurora-library/dist/assets/88c7ca39163c5b9507df823c.svg"
+    },
+    {
+      "path": "react/assets/8e6e749431d3847302246bb3.svg",
+      "sha256": "8e6e749431d3847302246bb3e320658c3fdebceedd5cd38585960d4e0bc02571",
+      "sourcePath": "packages/aurora-library/dist/assets/8e6e749431d3847302246bb3.svg"
+    },
+    {
+      "path": "react/assets/8ebe25fdf509d67e17cfb81d.svg",
+      "sha256": "8ebe25fdf509d67e17cfb81d05fcc8db288b5a2522f75eed24a0176fa002142f",
+      "sourcePath": "packages/aurora-library/dist/assets/8ebe25fdf509d67e17cfb81d.svg"
+    },
+    {
+      "path": "react/assets/8eee8a08cce4b08df07fba5c.svg",
+      "sha256": "8eee8a08cce4b08df07fba5cd98f108262b6bfbf9dde0494e913e40573f3fb47",
+      "sourcePath": "packages/aurora-library/dist/assets/8eee8a08cce4b08df07fba5c.svg"
+    },
+    {
+      "path": "react/assets/8feb46dbe67706029688ed97.svg",
+      "sha256": "8feb46dbe67706029688ed97b0236215b151ea64b7ac577fa10c791017e3bd80",
+      "sourcePath": "packages/aurora-library/dist/assets/8feb46dbe67706029688ed97.svg"
+    },
+    {
+      "path": "react/assets/91599777e60a853b04dc636b.svg",
+      "sha256": "91599777e60a853b04dc636ba3fa82ce40aba72fbd86c30e13e6ce5075cbdc03",
+      "sourcePath": "packages/aurora-library/dist/assets/91599777e60a853b04dc636b.svg"
+    },
+    {
+      "path": "react/assets/95ee761d917bb342ccbade44.svg",
+      "sha256": "95ee761d917bb342ccbade44bd1cdc8ad6f395dedb0fa751f81a95be83df431e",
+      "sourcePath": "packages/aurora-library/dist/assets/95ee761d917bb342ccbade44.svg"
+    },
+    {
+      "path": "react/assets/9c216aa49577fb026e4d939b.svg",
+      "sha256": "9c216aa49577fb026e4d939b0f0d43666b6d8c97ef88671c5cc7a3538e9a4873",
+      "sourcePath": "packages/aurora-library/dist/assets/9c216aa49577fb026e4d939b.svg"
+    },
+    {
+      "path": "react/assets/9eb58e89f81cc3296111dce6.png",
+      "sha256": "9eb58e89f81cc3296111dce672af3fedcf16365a7b1b5795e3b7326a2cb50163",
+      "sourcePath": "packages/aurora-library/dist/assets/9eb58e89f81cc3296111dce6.png"
+    },
+    {
+      "path": "react/assets/a045663d7bed1d9b8c04c184.png",
+      "sha256": "a045663d7bed1d9b8c04c184fd448625d4bf2aedc4c98790f1c5750ee967f101",
+      "sourcePath": "packages/aurora-library/dist/assets/a045663d7bed1d9b8c04c184.png"
+    },
+    {
+      "path": "react/assets/a0a8f59a7e04e1659a82d21d.svg",
+      "sha256": "a0a8f59a7e04e1659a82d21d96c501c2a45eff9448b422acac1542d7bf823e4f",
+      "sourcePath": "packages/aurora-library/dist/assets/a0a8f59a7e04e1659a82d21d.svg"
+    },
+    {
+      "path": "react/assets/a3b15ac3ee54945d27b3e4a6.svg",
+      "sha256": "a3b15ac3ee54945d27b3e4a604dd5cd7ebf518b4011412f28108ebb3828ca469",
+      "sourcePath": "packages/aurora-library/dist/assets/a3b15ac3ee54945d27b3e4a6.svg"
+    },
+    {
+      "path": "react/assets/a6ffdf909e58926e4a0edb87.svg",
+      "sha256": "a6ffdf909e58926e4a0edb87a2f476d852434c4a620bef809d4a483fd79f7573",
+      "sourcePath": "packages/aurora-library/dist/assets/a6ffdf909e58926e4a0edb87.svg"
+    },
+    {
+      "path": "react/assets/a7d7978c3d74405dff73bf06.svg",
+      "sha256": "a7d7978c3d74405dff73bf06f976a340a05bc5b1ba14aba2a6a222a03b2f0c93",
+      "sourcePath": "packages/aurora-library/dist/assets/a7d7978c3d74405dff73bf06.svg"
+    },
+    {
+      "path": "react/assets/a922f0ea7b9a1f87d3d747eb.svg",
+      "sha256": "a922f0ea7b9a1f87d3d747eb0de2a7e96b4c1b69a61c176abc64673c9ae01484",
+      "sourcePath": "packages/aurora-library/dist/assets/a922f0ea7b9a1f87d3d747eb.svg"
+    },
+    {
+      "path": "react/assets/af3fc19afc8ec8486206a07b.svg",
+      "sha256": "af3fc19afc8ec8486206a07b39db1f53ab1fdc082a09cb79349ae9ce9782ac27",
+      "sourcePath": "packages/aurora-library/dist/assets/af3fc19afc8ec8486206a07b.svg"
+    },
+    {
+      "path": "react/assets/af797d355dc156ae142e7734.svg",
+      "sha256": "af797d355dc156ae142e77343745a562f682c17a46dc956c968d19bf569c4964",
+      "sourcePath": "packages/aurora-library/dist/assets/af797d355dc156ae142e7734.svg"
+    },
+    {
+      "path": "react/assets/b09300085fe56811ee91a579.svg",
+      "sha256": "b09300085fe56811ee91a5796c5732dee0acad2c9cb07874b0033b9eb2682742",
+      "sourcePath": "packages/aurora-library/dist/assets/b09300085fe56811ee91a579.svg"
+    },
+    {
+      "path": "react/assets/b0c2bed2fc5c538d0974a1bd.svg",
+      "sha256": "b0c2bed2fc5c538d0974a1bd3e0d394799459c20109e0123f3d48368cacd663e",
+      "sourcePath": "packages/aurora-library/dist/assets/b0c2bed2fc5c538d0974a1bd.svg"
+    },
+    {
+      "path": "react/assets/b579a4305ebd8ace0e6d5474.svg",
+      "sha256": "b579a4305ebd8ace0e6d5474a60c586cee8f8d713e2040cd7171db4ac1643158",
+      "sourcePath": "packages/aurora-library/dist/assets/b579a4305ebd8ace0e6d5474.svg"
+    },
+    {
+      "path": "react/assets/b603e2d6fa8147bc8e99d632.svg",
+      "sha256": "b603e2d6fa8147bc8e99d63254efa207e1f167ec46a4568f0bbf75942fb4436d",
+      "sourcePath": "packages/aurora-library/dist/assets/b603e2d6fa8147bc8e99d632.svg"
+    },
+    {
+      "path": "react/assets/bb38d52ab9facfe25efb9df4.svg",
+      "sha256": "bb38d52ab9facfe25efb9df457239b0219e20339f0c792c239d0a7f236b74e2f",
+      "sourcePath": "packages/aurora-library/dist/assets/bb38d52ab9facfe25efb9df4.svg"
+    },
+    {
+      "path": "react/assets/bb717b76538a7b291a5bcaea.svg",
+      "sha256": "bb717b76538a7b291a5bcaeae73010cab98dae6a336037b5f1d9b8ec95320da9",
+      "sourcePath": "packages/aurora-library/dist/assets/bb717b76538a7b291a5bcaea.svg"
+    },
+    {
+      "path": "react/assets/bddd458849d2fd2c4b2f2843.svg",
+      "sha256": "bddd458849d2fd2c4b2f284372f460e37196b38cc39d38db748ec61009e3de3c",
+      "sourcePath": "packages/aurora-library/dist/assets/bddd458849d2fd2c4b2f2843.svg"
+    },
+    {
+      "path": "react/assets/bf1edb518e0a8c24b68fed42.svg",
+      "sha256": "bf1edb518e0a8c24b68fed42c7c2e680c74664bc92e3f45319a75cd8facc6edb",
+      "sourcePath": "packages/aurora-library/dist/assets/bf1edb518e0a8c24b68fed42.svg"
+    },
+    {
+      "path": "react/assets/c099299cd9dbf7e10414c8e2.svg",
+      "sha256": "c099299cd9dbf7e10414c8e21354f0d60d6b8ddb49a25f947884fb5d01826c56",
+      "sourcePath": "packages/aurora-library/dist/assets/c099299cd9dbf7e10414c8e2.svg"
+    },
+    {
+      "path": "react/assets/c84a14d162a7b3ca9e56477e.png",
+      "sha256": "c84a14d162a7b3ca9e56477e44522c2e3d720a9f51aee361c8a506f245ffbed7",
+      "sourcePath": "packages/aurora-library/dist/assets/c84a14d162a7b3ca9e56477e.png"
+    },
+    {
+      "path": "react/assets/c8aeec50af95ac5cac4e5424.svg",
+      "sha256": "c8aeec50af95ac5cac4e5424ed252e11e7aa35a1d9e844b7b2d9fa153569af51",
+      "sourcePath": "packages/aurora-library/dist/assets/c8aeec50af95ac5cac4e5424.svg"
+    },
+    {
+      "path": "react/assets/ca38f34159cc7aeab26b5fb5.svg",
+      "sha256": "ca38f34159cc7aeab26b5fb5769486720404da846dc181db5f8b74138bc913cc",
+      "sourcePath": "packages/aurora-library/dist/assets/ca38f34159cc7aeab26b5fb5.svg"
+    },
+    {
+      "path": "react/assets/cc4bbbbbe3f5dfa39af443ee.svg",
+      "sha256": "cc4bbbbbe3f5dfa39af443eeaf4c76f6c4b04e08d889ea361493d86b45fdbefe",
+      "sourcePath": "packages/aurora-library/dist/assets/cc4bbbbbe3f5dfa39af443ee.svg"
+    },
+    {
+      "path": "react/assets/d2d4a967ba9c8d7d08b938c8.svg",
+      "sha256": "d2d4a967ba9c8d7d08b938c8c975dcd59a1731b21e77a1f8a0faffa78e85aecc",
+      "sourcePath": "packages/aurora-library/dist/assets/d2d4a967ba9c8d7d08b938c8.svg"
+    },
+    {
+      "path": "react/assets/d2ea0675abd9abf7783ac3ee.svg",
+      "sha256": "d2ea0675abd9abf7783ac3eecf954dd922318020184543a465a1286264683baa",
+      "sourcePath": "packages/aurora-library/dist/assets/d2ea0675abd9abf7783ac3ee.svg"
+    },
+    {
+      "path": "react/assets/d45afffa2b72010890fb039f.png",
+      "sha256": "d45afffa2b72010890fb039fe1fd198636d57f250d4a8154e8eff2213fda945c",
+      "sourcePath": "packages/aurora-library/dist/assets/d45afffa2b72010890fb039f.png"
+    },
+    {
+      "path": "react/assets/d62e14accd0643ae948d1a3c.png",
+      "sha256": "d62e14accd0643ae948d1a3cf24059654471fcd8ce4f83ca56871930d1127f09",
+      "sourcePath": "packages/aurora-library/dist/assets/d62e14accd0643ae948d1a3c.png"
+    },
+    {
+      "path": "react/assets/dba1c50d5d7ecd3877b9437d.png",
+      "sha256": "dba1c50d5d7ecd3877b9437dae4e1f7239759bdca73f655ce3984ab776b6fae8",
+      "sourcePath": "packages/aurora-library/dist/assets/dba1c50d5d7ecd3877b9437d.png"
+    },
+    {
+      "path": "react/assets/dbec848487007f4459a8e53e.png",
+      "sha256": "dbec848487007f4459a8e53e826e1e64d386ece200c272a50284d009b4c25d2c",
+      "sourcePath": "packages/aurora-library/dist/assets/dbec848487007f4459a8e53e.png"
+    },
+    {
+      "path": "react/assets/df52d889fb517147e97dd2fc.svg",
+      "sha256": "df52d889fb517147e97dd2fc6cdbb008eb5f034fb8c9fe97b520d63ff387604d",
+      "sourcePath": "packages/aurora-library/dist/assets/df52d889fb517147e97dd2fc.svg"
+    },
+    {
+      "path": "react/assets/e359fbac1be75cab67eb81d6.svg",
+      "sha256": "e359fbac1be75cab67eb81d630aa8d6178809c38cfcae8e14af6dab98be097bb",
+      "sourcePath": "packages/aurora-library/dist/assets/e359fbac1be75cab67eb81d6.svg"
+    },
+    {
+      "path": "react/assets/e3d4a39f81771abf9a277870.svg",
+      "sha256": "e3d4a39f81771abf9a277870aad4e53d412f22935e7000ec96fc39e80d1bd7a3",
+      "sourcePath": "packages/aurora-library/dist/assets/e3d4a39f81771abf9a277870.svg"
+    },
+    {
+      "path": "react/assets/e9aa05151c25759c17c4185d.svg",
+      "sha256": "e9aa05151c25759c17c4185d3fde2c1cab10680c9a055051c5107b4d29317849",
+      "sourcePath": "packages/aurora-library/dist/assets/e9aa05151c25759c17c4185d.svg"
+    },
+    {
+      "path": "react/assets/ed0274f40fffce10ef5006f1.svg",
+      "sha256": "ed0274f40fffce10ef5006f1e1bfa5c902108a0f468925064bb04514c15c2e57",
+      "sourcePath": "packages/aurora-library/dist/assets/ed0274f40fffce10ef5006f1.svg"
+    },
+    {
+      "path": "react/assets/ed3118670855b684d7c2930a.png",
+      "sha256": "ed3118670855b684d7c2930a5a3e501dba0ecda23c683796e7adef9c214fb40b",
+      "sourcePath": "packages/aurora-library/dist/assets/ed3118670855b684d7c2930a.png"
+    },
+    {
+      "path": "react/assets/f1cef41f0627660374cb6b5e.svg",
+      "sha256": "f1cef41f0627660374cb6b5e285e90552815d1b62725df05ebe2066f6ce94a85",
+      "sourcePath": "packages/aurora-library/dist/assets/f1cef41f0627660374cb6b5e.svg"
+    },
+    {
+      "path": "react/assets/f254199ee38996be2d8ae8a3.svg",
+      "sha256": "f254199ee38996be2d8ae8a3daff0a78bc94cfb9e9a7a7be459d8a4980a9edad",
+      "sourcePath": "packages/aurora-library/dist/assets/f254199ee38996be2d8ae8a3.svg"
+    },
+    {
+      "path": "react/assets/f281261fd586847c922e33c4.svg",
+      "sha256": "f281261fd586847c922e33c4b8c7f9f2377df7e9c8ea39e1536720cd0df0e5ed",
+      "sourcePath": "packages/aurora-library/dist/assets/f281261fd586847c922e33c4.svg"
+    },
+    {
+      "path": "react/assets/f2c17ed20035a9ef8772c8fb.svg",
+      "sha256": "f2c17ed20035a9ef8772c8fb0a4497a749d16804b28082df45b37e4ede3618fd",
+      "sourcePath": "packages/aurora-library/dist/assets/f2c17ed20035a9ef8772c8fb.svg"
+    },
+    {
+      "path": "react/assets/f375debc300e80c2c6e9db58.svg",
+      "sha256": "f375debc300e80c2c6e9db5858b03e795f4a0f341014b60f03e8d0b920053cab",
+      "sourcePath": "packages/aurora-library/dist/assets/f375debc300e80c2c6e9db58.svg"
+    },
+    {
+      "path": "react/assets/f87aac86036203f6e1ee638d.svg",
+      "sha256": "f87aac86036203f6e1ee638d18e5181076c13ba306ce979ff632c6d7fadf4e35",
+      "sourcePath": "packages/aurora-library/dist/assets/f87aac86036203f6e1ee638d.svg"
+    },
+    {
+      "path": "react/assets/faf53038c0b4e89d01e75269.svg",
+      "sha256": "faf53038c0b4e89d01e752695ea2e0b6165ca43215726a89242c2f352720aaf3",
+      "sourcePath": "packages/aurora-library/dist/assets/faf53038c0b4e89d01e75269.svg"
+    },
+    {
+      "path": "react/assets/fc9ea7a388df467fdf724936.svg",
+      "sha256": "fc9ea7a388df467fdf724936cf1d46123997b1f4cc5e270bbcf7f3a1facb0f01",
+      "sourcePath": "packages/aurora-library/dist/assets/fc9ea7a388df467fdf724936.svg"
+    },
+    {
+      "path": "react/assets/fda48d8942b545b2430630f5.svg",
+      "sha256": "fda48d8942b545b2430630f5b6ace4a24c35066d1cfc346631c5c202ed7aa5dd",
+      "sourcePath": "packages/aurora-library/dist/assets/fda48d8942b545b2430630f5.svg"
+    },
+    {
+      "path": "react/assets/ff6682d4783a0ab911b905d0.svg",
+      "sha256": "ff6682d4783a0ab911b905d0b47d9c06bec14fd86a4d3cfab280dde95714dba7",
+      "sourcePath": "packages/aurora-library/dist/assets/ff6682d4783a0ab911b905d0.svg"
+    },
+    {
+      "path": "react/build-manifest.json",
+      "sha256": "dfdee6d7fb8d2d9138902f58576479756d482f22f45b4eb9c45c4bda4cd04e84",
+      "sourcePath": "scripts/bundle-aurora-library.py (generated adapter)"
+    },
+    {
+      "path": "react/catalog.json",
+      "sha256": "16ec0ce9f05c116d37ae61019d12e8b779e104ea7d8e8fac76ee4dbd941bda22",
+      "sourcePath": "scripts/bundle-aurora-library.py (generated adapter)"
+    },
+    {
+      "path": "react/code-connect-status.json",
+      "sha256": "5156cb1bf940e0d01374984a77caa72941129c2b4ffdb27b16da701aa91193d8",
+      "sourcePath": "scripts/bundle-aurora-library.py (generated adapter)"
+    },
+    {
+      "path": "react/coverage.json",
+      "sha256": "a01d9914818585bb6cb21c96f8049781983fecf244582cfb941304623c99a81f",
+      "sourcePath": "packages/aurora-library/dist/coverage.json"
+    },
+    {
+      "path": "react/fonts.css",
+      "sha256": "ac83d57e43a25a9ac0de7b602992ca0eceec3074b9fe958b29cfcfc7b73b8b1a",
+      "sourcePath": "scripts/bundle-aurora-library.py (generated adapter)"
+    },
+    {
+      "path": "react/fonts.css.d.ts",
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "sourcePath": "scripts/bundle-aurora-library.py (generated adapter)"
+    },
+    {
+      "path": "react/fonts/OFL-Inter.txt",
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+      "sourcePath": "packages/aurora-library/assets/fonts/OFL-Inter.txt"
+    },
+    {
+      "path": "react/fonts/inter-variable-0.ttf",
+      "sha256": "5dcea0643d98c3b9aa1cb1269da7bda17007eef92f47e2c9a001ca8d75b2f1f0",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-0.ttf"
+    },
+    {
+      "path": "react/fonts/inter-variable-1.ttf",
+      "sha256": "ef8f755d933b9310804cc9152f1f18cb2ac460d6b05054ec913d889c9f11f79e",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-1.ttf"
+    },
+    {
+      "path": "react/fonts/inter-variable-10.ttf",
+      "sha256": "eec66af7f2337bd34fe6e801cf92ededcb57a20c0d7bc40a61d4eefcbe3dd40c",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-10.ttf"
+    },
+    {
+      "path": "react/fonts/inter-variable-11.ttf",
+      "sha256": "1be2b11bc5c1e0f78deeeb4e8049b2f5cca9c476b77bb1912aac748ba4a37312",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-11.ttf"
+    },
+    {
+      "path": "react/fonts/inter-variable-12.ttf",
+      "sha256": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-12.ttf"
+    },
+    {
+      "path": "react/fonts/inter-variable-13.ttf",
+      "sha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-13.ttf"
+    },
+    {
+      "path": "react/fonts/inter-variable-14.ttf",
+      "sha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-14.ttf"
+    },
+    {
+      "path": "react/fonts/inter-variable-15.ttf",
+      "sha256": "3428fd01a45310781cfc06d8957c5485de2432132b405ebe6e53efec0719c229",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-15.ttf"
+    },
+    {
+      "path": "react/fonts/inter-variable-16.ttf",
+      "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-16.ttf"
+    },
+    {
+      "path": "react/fonts/inter-variable-17.ttf",
+      "sha256": "d0f4bc7faca468376e3db9b5e57afcdc2192134c9ac82a9511f32767b56853a4",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-17.ttf"
+    },
+    {
+      "path": "react/fonts/inter-variable-2.ttf",
+      "sha256": "f0f1d28363e3a64ef7ed59937b268494ad5e55e76b2c77eaab2f94c80cce17c9",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-2.ttf"
+    },
+    {
+      "path": "react/fonts/inter-variable-3.ttf",
+      "sha256": "5b6f0c6f26e5c554a64cdcc3a9b5d802b7f9aec6206f1dbcfcdcad7b5860a2a9",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-3.ttf"
+    },
+    {
+      "path": "react/fonts/inter-variable-4.ttf",
+      "sha256": "c1811d32ac0f6eed1bbf57529f2ecdfc6c717d48a969dd864942436315a1b198",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-4.ttf"
+    },
+    {
+      "path": "react/fonts/inter-variable-5.ttf",
+      "sha256": "bfaead52c6371b644ff234459211097e2f90441dc3ffd50987516d5acab0c9ea",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-5.ttf"
+    },
+    {
+      "path": "react/fonts/inter-variable-6.ttf",
+      "sha256": "43650eb9c3a23ddc6fc1f499d1e74892fa573119ae1ae3d83975918b10fa22a7",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-6.ttf"
+    },
+    {
+      "path": "react/fonts/inter-variable-7.ttf",
+      "sha256": "7c1999c303b4d292f039630440d717f58edb8139f9f1e3b25074e4e07f95b441",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-7.ttf"
+    },
+    {
+      "path": "react/fonts/inter-variable-8.ttf",
+      "sha256": "e59f6349bc74d1f9f46d50d47d6c12a57a51eb56d632c03642d678b2e7b054eb",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-8.ttf"
+    },
+    {
+      "path": "react/fonts/inter-variable-9.ttf",
+      "sha256": "5b717029a2c4cfca2167e97be1157edb24151591e5ec96eb484745c392817a7a",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter-variable-9.ttf"
+    },
+    {
+      "path": "react/fonts/inter.css",
+      "sha256": "83f4198c7f0efc95b8110470737389d7cdc8ba51e9f21f7097d77e881c290c42",
+      "sourcePath": "packages/aurora-library/assets/fonts/inter.css"
+    },
+    {
+      "path": "react/index.d.ts",
+      "sha256": "4de4381a480eb01f02dad4cac1b5f9b148574e3b67ce850c6405a9c783ab236c",
+      "sourcePath": "packages/aurora-library/dist/index.d.ts"
+    },
+    {
+      "path": "react/index.js",
+      "sha256": "bf92a5b1605f49370aeac1df09d3457185c51990ae0590eb8fb34c52f6e93556",
+      "sourcePath": "packages/aurora-library/dist/index.js"
+    },
+    {
+      "path": "react/native-assets/034b9f07cf2ea34f381b2294d2d488660e5ece47.png",
+      "sha256": "334371184a3c2f5e4f3d7e758728991a862c49a6d3f7e0ff9b20b7f7d8c44b45",
+      "sourcePath": "packages/aurora-library/dist/native-assets/034b9f07cf2ea34f381b2294d2d488660e5ece47.png"
+    },
+    {
+      "path": "react/native-assets/05c304fff296b67e98419514b474f58f6e548687.png",
+      "sha256": "c0bd6d61cc360815cc37bba910d837581be311f7aae0d031b286786a93939c3e",
+      "sourcePath": "packages/aurora-library/dist/native-assets/05c304fff296b67e98419514b474f58f6e548687.png"
+    },
+    {
+      "path": "react/native-assets/07917d480f3312860e6c2ba2bb2771854b68e467.png",
+      "sha256": "6a20a5836dee48a33ea7a7bd9c0665423bc0aa17e7c195deb298145e1add7449",
+      "sourcePath": "packages/aurora-library/dist/native-assets/07917d480f3312860e6c2ba2bb2771854b68e467.png"
+    },
+    {
+      "path": "react/native-assets/090f42aebeaa1b7d64241455e9ad68d127b225b7.png",
+      "sha256": "137533d9e6c057c95dc6332e7baa4e2b17f52bde77d551d6520329f70e512236",
+      "sourcePath": "packages/aurora-library/dist/native-assets/090f42aebeaa1b7d64241455e9ad68d127b225b7.png"
+    },
+    {
+      "path": "react/native-assets/0bfbea6d02f28c9d6691d86b7bf4bd0c9643017b.png",
+      "sha256": "d870077e9c19385bc9581b043327a846f591368dfa1be2891e97ddf26f0c50ae",
+      "sourcePath": "packages/aurora-library/dist/native-assets/0bfbea6d02f28c9d6691d86b7bf4bd0c9643017b.png"
+    },
+    {
+      "path": "react/native-assets/0c483cf5ce7e6a1cb8fe308b8eb03e473a180926.png",
+      "sha256": "668ebcd9d360933abd9044965844ee1c53b1f173a87b2063b96aab6dda178533",
+      "sourcePath": "packages/aurora-library/dist/native-assets/0c483cf5ce7e6a1cb8fe308b8eb03e473a180926.png"
+    },
+    {
+      "path": "react/native-assets/1327b53315df1de97d96b260d4ff0ff3912bc5da.png",
+      "sha256": "1c8f406bcb8b0d5f6fa5eb8646fcee5cc5c6cd7e5b48781b416d60e7ed8d1440",
+      "sourcePath": "packages/aurora-library/dist/native-assets/1327b53315df1de97d96b260d4ff0ff3912bc5da.png"
+    },
+    {
+      "path": "react/native-assets/13860502550f07d2c0adae444dc9dd538c7299c7.png",
+      "sha256": "8989812f9e66a18433b0d5f6071a990992d4c04e3d0375cf530f88ed9aa5836e",
+      "sourcePath": "packages/aurora-library/dist/native-assets/13860502550f07d2c0adae444dc9dd538c7299c7.png"
+    },
+    {
+      "path": "react/native-assets/1a9ca8bbbb7cdb3f48378fd48f0d86129f67ba85.png",
+      "sha256": "0032b6c31691ceff640d130701d644ac2973ec39eec253ab7007f6c0c0d4c806",
+      "sourcePath": "packages/aurora-library/dist/native-assets/1a9ca8bbbb7cdb3f48378fd48f0d86129f67ba85.png"
+    },
+    {
+      "path": "react/native-assets/1bc25e80fda0d39ff9c394db556e537c20a8f9b8.png",
+      "sha256": "175aeb77760f33227c10d23bada1882099bf7601aa81314b81a8a5f64bcb61a1",
+      "sourcePath": "packages/aurora-library/dist/native-assets/1bc25e80fda0d39ff9c394db556e537c20a8f9b8.png"
+    },
+    {
+      "path": "react/native-assets/1ef645af2d5d1567a647c1dc48bae5f4baf3ef29.png",
+      "sha256": "7aa6ef725746d3f85a8d4ac5fdd28fba32e8b1ef3ba0822d297bed0cd51e613e",
+      "sourcePath": "packages/aurora-library/dist/native-assets/1ef645af2d5d1567a647c1dc48bae5f4baf3ef29.png"
+    },
+    {
+      "path": "react/native-assets/1fd3ea6ef9229647e7027815c949472bc8165abf.jpg",
+      "sha256": "abd3d6d115c858841d840a32771c200e45ed310219f64b8d285fef9dd1709d64",
+      "sourcePath": "packages/aurora-library/dist/native-assets/1fd3ea6ef9229647e7027815c949472bc8165abf.jpg"
+    },
+    {
+      "path": "react/native-assets/249ca093c5597821e98bcb78dd1ba0ef136583be.png",
+      "sha256": "449359983c7d3344241664218b274981a8c76dd9c63d98b0ca1435c87892d3e3",
+      "sourcePath": "packages/aurora-library/dist/native-assets/249ca093c5597821e98bcb78dd1ba0ef136583be.png"
+    },
+    {
+      "path": "react/native-assets/2aa78a445c7cfeb36cf7bbb8620ce0dd985c976f.png",
+      "sha256": "4a900e75c51cb0b3521ee2192bc7e3cd8449f26850218a5e5d26c021b4bdbe4c",
+      "sourcePath": "packages/aurora-library/dist/native-assets/2aa78a445c7cfeb36cf7bbb8620ce0dd985c976f.png"
+    },
+    {
+      "path": "react/native-assets/2c7a3f6b7761c94bfb3d037080180eab8ab4204b.png",
+      "sha256": "d2ffd9923e0c12c241ec9abbf85acdc62afcefdc1c2a23974fb59cda18529d2c",
+      "sourcePath": "packages/aurora-library/dist/native-assets/2c7a3f6b7761c94bfb3d037080180eab8ab4204b.png"
+    },
+    {
+      "path": "react/native-assets/2d2e814090b1d4536752df52132903c81a983e27.png",
+      "sha256": "4c08a23d4a3eb39ad0affecdd5fab747e0dcc7263f1906cab5771eeb71c998d4",
+      "sourcePath": "packages/aurora-library/dist/native-assets/2d2e814090b1d4536752df52132903c81a983e27.png"
+    },
+    {
+      "path": "react/native-assets/2eeaf5c22732b2efdc54f1c87bc3f137ad1f4594.jpg",
+      "sha256": "d313129e301577772f63805127c1efdd8c7c5f9569bef4c8ef7c79939a9328aa",
+      "sourcePath": "packages/aurora-library/dist/native-assets/2eeaf5c22732b2efdc54f1c87bc3f137ad1f4594.jpg"
+    },
+    {
+      "path": "react/native-assets/2f70a18d0e121ff8184521d48ca6d6a3f59ba808.png",
+      "sha256": "4bd584104ae9f1b1e20098c49c56b08fe4d91c661ac1e950dd311155548fe941",
+      "sourcePath": "packages/aurora-library/dist/native-assets/2f70a18d0e121ff8184521d48ca6d6a3f59ba808.png"
+    },
+    {
+      "path": "react/native-assets/3378c032c502f553645a8250b7ab4412f46d5b49.png",
+      "sha256": "1db0fda683752d6c3f17ee6724942cb2a254bfe1fd375bbfea62e9abd1b4ce2f",
+      "sourcePath": "packages/aurora-library/dist/native-assets/3378c032c502f553645a8250b7ab4412f46d5b49.png"
+    },
+    {
+      "path": "react/native-assets/33a34281c16e143862240bff20249a11f7105ffc.png",
+      "sha256": "e71315aa19831cfc61956c8e93c40073bdab5c35a9d427255e31b04e0a27f90a",
+      "sourcePath": "packages/aurora-library/dist/native-assets/33a34281c16e143862240bff20249a11f7105ffc.png"
+    },
+    {
+      "path": "react/native-assets/33d840c1df2d26cb419b636303258049293264e6.png",
+      "sha256": "eece4bc9dc20d243d363df50f49f71b6e3ae42cf74b811d99e817c67e53ccbfc",
+      "sourcePath": "packages/aurora-library/dist/native-assets/33d840c1df2d26cb419b636303258049293264e6.png"
+    },
+    {
+      "path": "react/native-assets/348cfcf0c499753db79b944cb519359f6077e084.png",
+      "sha256": "aaafb31c9beb7073fc4c7eeb0ed5ed2141e797469b1a7980267a994f14f96039",
+      "sourcePath": "packages/aurora-library/dist/native-assets/348cfcf0c499753db79b944cb519359f6077e084.png"
+    },
+    {
+      "path": "react/native-assets/351822c33c4ad466d63e78f30ce052fb819c526b.png",
+      "sha256": "2408704d65b9205555e60d32bb344c81d6e00f27a44e38a2e0864f27398a87d5",
+      "sourcePath": "packages/aurora-library/dist/native-assets/351822c33c4ad466d63e78f30ce052fb819c526b.png"
+    },
+    {
+      "path": "react/native-assets/36045a362edb39c6ddd38533b3c650cb220f204f.jpg",
+      "sha256": "848f78b2d04bae5f13057a61a6f1c7ec8853178282719b3f44fa3f0356341bc4",
+      "sourcePath": "packages/aurora-library/dist/native-assets/36045a362edb39c6ddd38533b3c650cb220f204f.jpg"
+    },
+    {
+      "path": "react/native-assets/3743899285c21f7e1222a4d408f1c83a323d4e0d.jpg",
+      "sha256": "5b4dbf7ae960b6cadd40b3a3dc2aaf78d0f27844ddd9a50e662e0aa18548cf44",
+      "sourcePath": "packages/aurora-library/dist/native-assets/3743899285c21f7e1222a4d408f1c83a323d4e0d.jpg"
+    },
+    {
+      "path": "react/native-assets/38375c83c32c41b19aae0f56ae2b3a61b1cde53d.jpg",
+      "sha256": "424751d0cb8d54b9c44eab318ab9105bb39348b48dedcb0db5b1a26c4003f858",
+      "sourcePath": "packages/aurora-library/dist/native-assets/38375c83c32c41b19aae0f56ae2b3a61b1cde53d.jpg"
+    },
+    {
+      "path": "react/native-assets/392034a41db5b48b92bd53690d494a0a802497f8.png",
+      "sha256": "ef65b4bed9e2ca61755d000c844d1bc87f187dec50fedae959399aae7bf6190f",
+      "sourcePath": "packages/aurora-library/dist/native-assets/392034a41db5b48b92bd53690d494a0a802497f8.png"
+    },
+    {
+      "path": "react/native-assets/39bb46526a0deb051f148af37899315bb5a75c32.png",
+      "sha256": "0bf99ec176bfc4c77cad5fd7bbc40141b3458e30e49d563d1459dd62d8a94e13",
+      "sourcePath": "packages/aurora-library/dist/native-assets/39bb46526a0deb051f148af37899315bb5a75c32.png"
+    },
+    {
+      "path": "react/native-assets/3b2b12c663b2b86b5cce3dbed73f54c4d6604d64.png",
+      "sha256": "bc54d47d28489cee00b7907a81c824a38a92e38a0723df4b4424ba2c43d6c0c5",
+      "sourcePath": "packages/aurora-library/dist/native-assets/3b2b12c663b2b86b5cce3dbed73f54c4d6604d64.png"
+    },
+    {
+      "path": "react/native-assets/3d409ee6581e65f5d5b90eda9a96db681f0f8344.png",
+      "sha256": "a4613a13f8123ecb392c85a1f1558f94f24585e0f59b745fcc307b4bf315dfe5",
+      "sourcePath": "packages/aurora-library/dist/native-assets/3d409ee6581e65f5d5b90eda9a96db681f0f8344.png"
+    },
+    {
+      "path": "react/native-assets/3e0935784c0d002b9821f93178e8e5ee7b3fe5d7.jpg",
+      "sha256": "40f3cc28fba8be9392af38d63023e444a29a2da3d0bb5618946a5720b8b560e6",
+      "sourcePath": "packages/aurora-library/dist/native-assets/3e0935784c0d002b9821f93178e8e5ee7b3fe5d7.jpg"
+    },
+    {
+      "path": "react/native-assets/3e306987a9b5948c1199837737d96e2adfaa51e8.jpg",
+      "sha256": "b3381f98817b8255936cd9bc42bf67a74e8837a30d94280a8ab9b13a9497742e",
+      "sourcePath": "packages/aurora-library/dist/native-assets/3e306987a9b5948c1199837737d96e2adfaa51e8.jpg"
+    },
+    {
+      "path": "react/native-assets/3e421170cf061a996dfba033c64d22c951c138a2.jpg",
+      "sha256": "3a4078b5c8890a11cb7d40e090a30e86a6d135b907e6ac148b8d8f86053dbf77",
+      "sourcePath": "packages/aurora-library/dist/native-assets/3e421170cf061a996dfba033c64d22c951c138a2.jpg"
+    },
+    {
+      "path": "react/native-assets/3ee5ab9c3d8bfb42dbec6c36e677f93d0d7019db.png",
+      "sha256": "42d2bf67364083c6eddc865ec504912e222563dc09678468b95104ba1d4d9c9d",
+      "sourcePath": "packages/aurora-library/dist/native-assets/3ee5ab9c3d8bfb42dbec6c36e677f93d0d7019db.png"
+    },
+    {
+      "path": "react/native-assets/3f24873d5ec6e3d98b53ac3e798b3b1de539101d.png",
+      "sha256": "c539b1155050f9a08a3979427b0f80ae18718ef051b4b5541316c772ed40c093",
+      "sourcePath": "packages/aurora-library/dist/native-assets/3f24873d5ec6e3d98b53ac3e798b3b1de539101d.png"
+    },
+    {
+      "path": "react/native-assets/41926f68539b5f3d353d43207b02162ebc9ca13f.jpg",
+      "sha256": "2f9420d92f6e78eedab46fcc21d9b02e316e823fa2e48a64263860a10477108f",
+      "sourcePath": "packages/aurora-library/dist/native-assets/41926f68539b5f3d353d43207b02162ebc9ca13f.jpg"
+    },
+    {
+      "path": "react/native-assets/44a98a41f47ffcc61130d726b21192d707ade4d4.png",
+      "sha256": "1d993ff89e575291c49d096df05c237b6de5f003cafb0140bbd6a20e3e6a39f8",
+      "sourcePath": "packages/aurora-library/dist/native-assets/44a98a41f47ffcc61130d726b21192d707ade4d4.png"
+    },
+    {
+      "path": "react/native-assets/44c4e7274a948e9a9a45892f1f9bb14ddc3be140.png",
+      "sha256": "b497a5bce9c801b0080a7c5fb0bc9bdace10de6a80788912ba89d55aa0238b93",
+      "sourcePath": "packages/aurora-library/dist/native-assets/44c4e7274a948e9a9a45892f1f9bb14ddc3be140.png"
+    },
+    {
+      "path": "react/native-assets/467df8cf3e75bfde9046698261ed9c41e6732493.jpg",
+      "sha256": "4ebbedcf3314de174096787a6aa2393673c55f2b3fd11ce6bed49510bf5e606a",
+      "sourcePath": "packages/aurora-library/dist/native-assets/467df8cf3e75bfde9046698261ed9c41e6732493.jpg"
+    },
+    {
+      "path": "react/native-assets/4711ed05ee69420e8b415c553a40e97e94988736.png",
+      "sha256": "d768f7fa7adba730536ea9a7fc63047ed43411e5d0f265bedce5726e4c348414",
+      "sourcePath": "packages/aurora-library/dist/native-assets/4711ed05ee69420e8b415c553a40e97e94988736.png"
+    },
+    {
+      "path": "react/native-assets/4736fe5af69a0209beb73a3090a0d44e819d32d9.png",
+      "sha256": "94edd0c6c8470354146b6f71a0c5c501dccdf2b5a32b2a1b878e446ca0acc337",
+      "sourcePath": "packages/aurora-library/dist/native-assets/4736fe5af69a0209beb73a3090a0d44e819d32d9.png"
+    },
+    {
+      "path": "react/native-assets/47b320c91cb1fb0320c99e6c898cdd76258cf041.png",
+      "sha256": "c49727a2b2564e92d0c96cee86441ce2e5798a7eb943135d6642dfddf297c74c",
+      "sourcePath": "packages/aurora-library/dist/native-assets/47b320c91cb1fb0320c99e6c898cdd76258cf041.png"
+    },
+    {
+      "path": "react/native-assets/49c7c81a136aeddc732d8b06f475a06fd33c386b.jpg",
+      "sha256": "4df3527c66c7dc608d88e9b4b6a64afeabab8d231e1c8d3773c07d5d1b7ca69e",
+      "sourcePath": "packages/aurora-library/dist/native-assets/49c7c81a136aeddc732d8b06f475a06fd33c386b.jpg"
+    },
+    {
+      "path": "react/native-assets/4be818bfbef3db75145e51c8e25f2591b4b24442.png",
+      "sha256": "a94236b0eb1d2da6cb32ff3355ae58271c5137cbecf6547e4d274953db05ce06",
+      "sourcePath": "packages/aurora-library/dist/native-assets/4be818bfbef3db75145e51c8e25f2591b4b24442.png"
+    },
+    {
+      "path": "react/native-assets/4d08fe2f2f375ca092441141db84333f3c14dfbf.jpg",
+      "sha256": "1b5742f431c14d64ca32954856c2197c999924e486b47583a86a4ba007233179",
+      "sourcePath": "packages/aurora-library/dist/native-assets/4d08fe2f2f375ca092441141db84333f3c14dfbf.jpg"
+    },
+    {
+      "path": "react/native-assets/50992c23851f70a9ef4ff574f9c4b96bb5636480.png",
+      "sha256": "742b96c1efcfdb2c76fa257bac787c78a10dcd6b9752a43f8164dd6baad32a76",
+      "sourcePath": "packages/aurora-library/dist/native-assets/50992c23851f70a9ef4ff574f9c4b96bb5636480.png"
+    },
+    {
+      "path": "react/native-assets/50d6f113aff6dd417d4bbf6b010134f9bfd79dc6.png",
+      "sha256": "d599424016221842408cac69a3731708a3d94b5fd8c4fe4c3a3fb13ee281e238",
+      "sourcePath": "packages/aurora-library/dist/native-assets/50d6f113aff6dd417d4bbf6b010134f9bfd79dc6.png"
+    },
+    {
+      "path": "react/native-assets/51d84bf00221a33ef2aeee98bd17488801e36bd6.png",
+      "sha256": "3c1ae564a4efed9d606193dbbe9e358b6264b54fd4befbf5ab5eec29141b5242",
+      "sourcePath": "packages/aurora-library/dist/native-assets/51d84bf00221a33ef2aeee98bd17488801e36bd6.png"
+    },
+    {
+      "path": "react/native-assets/54990850269b0e46617a9889bf5c47c5bf0447b8.png",
+      "sha256": "e6aeaa5834148202115f94d67472dce56fc088c822cae999f839310e0ec47d46",
+      "sourcePath": "packages/aurora-library/dist/native-assets/54990850269b0e46617a9889bf5c47c5bf0447b8.png"
+    },
+    {
+      "path": "react/native-assets/5625cc9d377b842185dc9fb9d519539e4ad8694f.png",
+      "sha256": "5490394d9daac49bb289dbc6549bcc8e881a1dfbb83fc8d0d371f2ca500b859a",
+      "sourcePath": "packages/aurora-library/dist/native-assets/5625cc9d377b842185dc9fb9d519539e4ad8694f.png"
+    },
+    {
+      "path": "react/native-assets/58dcc8a0fea1825f2ebc6b240914de7dd81e1591.png",
+      "sha256": "92891eb8c4a41bf15b92199481e85037476169fa5bda396c518d35614ce3c038",
+      "sourcePath": "packages/aurora-library/dist/native-assets/58dcc8a0fea1825f2ebc6b240914de7dd81e1591.png"
+    },
+    {
+      "path": "react/native-assets/5c5cd3802203c39fba8370fd11e4c376537e882e.png",
+      "sha256": "f1898173e8a2967fa4f9ecc6bc17d654c4b0642bf130ddd80c01560966570e77",
+      "sourcePath": "packages/aurora-library/dist/native-assets/5c5cd3802203c39fba8370fd11e4c376537e882e.png"
+    },
+    {
+      "path": "react/native-assets/615bd030319752451eceb972955c77c908846eb0.png",
+      "sha256": "c3e7d3d9c3d17bb5061438a70930c9c4a3ce6613b25e0ac70f3ddb09163ba37d",
+      "sourcePath": "packages/aurora-library/dist/native-assets/615bd030319752451eceb972955c77c908846eb0.png"
+    },
+    {
+      "path": "react/native-assets/617fb9d3c0c69ab2f87c352edccbae86eee3f27a.png",
+      "sha256": "6bf7363fd119903a734cba08811c654f7cf3a82e1c95d7b511c6a767a3e00147",
+      "sourcePath": "packages/aurora-library/dist/native-assets/617fb9d3c0c69ab2f87c352edccbae86eee3f27a.png"
+    },
+    {
+      "path": "react/native-assets/621e6d188b979379b75803587ae40f9cc605e9b4.png",
+      "sha256": "2ec539bd5d0bd65bfdadd981879251ac75413ce7b54ffeae003ee21dc661b921",
+      "sourcePath": "packages/aurora-library/dist/native-assets/621e6d188b979379b75803587ae40f9cc605e9b4.png"
+    },
+    {
+      "path": "react/native-assets/6382592a33e5110b97e0c60da3274de8f1f83ecc.png",
+      "sha256": "a3c343e07a9460b1a3f08897a6f977bf1d6424188c4b30bb6e033a9d97baabe3",
+      "sourcePath": "packages/aurora-library/dist/native-assets/6382592a33e5110b97e0c60da3274de8f1f83ecc.png"
+    },
+    {
+      "path": "react/native-assets/643d3877a2c702b68c555a915df693a4ed36a9a4.png",
+      "sha256": "5fe1b434cb60b781a56334f7e43a47752b55f49b346fc96750ba359e9127429d",
+      "sourcePath": "packages/aurora-library/dist/native-assets/643d3877a2c702b68c555a915df693a4ed36a9a4.png"
+    },
+    {
+      "path": "react/native-assets/670e8de44aaf60d3ed4731edda6108b810e7fdcc.png",
+      "sha256": "f3435b189ee999662811bf7a259b2bb59df5a36c5986d497ca6d0073a7e860ed",
+      "sourcePath": "packages/aurora-library/dist/native-assets/670e8de44aaf60d3ed4731edda6108b810e7fdcc.png"
+    },
+    {
+      "path": "react/native-assets/67da3552fe1445c424133d1fc924fdcd636b9fe5.png",
+      "sha256": "6c6f4c7633b551fc816af627f78bc9b781878542212cfd6cce63d2996513c740",
+      "sourcePath": "packages/aurora-library/dist/native-assets/67da3552fe1445c424133d1fc924fdcd636b9fe5.png"
+    },
+    {
+      "path": "react/native-assets/690480117a1cdf1c9ccc7c26bfcad9e48145bb03.png",
+      "sha256": "8e6713ccf1c29e1adae0ca985463b67fe99bc5879359beee739d916d00aa9445",
+      "sourcePath": "packages/aurora-library/dist/native-assets/690480117a1cdf1c9ccc7c26bfcad9e48145bb03.png"
+    },
+    {
+      "path": "react/native-assets/69b32e79510d3e3d788e7643572ae11206fbd7a5.png",
+      "sha256": "78880a1dc9a30d5ba57f96d8d16ec73ef225e05624b8b9e4312b536cbdcb512d",
+      "sourcePath": "packages/aurora-library/dist/native-assets/69b32e79510d3e3d788e7643572ae11206fbd7a5.png"
+    },
+    {
+      "path": "react/native-assets/69b610bb89a35d0bd5158ced699b233b0f313416.png",
+      "sha256": "90ada43ce24fa5cdf6eb14b3fa826d8ed5b5bc108ab6a71523a5c082675336a2",
+      "sourcePath": "packages/aurora-library/dist/native-assets/69b610bb89a35d0bd5158ced699b233b0f313416.png"
+    },
+    {
+      "path": "react/native-assets/6aba2235dba9682582078bd0c8de2be42900bd5d.png",
+      "sha256": "8f9dad39088fed4598b15ac33c6a0ab9af9f39cbc3aa16f333707a1ca2dc0509",
+      "sourcePath": "packages/aurora-library/dist/native-assets/6aba2235dba9682582078bd0c8de2be42900bd5d.png"
+    },
+    {
+      "path": "react/native-assets/6cd25ac975144f144e992b0014b0241054c1b318.png",
+      "sha256": "a58a58b3ec386c014b47603a93f45bce1a7b4ebf291e21602c68109110e4e6b6",
+      "sourcePath": "packages/aurora-library/dist/native-assets/6cd25ac975144f144e992b0014b0241054c1b318.png"
+    },
+    {
+      "path": "react/native-assets/6ce3d6679978338b91f44e7cff7c201539b56656.png",
+      "sha256": "eb14dbd06b0a1998b5ed649941dac484746f1f717f04812b62ad1301514abd52",
+      "sourcePath": "packages/aurora-library/dist/native-assets/6ce3d6679978338b91f44e7cff7c201539b56656.png"
+    },
+    {
+      "path": "react/native-assets/6de39e8ba27af97350bdf490768a375fe1f65b0f.jpg",
+      "sha256": "d2029ff4a244b4a18292da477a281f228880a3ed8bc5134e0fe4129eb9540b73",
+      "sourcePath": "packages/aurora-library/dist/native-assets/6de39e8ba27af97350bdf490768a375fe1f65b0f.jpg"
+    },
+    {
+      "path": "react/native-assets/6e81ec4ff85ec22241f131d511220d56883542af.jpg",
+      "sha256": "f54c124682ab28d9ca0b12d6439eb4711a80cbc62d56bf3746d5565d6331a570",
+      "sourcePath": "packages/aurora-library/dist/native-assets/6e81ec4ff85ec22241f131d511220d56883542af.jpg"
+    },
+    {
+      "path": "react/native-assets/6f0d8e0385a9f1d6d99df21b7ec265bb036bce78.jpg",
+      "sha256": "a7132dcdf68bd0b8b5ad0fe2951e55eedb706211da7b5eec4c1782e95e5b9e93",
+      "sourcePath": "packages/aurora-library/dist/native-assets/6f0d8e0385a9f1d6d99df21b7ec265bb036bce78.jpg"
+    },
+    {
+      "path": "react/native-assets/6f36e6332ea37d4197d4b2a0d3e927e3208acbae.png",
+      "sha256": "cd586eeea405c6bcc19c4ac558c5409598a1eccd7eb099425a23eb477974724f",
+      "sourcePath": "packages/aurora-library/dist/native-assets/6f36e6332ea37d4197d4b2a0d3e927e3208acbae.png"
+    },
+    {
+      "path": "react/native-assets/6f94ab455323f11dd01c503eae3dfe8872900055.png",
+      "sha256": "d45956b7f37b2435b8735b5452377ad84d0edf888f33de0a6b8b975c121832d5",
+      "sourcePath": "packages/aurora-library/dist/native-assets/6f94ab455323f11dd01c503eae3dfe8872900055.png"
+    },
+    {
+      "path": "react/native-assets/772423c30bc927cf8d1b4caee33b29509319bb28.jpg",
+      "sha256": "38d2ef887f4ec851a174ad63b433b04fda018d79aab67ed6cede42a61106f826",
+      "sourcePath": "packages/aurora-library/dist/native-assets/772423c30bc927cf8d1b4caee33b29509319bb28.jpg"
+    },
+    {
+      "path": "react/native-assets/774928a2b195fe536ef4c72634f26902bb2647de.png",
+      "sha256": "0c5fb0afba5d33ff4d60c86a0be5ac6436a0f838128009178a483029b9d38a9f",
+      "sourcePath": "packages/aurora-library/dist/native-assets/774928a2b195fe536ef4c72634f26902bb2647de.png"
+    },
+    {
+      "path": "react/native-assets/7773d5747bbeaa46673be4f8882c43ad47939b69.png",
+      "sha256": "af81aef22c2003bcde9fed7a23b66cd0f12aa1d413793953cabbffebe78e9194",
+      "sourcePath": "packages/aurora-library/dist/native-assets/7773d5747bbeaa46673be4f8882c43ad47939b69.png"
+    },
+    {
+      "path": "react/native-assets/7ddeff47696f4b79d45c0e8f02ab132ce6adb4ac.png",
+      "sha256": "3e32c1cd84bedaffafaa36b3d72cdc5ccd1bc4281aec5deedb335b6766eaf57c",
+      "sourcePath": "packages/aurora-library/dist/native-assets/7ddeff47696f4b79d45c0e8f02ab132ce6adb4ac.png"
+    },
+    {
+      "path": "react/native-assets/834ad62a34b01850503e399b6e2b553799c61dda.png",
+      "sha256": "2747e98bd64058555009e6f8c9f3d828e84f33e8b435fc9ad933b4846f02c831",
+      "sourcePath": "packages/aurora-library/dist/native-assets/834ad62a34b01850503e399b6e2b553799c61dda.png"
+    },
+    {
+      "path": "react/native-assets/845b1e50137635091d86b8ea662e84f4db26f3a5.jpg",
+      "sha256": "ca99ca3dcdac323f099f64025a43bcf9aea0fa47555d026abb6cd2b05d16f0c6",
+      "sourcePath": "packages/aurora-library/dist/native-assets/845b1e50137635091d86b8ea662e84f4db26f3a5.jpg"
+    },
+    {
+      "path": "react/native-assets/850fba46095083fb765c5881f9a19a339576f108.png",
+      "sha256": "fc975647f6af34b2c35ba8b7ff97a80fc29d14e437515277ad1e89cf6770435c",
+      "sourcePath": "packages/aurora-library/dist/native-assets/850fba46095083fb765c5881f9a19a339576f108.png"
+    },
+    {
+      "path": "react/native-assets/891166894a50800449d5e2bccbd22d28ce6644d3.png",
+      "sha256": "7eb80372d64da14e319bb4d5d72cf49aaad4da5ae860f5c2ad6efe052ef0e7e4",
+      "sourcePath": "packages/aurora-library/dist/native-assets/891166894a50800449d5e2bccbd22d28ce6644d3.png"
+    },
+    {
+      "path": "react/native-assets/89b7575c0b3a8c08a362ea2d0f63d7bd5bce7b4d.jpg",
+      "sha256": "0eef991b664a27fe756fc2a78790120e336b9cfc93e243e0c19d56ac0d4546d4",
+      "sourcePath": "packages/aurora-library/dist/native-assets/89b7575c0b3a8c08a362ea2d0f63d7bd5bce7b4d.jpg"
+    },
+    {
+      "path": "react/native-assets/8be2ebf6b06bdc72ce785930315ac51c2df5dcd5.png",
+      "sha256": "a3fe52de3c23466d0fe49c90627be60c84f8a621bd1806eda39cafc470b8a100",
+      "sourcePath": "packages/aurora-library/dist/native-assets/8be2ebf6b06bdc72ce785930315ac51c2df5dcd5.png"
+    },
+    {
+      "path": "react/native-assets/8cfdf096be248999fdca71a4471c4d589d3133ca.png",
+      "sha256": "7c8ed06e53c558e56d855f7c24c165795de2233b37361be4e7f4ba902fc35873",
+      "sourcePath": "packages/aurora-library/dist/native-assets/8cfdf096be248999fdca71a4471c4d589d3133ca.png"
+    },
+    {
+      "path": "react/native-assets/8fc6e4781aef38875c53d9f25d09550aad580b9c.png",
+      "sha256": "2a1d5e398053cb47b52820b783de74153c469781dd6d7efafc5821b0ddbefcef",
+      "sourcePath": "packages/aurora-library/dist/native-assets/8fc6e4781aef38875c53d9f25d09550aad580b9c.png"
+    },
+    {
+      "path": "react/native-assets/912cfec58e2cd8177e5d1f10aec2d3e19e77a52c.png",
+      "sha256": "e615adb3d404b648c55f870b4084d6167b567f3e27c4de1499ceded9d64ad049",
+      "sourcePath": "packages/aurora-library/dist/native-assets/912cfec58e2cd8177e5d1f10aec2d3e19e77a52c.png"
+    },
+    {
+      "path": "react/native-assets/93e9336dedc7f4486f551ea01a01a238fe5d0d6c.png",
+      "sha256": "4d133c866ded6f3509179d2fa89de4facc9e803892d940f91fa748eab531b196",
+      "sourcePath": "packages/aurora-library/dist/native-assets/93e9336dedc7f4486f551ea01a01a238fe5d0d6c.png"
+    },
+    {
+      "path": "react/native-assets/956c06212a52fef04410d189d00df75067136776.png",
+      "sha256": "e20b1d0e8054fe8d7e97ec8a4b3efc84d561b901ccf49f935362e94ed257a565",
+      "sourcePath": "packages/aurora-library/dist/native-assets/956c06212a52fef04410d189d00df75067136776.png"
+    },
+    {
+      "path": "react/native-assets/956fe080e81a9c4c9f087dc9a93409ed10c6ddd8.jpg",
+      "sha256": "7a1444d4f6d39865f6bedee6948a2956bc37cc9011c21de5c6ea146cc1781f4e",
+      "sourcePath": "packages/aurora-library/dist/native-assets/956fe080e81a9c4c9f087dc9a93409ed10c6ddd8.jpg"
+    },
+    {
+      "path": "react/native-assets/957ba944b83511ce5dffa8fad691faae01325f83.jpg",
+      "sha256": "d813401661a24027aac71a6497017006f6315311db38677f37007014c64559e2",
+      "sourcePath": "packages/aurora-library/dist/native-assets/957ba944b83511ce5dffa8fad691faae01325f83.jpg"
+    },
+    {
+      "path": "react/native-assets/962ef9532f6223a681ce7d20b08337eb4088c61d.png",
+      "sha256": "c7185d4a14c0ecb4e8bb849e99f9bee6b474dfbf2be7dcb86fe47ac8621a0a53",
+      "sourcePath": "packages/aurora-library/dist/native-assets/962ef9532f6223a681ce7d20b08337eb4088c61d.png"
+    },
+    {
+      "path": "react/native-assets/970438d3ff48a4b200d606ccd5198fd82bdf5770.jpg",
+      "sha256": "ed527920a68632ab1bbb5e53271b8e6ad00073dd020c6d2af0893898c4fd5e11",
+      "sourcePath": "packages/aurora-library/dist/native-assets/970438d3ff48a4b200d606ccd5198fd82bdf5770.jpg"
+    },
+    {
+      "path": "react/native-assets/9daa0c2c44d38296eac34e84e2c4e809c6013870.jpg",
+      "sha256": "8cde9cff9473421faa83ba10d68e78bc0017ac9238c490f236f81ff5c794e7ee",
+      "sourcePath": "packages/aurora-library/dist/native-assets/9daa0c2c44d38296eac34e84e2c4e809c6013870.jpg"
+    },
+    {
+      "path": "react/native-assets/a1df8bdfcc24864c6476d7c95c3d1c3cbc92f62e.png",
+      "sha256": "18ed9955ec13c31ed13753c2469615cae971e5678905c126cf0e39ad20aaf5d2",
+      "sourcePath": "packages/aurora-library/dist/native-assets/a1df8bdfcc24864c6476d7c95c3d1c3cbc92f62e.png"
+    },
+    {
+      "path": "react/native-assets/a305f735c96f0ecc7f34b1ec1dc496d80e054ce7.png",
+      "sha256": "b0eea250152e29ac95d6a1c22e47f9a17a3d72d1fb95751877ae65564c8adf43",
+      "sourcePath": "packages/aurora-library/dist/native-assets/a305f735c96f0ecc7f34b1ec1dc496d80e054ce7.png"
+    },
+    {
+      "path": "react/native-assets/a3b09f98a47701af17c0165412f917490b06500f.png",
+      "sha256": "84a62309c4de761eb50102813429c2de293f0d896e85466dfec4a006741c839a",
+      "sourcePath": "packages/aurora-library/dist/native-assets/a3b09f98a47701af17c0165412f917490b06500f.png"
+    },
+    {
+      "path": "react/native-assets/a764303deed43df05ca3d05d09059507d646a98c.jpg",
+      "sha256": "25b6a7c2cdcd35593101e7c550eabc2c73cc580d265db35786fa219f0c800593",
+      "sourcePath": "packages/aurora-library/dist/native-assets/a764303deed43df05ca3d05d09059507d646a98c.jpg"
+    },
+    {
+      "path": "react/native-assets/a9156a3ba0a38a381014a3c1b0f1cf6c550f3f7b.png",
+      "sha256": "6f4843cc55031bf3de809c56faa29f0352bc67a8cf29a094f5916eb9f9659839",
+      "sourcePath": "packages/aurora-library/dist/native-assets/a9156a3ba0a38a381014a3c1b0f1cf6c550f3f7b.png"
+    },
+    {
+      "path": "react/native-assets/a9eee1c05cf50f5c600d090001701622d3429360.png",
+      "sha256": "4f75f423303ad42a18b1922b28a6bf86e6a5a3a78bb7b0e80fad777f1c7a1164",
+      "sourcePath": "packages/aurora-library/dist/native-assets/a9eee1c05cf50f5c600d090001701622d3429360.png"
+    },
+    {
+      "path": "react/native-assets/aa1f54c25a3ab2d175f4d517b4e620960d07a4bd.png",
+      "sha256": "c29f31dba0bf94ae9b648b2f6e3d1722544c8151c489997cca263cdcfd255ff7",
+      "sourcePath": "packages/aurora-library/dist/native-assets/aa1f54c25a3ab2d175f4d517b4e620960d07a4bd.png"
+    },
+    {
+      "path": "react/native-assets/ac83affbb0e79d614dfb4494405f5ed5fac27be3.png",
+      "sha256": "b58ffc27182d4e324c298494c48780d47162aee373c18d78943a1f8145c2eaa3",
+      "sourcePath": "packages/aurora-library/dist/native-assets/ac83affbb0e79d614dfb4494405f5ed5fac27be3.png"
+    },
+    {
+      "path": "react/native-assets/ac912bf980c5e3b9444569ffc25a4e2e32e3e7f8.png",
+      "sha256": "5ae0222ac5e24a26fc6ec0a05dc728606ddac0c7c7bd7aa40aee8d35c60df578",
+      "sourcePath": "packages/aurora-library/dist/native-assets/ac912bf980c5e3b9444569ffc25a4e2e32e3e7f8.png"
+    },
+    {
+      "path": "react/native-assets/ad43df338b00af64e2a0037de534f2e57e5e2c56.png",
+      "sha256": "9fcd64337e958a035c37c0d1971d2e957fe08d19085f3ae19792491de270ad18",
+      "sourcePath": "packages/aurora-library/dist/native-assets/ad43df338b00af64e2a0037de534f2e57e5e2c56.png"
+    },
+    {
+      "path": "react/native-assets/b4363634fc555fb8f3014bf76d2d1f243b3cbafb.jpg",
+      "sha256": "a2df31ab2be0d316c22bdd418fea9ee04f16f46b3122935b78eda4eb63616f18",
+      "sourcePath": "packages/aurora-library/dist/native-assets/b4363634fc555fb8f3014bf76d2d1f243b3cbafb.jpg"
+    },
+    {
+      "path": "react/native-assets/b5dcd34dd2abd25e1e2a28fb0d889f2cae7cffb2.png",
+      "sha256": "c447ce398598f740ae9e49f9787ed4671e520c986e6c6924d9124a6fb7d49888",
+      "sourcePath": "packages/aurora-library/dist/native-assets/b5dcd34dd2abd25e1e2a28fb0d889f2cae7cffb2.png"
+    },
+    {
+      "path": "react/native-assets/b70ec56ad61ebf9daf00b2d5c885fe610b43d8f1.png",
+      "sha256": "245305fe2aa32fe087e25fd87dbdb70eb8da96bacffeaca79fa367fcdfbe7b11",
+      "sourcePath": "packages/aurora-library/dist/native-assets/b70ec56ad61ebf9daf00b2d5c885fe610b43d8f1.png"
+    },
+    {
+      "path": "react/native-assets/b975d5f032ce69088d77649eb3e7f873ba6bd336.jpg",
+      "sha256": "e98cc219350ec82dc29c4a8f0705d61b1c6cce350a76d86d400176bdc0a75a7d",
+      "sourcePath": "packages/aurora-library/dist/native-assets/b975d5f032ce69088d77649eb3e7f873ba6bd336.jpg"
+    },
+    {
+      "path": "react/native-assets/b9f8c73550bde948be4312d363e6ab048effbbd9.jpg",
+      "sha256": "8b2365ddd77d45de453a5c88fca0f09f6835ece204518fc36891e15b2178e347",
+      "sourcePath": "packages/aurora-library/dist/native-assets/b9f8c73550bde948be4312d363e6ab048effbbd9.jpg"
+    },
+    {
+      "path": "react/native-assets/bda73c8cd010cb7f321087effefc75eb89857fc1.jpg",
+      "sha256": "e5e29fff1fa771dbe56615b9f5c078f76c4841aa1a86e416236a618b0d2154fd",
+      "sourcePath": "packages/aurora-library/dist/native-assets/bda73c8cd010cb7f321087effefc75eb89857fc1.jpg"
+    },
+    {
+      "path": "react/native-assets/be3d9acc8c93781cb30e9054f474752eeea578f9.png",
+      "sha256": "3822105bcef79db14e50499ea906e2e87cbd7146cbbce7da634ddfef64118090",
+      "sourcePath": "packages/aurora-library/dist/native-assets/be3d9acc8c93781cb30e9054f474752eeea578f9.png"
+    },
+    {
+      "path": "react/native-assets/c2d5b250c24356616f213fd9288d363d17164b56.png",
+      "sha256": "6c365607ed7e42d877ac1c34ecdfa9b4a4642b525f843627e1d0881919dcb142",
+      "sourcePath": "packages/aurora-library/dist/native-assets/c2d5b250c24356616f213fd9288d363d17164b56.png"
+    },
+    {
+      "path": "react/native-assets/c435ab16a3eb827b85ff383d0d36de60dc0e11af.png",
+      "sha256": "1a65bd223a60fa1e76dfd0286a01df10f3833561aea4e835d2bea1e02cc45617",
+      "sourcePath": "packages/aurora-library/dist/native-assets/c435ab16a3eb827b85ff383d0d36de60dc0e11af.png"
+    },
+    {
+      "path": "react/native-assets/c8e0e2a04077e89f5caf8853af8c933023183833.jpg",
+      "sha256": "ae60a2121be39fce3ed6328a08de9b3632a89db8c698e4275229ef58da71897a",
+      "sourcePath": "packages/aurora-library/dist/native-assets/c8e0e2a04077e89f5caf8853af8c933023183833.jpg"
+    },
+    {
+      "path": "react/native-assets/c90fbcc9c40290548e0c5bfcda38b9f3ad84191f.png",
+      "sha256": "54de45db093a6a744900d72bbecb2584ce980089eed8a2c8f65ae8735d3239f3",
+      "sourcePath": "packages/aurora-library/dist/native-assets/c90fbcc9c40290548e0c5bfcda38b9f3ad84191f.png"
+    },
+    {
+      "path": "react/native-assets/c97166a01a882ebf72c7c1f146c12458e74ff19c.png",
+      "sha256": "b6268c3341ad24593b719b09c90b853f3486dcb8e869e198d348321932b71555",
+      "sourcePath": "packages/aurora-library/dist/native-assets/c97166a01a882ebf72c7c1f146c12458e74ff19c.png"
+    },
+    {
+      "path": "react/native-assets/cc7ae18ea6f710f340cb8a80c76ed3656326a418.png",
+      "sha256": "11797c5be4caab27db9b4d30c7bf5b3c972c646d3f0fc457a260a69d927c20c2",
+      "sourcePath": "packages/aurora-library/dist/native-assets/cc7ae18ea6f710f340cb8a80c76ed3656326a418.png"
+    },
+    {
+      "path": "react/native-assets/cf94e2d35dc71c104cc4080bdb11df36089d0942.png",
+      "sha256": "123f2e57afaa840a6420d225cfc397501918bdc1db503ea5d7344d7e13646a04",
+      "sourcePath": "packages/aurora-library/dist/native-assets/cf94e2d35dc71c104cc4080bdb11df36089d0942.png"
+    },
+    {
+      "path": "react/native-assets/d1c99d80907c1589b53aaff15107c3d0df00b6c8.png",
+      "sha256": "23f2d7e9638f170e0be6163dbe6bf399e2013286cd9d6569d8b3fc20a20e578d",
+      "sourcePath": "packages/aurora-library/dist/native-assets/d1c99d80907c1589b53aaff15107c3d0df00b6c8.png"
+    },
+    {
+      "path": "react/native-assets/d669fc941292465415bf34807484050bfef14523.png",
+      "sha256": "9770a7a8e8c19c4a38c45c18bfd25c8fff543ac75d1a535adc3126da73affe5a",
+      "sourcePath": "packages/aurora-library/dist/native-assets/d669fc941292465415bf34807484050bfef14523.png"
+    },
+    {
+      "path": "react/native-assets/d6db53782d6d4af6cdf6a31162f2fd434a7f6e76.jpg",
+      "sha256": "835de1e81f54c52a26bc2f19035d203fb7b56096567aac42ece9df715a83b7dd",
+      "sourcePath": "packages/aurora-library/dist/native-assets/d6db53782d6d4af6cdf6a31162f2fd434a7f6e76.jpg"
+    },
+    {
+      "path": "react/native-assets/d94f025056b282d7efa38284f216d6b04e935588.jpg",
+      "sha256": "0a1815750c2b1137be00e272612f6ee4420b4db83b8c3615be1af3f6ad43e045",
+      "sourcePath": "packages/aurora-library/dist/native-assets/d94f025056b282d7efa38284f216d6b04e935588.jpg"
+    },
+    {
+      "path": "react/native-assets/db2f45b9aff0b37b2933eade71aae4cc2f7f7864.png",
+      "sha256": "7086fe883ea1faa9a32ba8d142b3f56d4bcca002f487e02bedc83a2d09a3f7d0",
+      "sourcePath": "packages/aurora-library/dist/native-assets/db2f45b9aff0b37b2933eade71aae4cc2f7f7864.png"
+    },
+    {
+      "path": "react/native-assets/dbddcbec86a83b5842980e581097ae6c2265f3f6.png",
+      "sha256": "8a1277add507b3d3832cb85febf6ddf81ab23607da64af67ab3c6d2b3f4825b2",
+      "sourcePath": "packages/aurora-library/dist/native-assets/dbddcbec86a83b5842980e581097ae6c2265f3f6.png"
+    },
+    {
+      "path": "react/native-assets/dd6d15400742a9450f591d24567d3fe8325dac63.jpg",
+      "sha256": "7508edbdc2bc1562e84587c74b9d72896fca120b16890e830245bd8e26dbf706",
+      "sourcePath": "packages/aurora-library/dist/native-assets/dd6d15400742a9450f591d24567d3fe8325dac63.jpg"
+    },
+    {
+      "path": "react/native-assets/de6773a89df668c7c5ca8f18a37482109b7610f4.png",
+      "sha256": "9b1f0a2084128688c971b077cdccdbdcff7d61964059a9409aa3127bd602895a",
+      "sourcePath": "packages/aurora-library/dist/native-assets/de6773a89df668c7c5ca8f18a37482109b7610f4.png"
+    },
+    {
+      "path": "react/native-assets/e00789488c2b17f8039c2be5e40dde5950bb104a.jpg",
+      "sha256": "fd7b20e1759980933b78dccc3eb92ec46d57853a14e3e3a31be82f01e820704f",
+      "sourcePath": "packages/aurora-library/dist/native-assets/e00789488c2b17f8039c2be5e40dde5950bb104a.jpg"
+    },
+    {
+      "path": "react/native-assets/e1ea51b9b803a57e2b148e39229720621d9f7c14.png",
+      "sha256": "07aa9b041548b982027fecb3e9f8b9d181a6403b82db255d0ddb4de828ddcd4c",
+      "sourcePath": "packages/aurora-library/dist/native-assets/e1ea51b9b803a57e2b148e39229720621d9f7c14.png"
+    },
+    {
+      "path": "react/native-assets/e580ce405e692d8536f2e528e0b726a269528c7a.png",
+      "sha256": "c24d437cbe8800f71956aed29aa930e594c5fa9f48fad648994aead2cde93e16",
+      "sourcePath": "packages/aurora-library/dist/native-assets/e580ce405e692d8536f2e528e0b726a269528c7a.png"
+    },
+    {
+      "path": "react/native-assets/e60b6a55950d3110d01ac5272d8027c31fc694dd.png",
+      "sha256": "c4d282a714a3fef553c68fac672d70bf3d471254bff59c512771de59f7e8ec01",
+      "sourcePath": "packages/aurora-library/dist/native-assets/e60b6a55950d3110d01ac5272d8027c31fc694dd.png"
+    },
+    {
+      "path": "react/native-assets/e711c1c4fbfe8721cc713cf758ed5270d892e6c6.jpg",
+      "sha256": "74c87bef791505bac8b5ba8008ba752a5129b6b78c4233f495a2945c5acf8caa",
+      "sourcePath": "packages/aurora-library/dist/native-assets/e711c1c4fbfe8721cc713cf758ed5270d892e6c6.jpg"
+    },
+    {
+      "path": "react/native-assets/e78f153cf1238a98fb9f914c2495559dd6be2056.png",
+      "sha256": "630c197150fefef3006f94ca463c380f3221fd64527f47170fb3e9b82dacaaf3",
+      "sourcePath": "packages/aurora-library/dist/native-assets/e78f153cf1238a98fb9f914c2495559dd6be2056.png"
+    },
+    {
+      "path": "react/native-assets/e7cbbbb307ba490f14092232d891008cb9de0085.png",
+      "sha256": "268fe3badd23570636545c2b086ac06d672cfb7a821e71b710e5d79f177a0910",
+      "sourcePath": "packages/aurora-library/dist/native-assets/e7cbbbb307ba490f14092232d891008cb9de0085.png"
+    },
+    {
+      "path": "react/native-assets/e97db109c2c4953022553cc2e3b57f42281a7467.jpg",
+      "sha256": "c815669e1e0172272801352770598bd106b56e403bd108fc5ac67614720dcf93",
+      "sourcePath": "packages/aurora-library/dist/native-assets/e97db109c2c4953022553cc2e3b57f42281a7467.jpg"
+    },
+    {
+      "path": "react/native-assets/ea837bb2fe2b6b09bf3a78f7e61c54bd132b2284.png",
+      "sha256": "51e433e76621fc324c2353c60597069d889e119aa64c3f4df90803435adcf885",
+      "sourcePath": "packages/aurora-library/dist/native-assets/ea837bb2fe2b6b09bf3a78f7e61c54bd132b2284.png"
+    },
+    {
+      "path": "react/native-assets/eae313a48883a46e7a2a60ee806e73a8052191be.png",
+      "sha256": "9eb58e89f81cc3296111dce672af3fedcf16365a7b1b5795e3b7326a2cb50163",
+      "sourcePath": "packages/aurora-library/dist/native-assets/eae313a48883a46e7a2a60ee806e73a8052191be.png"
+    },
+    {
+      "path": "react/native-assets/eb90bfe467286bbd9b8ccdde60e36e30d8592327.png",
+      "sha256": "7b8df0a7f3eedc2277a9ee85931710c38ef95ca136e91c5d9b7785d8461ab8c0",
+      "sourcePath": "packages/aurora-library/dist/native-assets/eb90bfe467286bbd9b8ccdde60e36e30d8592327.png"
+    },
+    {
+      "path": "react/native-assets/ec83b0572e17419acfedd3f3644a489e598af966.png",
+      "sha256": "996b788eaa9ac002702fc4953546a8ed260a647403d8038ef53c3ce61185fb7f",
+      "sourcePath": "packages/aurora-library/dist/native-assets/ec83b0572e17419acfedd3f3644a489e598af966.png"
+    },
+    {
+      "path": "react/native-assets/ee0eeb2fa8e8f741a1d1362ab25e8367ff4528cb.png",
+      "sha256": "bca8b0df127187e5432f6fdcd0a14159e2f0497b519c38c756c584cd07ac9bef",
+      "sourcePath": "packages/aurora-library/dist/native-assets/ee0eeb2fa8e8f741a1d1362ab25e8367ff4528cb.png"
+    },
+    {
+      "path": "react/native-assets/efe98099a0aa97c1aa64e286bc82e633cc9aed22.png",
+      "sha256": "ad6a9d94f66296d7649c57856a0248ac05e80ed0d11f4f00ed5c81ff1228aaea",
+      "sourcePath": "packages/aurora-library/dist/native-assets/efe98099a0aa97c1aa64e286bc82e633cc9aed22.png"
+    },
+    {
+      "path": "react/native-assets/f01e054152df8e7c9cc1e1f8b4f37d8b40b17427.png",
+      "sha256": "b3a0b47d255230e7af58a93db583d603d4a797137bb3f0880f82fa6e645180fa",
+      "sourcePath": "packages/aurora-library/dist/native-assets/f01e054152df8e7c9cc1e1f8b4f37d8b40b17427.png"
+    },
+    {
+      "path": "react/native-assets/f0a3376169c4da5e78338d8bb6dc30ecc0564f18.jpg",
+      "sha256": "70f4f5b8b2729de5168ed51c12dc844c8f955c72c424b545767035823e7514f3",
+      "sourcePath": "packages/aurora-library/dist/native-assets/f0a3376169c4da5e78338d8bb6dc30ecc0564f18.jpg"
+    },
+    {
+      "path": "react/native-assets/f0d1ee071f88232931595e34688caa08cab3ba24.jpg",
+      "sha256": "28ddb2cdab8606fa41310515709450dacdc2dff2176e97462b033c21a87c4a8c",
+      "sourcePath": "packages/aurora-library/dist/native-assets/f0d1ee071f88232931595e34688caa08cab3ba24.jpg"
+    },
+    {
+      "path": "react/native-assets/f4f5d6e103ba579fa4fd50522c971daa2a47b3e1.png",
+      "sha256": "a0b8a94210470086f3414944e5f90d9e27f6d6adb297f8da4136d38638b659b0",
+      "sourcePath": "packages/aurora-library/dist/native-assets/f4f5d6e103ba579fa4fd50522c971daa2a47b3e1.png"
+    },
+    {
+      "path": "react/native-assets/f5abb9b4201785d7fc7b7ae932c9199010f7dda3.png",
+      "sha256": "0502a9231e6c813a1695bfa1d4bb1cdb5476817ff923e4f9024b97c27d73c2d7",
+      "sourcePath": "packages/aurora-library/dist/native-assets/f5abb9b4201785d7fc7b7ae932c9199010f7dda3.png"
+    },
+    {
+      "path": "react/native-assets/f6e4d05d8c075e77a67c6fd9ce8970f40315a309.jpg",
+      "sha256": "700ae4e1b4c357fda9f498549740843f0ece066a1db789bcc8c6945b911375ee",
+      "sourcePath": "packages/aurora-library/dist/native-assets/f6e4d05d8c075e77a67c6fd9ce8970f40315a309.jpg"
+    },
+    {
+      "path": "react/native-assets/f704a1b9b6f738d3a7eee28936a83dbacb0295f4.png",
+      "sha256": "7096d25e68c9b283a35eab27ba88d69e2f2e95b3ca10173bcc14e6ef329d6ba9",
+      "sourcePath": "packages/aurora-library/dist/native-assets/f704a1b9b6f738d3a7eee28936a83dbacb0295f4.png"
+    },
+    {
+      "path": "react/native-assets/fc93541bc0b865ba4ea5b2500373aeede980993d.png",
+      "sha256": "f33dcd2b855d53bebfe450450382b7dae32628926f40d6f927e1c195f9734280",
+      "sourcePath": "packages/aurora-library/dist/native-assets/fc93541bc0b865ba4ea5b2500373aeede980993d.png"
+    },
+    {
+      "path": "react/native.d.ts",
+      "sha256": "bcae048e778cf71e3585e498c55e5a9ec27eddfd55b9e1c8a8a02cf5863f5d53",
+      "sourcePath": "packages/aurora-library/dist/native.d.ts"
+    },
+    {
+      "path": "react/native.js",
+      "sha256": "5ae440c7d3fceeadb1bbde9fd3911387b28fa269f91a507d01883d844a2dde75",
+      "sourcePath": "packages/aurora-library/dist/native.js"
+    },
+    {
+      "path": "react/package.json",
+      "sha256": "7bab8f682798b5e1b535e0e5b76ec321a06fb6d49879213cdabdbe78a78c50de",
+      "sourcePath": "packages/aurora-library/dist/package.json"
+    },
+    {
+      "path": "react/styles.css",
+      "sha256": "c55e19c75422de992aeb619394a9934d9ec951f7d7bfb00f69b6f8082dc0e34b",
+      "sourcePath": "packages/aurora-library/dist/styles.css"
+    },
+    {
+      "path": "react/styles.css.d.ts",
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "sourcePath": "packages/aurora-library/dist/styles.css.d.ts"
+    },
+    {
+      "path": "themes/white.css",
+      "sha256": "7f872ef1667353d350240b0d29f30c4b0afe4158f4ad1719b7f0d34d356a112f",
+      "sourcePath": "my-app/src/styles/themes/white.css"
+    },
+    {
+      "path": "tokens/motion.css",
+      "sha256": "b8b50df62f1a9def7fd9d4fb1d3dc4c3fce53258d03799a3572196650bddf686",
+      "sourcePath": "my-app/src/styles/tokens/motion.css"
+    },
+    {
+      "path": "tokens/primitives.css",
+      "sha256": "6880a29955a6c9b7fc59e611fc87655a9c9eab028069056c720133649ee6faf5",
+      "sourcePath": "my-app/src/styles/tokens/primitives.css"
+    },
+    {
+      "path": "tokens/semantics.css",
+      "sha256": "d226890140a2fcdb49e37b951c3c3d11fad42673fc4ad2198873d61ac66f3275",
+      "sourcePath": "my-app/src/styles/tokens/semantics.css"
+    },
+    {
+      "path": "tokens/spacing.css",
+      "sha256": "0682f5fcc75174ea87cd66c724149b470eb233ac6d36fa4677f8f6061521d65b",
+      "sourcePath": "my-app/src/styles/tokens/spacing.css"
+    },
+    {
+      "path": "tokens/typography.css",
+      "sha256": "5197318bde1605984754e62a031f5714d71d8939690194b47d88d7078c64fc78",
+      "sourcePath": "my-app/src/styles/tokens/typography.css"
+    }
+  ],
+  "libraries": {
+    "react": {
+      "schema": 1,
+      "package": "@curefit/aurora-library",
+      "version": "2.0.11",
+      "manifestSha256": "39e9e0f335997a7c44ee63396c9b9451b0447370c7cc24154579cbffb62d266f",
+      "coverageSha256": "a01d9914818585bb6cb21c96f8049781983fecf244582cfb941304623c99a81f",
+      "catalogSha256": "16ec0ce9f05c116d37ae61019d12e8b779e104ea7d8e8fac76ee4dbd941bda22",
+      "codeConnectStatusSha256": "5156cb1bf940e0d01374984a77caa72941129c2b4ffdb27b16da701aa91193d8",
+      "counts": {
+        "exports": 1271,
+        "interactive": 218,
+        "functional": 61,
+        "visualVerified": 0,
+        "behaviorVerified": 0,
+        "mcpEvidence": 80,
+        "archiveEvidence": 1191
+      },
+      "peerDependencies": {
+        "react": ">=18.2.0 <20"
+      },
+      "entry": "react/index.js",
+      "stylesheet": "react/styles.css",
+      "nativeEntry": "react/native.js",
+      "optionalFonts": "react/fonts.css",
+      "sourceArchiveIncluded": false,
+      "scope": "Prebuilt React exports only. Build, source, visual and behavior coverage remain distinct in coverage.json."
+    }
+  },
+  "archiveSha256": "b4588dd69845929f38031c88e85c0e7b2391c707e4476c409b6c2b15dc6ef2b1"
+}

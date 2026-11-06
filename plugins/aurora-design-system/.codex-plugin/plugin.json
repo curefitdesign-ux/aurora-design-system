@@ -1,0 +1,43 @@
+{
+  "name": "aurora-design-system",
+  "version": "2.0.11",
+  "description": "Aurora Design System 2.0: one portable skill for Aurora App and Web UI.",
+  "author": {
+    "name": "curefitdesign-ux",
+    "url": "https://github.com/curefitdesign-ux"
+  },
+  "homepage": "https://github.com/curefitdesign-ux/aurora-design-system",
+  "repository": "https://github.com/curefitdesign-ux/aurora-design-system",
+  "license": "Proprietary",
+  "keywords": [
+    "aurora",
+    "design-system",
+    "figma",
+    "codex",
+    "plugin"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Aurora Design System 2.0",
+    "shortDescription": "Aurora App and Web UI only",
+    "longDescription": "Use Aurora-only tokens, native React controls, source-backed Figma components and variants, gradient backgrounds, fading card strokes, and inspectable Code Connect evidence across projects.",
+    "developerName": "curefitdesign-ux",
+    "category": "Design",
+    "capabilities": [
+      "Interactive",
+      "Write",
+      "Read"
+    ],
+    "websiteURL": "https://github.com/curefitdesign-ux/aurora-design-system",
+    "privacyPolicyURL": "https://github.com/curefitdesign-ux/aurora-design-system/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://www.cult.fit/terms-and-conditions",
+    "defaultPrompt": [
+      "Use $aurora-design-system to build or update this UI with Aurora App and Web components only."
+    ],
+    "brandColor": "#FF3278",
+    "supportURL": "https://github.com/curefitdesign-ux/aurora-design-system/issues",
+    "composerIcon": "./assets/aurora-icon.svg",
+    "logo": "./assets/aurora-icon.svg"
+  },
+  "requires_local_executor": true
+}
