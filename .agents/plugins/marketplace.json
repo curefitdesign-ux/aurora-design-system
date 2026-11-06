@@ -1,0 +1,20 @@
+{
+  "name": "aurora",
+  "interface": {
+    "displayName": "Aurora Design System 2.0 \u2014 Org pilot 2.0.10"
+  },
+  "plugins": [
+    {
+      "name": "aurora-design-system",
+      "source": {
+        "source": "local",
+        "path": "./aurora-design-system"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

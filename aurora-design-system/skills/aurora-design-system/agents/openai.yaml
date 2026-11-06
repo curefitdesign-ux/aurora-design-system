@@ -1,0 +1,4 @@
+interface:
+  display_name: "Aurora Design System 2.0"
+  short_description: "Build Aurora-only UI in any project"
+  default_prompt: "Use $aurora-design-system to build or convert the requested UI with Aurora tokens, typography, components, and states only; remove conflicting visual styles within that surface and verify the result."

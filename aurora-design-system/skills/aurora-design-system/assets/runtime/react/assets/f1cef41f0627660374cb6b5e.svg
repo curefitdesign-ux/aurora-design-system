@@ -1,0 +1,8 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Circular Action button">
+<rect width="40" height="40" rx="20" fill="white" fill-opacity="0.1"/>
+<g id="tail arrow right" opacity="0.2">
+<path id="Vector (Stroke)" d="M19.2143 11.4365C19.6482 11.0026 20.3518 11.0026 20.7857 11.4365L28.5634 19.2143C28.9974 19.6482 28.9974 20.3518 28.5634 20.7857L20.7857 28.5634C20.3518 28.9974 19.6482 28.9974 19.2143 28.5634C18.7804 28.1295 18.7804 27.426 19.2143 26.9921L25.0953 21.1111H12.2222C11.6086 21.1111 11.1111 20.6136 11.1111 20C11.1111 19.3863 11.6086 18.8889 12.2222 18.8889H25.0953L19.2143 13.0079C18.7804 12.574 18.7804 11.8705 19.2143 11.4365Z" fill-rule="evenodd" clip-rule="evenodd" fill="white"/>
+</g>
+</g>
+</svg>

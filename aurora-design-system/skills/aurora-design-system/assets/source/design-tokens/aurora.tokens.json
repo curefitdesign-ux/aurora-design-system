@@ -1,0 +1,1294 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "Aurora Design System tokens in W3C DTCG format. Single source of truth — generated CSS/TS/Swift/Kotlin/JSON all derive from this file. Non-destructive by design: every value here must match the frozen index.css baseline byte-for-byte.",
+  "color": {
+    "curefit": {
+      "yellow": {
+        "$value": "#F5BC00",
+        "$type": "color",
+        "$description": "Primary brand yellow"
+      },
+      "yellow-light": {
+        "$value": "#FFDC18",
+        "$type": "color"
+      },
+      "pink": {
+        "$value": "#FF3278",
+        "$type": "color"
+      },
+      "blue": {
+        "$value": "#00BEFF",
+        "$type": "color"
+      },
+      "green": {
+        "$value": "#0FE498",
+        "$type": "color"
+      }
+    },
+    "dark": {
+      "primary": {
+        "$value": "#1C1C1E",
+        "$type": "color"
+      },
+      "secondary": {
+        "$value": "#2C2C2C",
+        "$type": "color"
+      },
+      "ink": {
+        "$value": "#141515",
+        "$type": "color"
+      },
+      "action": {
+        "$value": "#333333",
+        "$type": "color"
+      }
+    },
+    "light": {
+      "primary": {
+        "$value": "#FFFFFF",
+        "$type": "color"
+      },
+      "action": {
+        "$value": "#F0F0F0",
+        "$type": "color"
+      }
+    },
+    "status": {
+      "positive": {
+        "$value": "#4AB74A",
+        "$type": "color"
+      },
+      "negative": {
+        "$value": "#B00020",
+        "$type": "color"
+      },
+      "alert": {
+        "$value": "#F5BC00",
+        "$type": "color"
+      },
+      "neutral": {
+        "$value": "#00BEFF",
+        "$type": "color"
+      }
+    },
+    "text": {
+      "white": {
+        "$value": "#FFFFFF",
+        "$type": "color"
+      },
+      "dark": {
+        "$value": "#313028",
+        "$type": "color"
+      },
+      "muted": {
+        "$value": "#999CA0",
+        "$type": "color",
+        "$description": "Trunks — secondary text"
+      },
+      "disabled": {
+        "$value": "rgba(255,255,255,0.1)",
+        "$type": "color"
+      }
+    },
+    "bg": {
+      "dark": {
+        "$value": "#1A1A1A",
+        "$type": "color"
+      },
+      "card": {
+        "$value": "#1C1C1E",
+        "$type": "color"
+      },
+      "elevated": {
+        "$value": "#2C2C2C",
+        "$type": "color"
+      },
+      "surface": {
+        "$value": "#232323",
+        "$type": "color"
+      },
+      "card-light": {
+        "$value": "#F4F0E6",
+        "$type": "color"
+      }
+    },
+    "gray": {
+      "50": {
+        "$value": "#F7F7F7",
+        "$type": "color"
+      },
+      "100": {
+        "$value": "#F0F0F0",
+        "$type": "color"
+      },
+      "200": {
+        "$value": "#E0E0E0",
+        "$type": "color"
+      },
+      "300": {
+        "$value": "#D9D9D9",
+        "$type": "color"
+      },
+      "400": {
+        "$value": "#C4C4C4",
+        "$type": "color"
+      },
+      "500": {
+        "$value": "#999CA0",
+        "$type": "color"
+      },
+      "600": {
+        "$value": "#808080",
+        "$type": "color"
+      },
+      "700": {
+        "$value": "#666666",
+        "$type": "color"
+      },
+      "800": {
+        "$value": "#434343",
+        "$type": "color"
+      },
+      "900": {
+        "$value": "#2C2C2C",
+        "$type": "color"
+      }
+    },
+    "white-alpha": {
+      "10": {
+        "$value": "rgba(255,255,255,0.1)",
+        "$type": "color"
+      },
+      "20": {
+        "$value": "rgba(255,255,255,0.2)",
+        "$type": "color"
+      },
+      "40": {
+        "$value": "rgba(255,255,255,0.4)",
+        "$type": "color"
+      },
+      "60": {
+        "$value": "rgba(255,255,255,0.6)",
+        "$type": "color"
+      }
+    },
+    "accent": {
+      "purple": {
+        "$value": "#7F5BFF",
+        "$type": "color"
+      },
+      "orange": {
+        "$value": "#FF9700",
+        "$type": "color"
+      },
+      "coral": {
+        "$value": "#FF5942",
+        "$type": "color"
+      },
+      "gold": {
+        "$value": "#F7C744",
+        "$type": "color"
+      },
+      "blue": {
+        "$value": "#3888FF",
+        "$type": "color"
+      }
+    },
+    "line": {
+      "gray": {
+        "$value": "#B3B3B3",
+        "$type": "color"
+      }
+    },
+    "semantic": {
+      "scrim": {
+        "$value": "rgba(0,0,0,0.6)",
+        "$type": "color"
+      },
+      "overlay": {
+        "$value": "rgba(0,0,0,0.4)",
+        "$type": "color"
+      },
+      "divider": {
+        "$value": "rgba(255,255,255,0.1)",
+        "$type": "color"
+      },
+      "divider-light": {
+        "$value": "rgba(0,0,0,0.08)",
+        "$type": "color"
+      },
+      "focus-ring": {
+        "$value": "{color.curefit.blue}",
+        "$type": "color"
+      }
+    },
+    "surface": {
+      "$description": "Semantic aliases — what components should consume. Resolve to primitives above, so no visual change.",
+      "app-bg": {
+        "$value": "{color.bg.dark}",
+        "$type": "color"
+      },
+      "card-bg": {
+        "$value": "{color.bg.card}",
+        "$type": "color"
+      },
+      "sheet-bg": {
+        "$value": "{color.bg.elevated}",
+        "$type": "color"
+      },
+      "action": {
+        "primary": {
+          "$value": "{color.curefit.yellow}",
+          "$type": "color"
+        },
+        "secondary": {
+          "$value": "{color.white-alpha.10}",
+          "$type": "color"
+        }
+      }
+    }
+  },
+  "font": {
+    "family": {
+      "primary": {
+        "$value": "Inter, 'Helvetica Neue', Arial, sans-serif",
+        "$type": "fontFamily"
+      },
+      "display": {
+        "$value": "'Bw Modelica SS01', Inter, sans-serif",
+        "$type": "fontFamily"
+      },
+      "mono": {
+        "$value": "'Roboto Mono', monospace",
+        "$type": "fontFamily"
+      },
+      "bebas": {
+        "$value": "'Bebas Neue', sans-serif",
+        "$type": "fontFamily"
+      },
+      "heading": {
+        "$value": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+        "$type": "fontFamily"
+      },
+      "handwritten": {
+        "$value": "Caveat, 'Segoe Script', cursive",
+        "$type": "fontFamily"
+      },
+      "handlee": {
+        "$value": "Handlee, Caveat, cursive",
+        "$type": "fontFamily"
+      },
+      "label": {
+        "$value": "BenchNine, 'Arial Narrow', sans-serif",
+        "$type": "fontFamily"
+      }
+    }
+  },
+  "text-style": {
+    "h1": {
+      "size": {
+        "$value": "20px"
+      },
+      "weight": {
+        "$value": 700
+      },
+      "lh": {
+        "$value": 1.2
+      },
+      "ls": {
+        "$value": "-0.25px"
+      }
+    },
+    "h2": {
+      "size": {
+        "$value": "18px"
+      },
+      "weight": {
+        "$value": 700
+      },
+      "lh": {
+        "$value": 1.222
+      },
+      "ls": {
+        "$value": "-0.2px"
+      }
+    },
+    "h3": {
+      "size": {
+        "$value": "18px"
+      },
+      "weight": {
+        "$value": 500
+      },
+      "lh": {
+        "$value": 1.222
+      },
+      "ls": {
+        "$value": "-0.2px"
+      }
+    },
+    "h4": {
+      "size": {
+        "$value": "16px"
+      },
+      "weight": {
+        "$value": 700
+      },
+      "lh": {
+        "$value": 1.25
+      },
+      "ls": {
+        "$value": "0px"
+      }
+    },
+    "h5": {
+      "size": {
+        "$value": "50px"
+      },
+      "weight": {
+        "$value": 900
+      },
+      "lh": {
+        "$value": 1.2
+      },
+      "ls": {
+        "$value": "0.5px"
+      }
+    },
+    "h6": {
+      "size": {
+        "$value": "40px"
+      },
+      "weight": {
+        "$value": 400
+      },
+      "lh": {
+        "$value": 1
+      },
+      "ls": {
+        "$value": "0px"
+      }
+    },
+    "h7": {
+      "size": {
+        "$value": "38px"
+      },
+      "weight": {
+        "$value": 900
+      },
+      "lh": {
+        "$value": 1.263
+      },
+      "ls": {
+        "$value": "-0.3px"
+      }
+    },
+    "h8": {
+      "size": {
+        "$value": "40px"
+      },
+      "weight": {
+        "$value": 500
+      },
+      "lh": {
+        "$value": 1.1
+      },
+      "ls": {
+        "$value": "-1.0px"
+      }
+    },
+    "h9": {
+      "size": {
+        "$value": "24px"
+      },
+      "weight": {
+        "$value": 800
+      },
+      "lh": {
+        "$value": 1.25
+      },
+      "ls": {
+        "$value": "-0.3px"
+      }
+    },
+    "h10": {
+      "size": {
+        "$value": "30px"
+      },
+      "weight": {
+        "$value": 700
+      },
+      "lh": {
+        "$value": 1.2
+      },
+      "ls": {
+        "$value": "-0.5px"
+      }
+    },
+    "p1": {
+      "size": {
+        "$value": "16px"
+      },
+      "weight": {
+        "$value": 500
+      },
+      "lh": {
+        "$value": 1.25
+      },
+      "ls": {
+        "$value": "0px"
+      }
+    },
+    "p2": {
+      "size": {
+        "$value": "16px"
+      },
+      "weight": {
+        "$value": 400
+      },
+      "lh": {
+        "$value": 1.25
+      },
+      "ls": {
+        "$value": "0px"
+      }
+    },
+    "p3": {
+      "size": {
+        "$value": "14px"
+      },
+      "weight": {
+        "$value": 700
+      },
+      "lh": {
+        "$value": 1.286
+      },
+      "ls": {
+        "$value": "0.5px"
+      }
+    },
+    "p4": {
+      "size": {
+        "$value": "14px"
+      },
+      "weight": {
+        "$value": 500
+      },
+      "lh": {
+        "$value": 1.571
+      },
+      "ls": {
+        "$value": "0px"
+      }
+    },
+    "p5": {
+      "size": {
+        "$value": "14px"
+      },
+      "weight": {
+        "$value": 400
+      },
+      "lh": {
+        "$value": 1.429
+      },
+      "ls": {
+        "$value": "0px"
+      }
+    },
+    "p6": {
+      "size": {
+        "$value": "12px"
+      },
+      "weight": {
+        "$value": 700
+      },
+      "lh": {
+        "$value": 1.333
+      },
+      "ls": {
+        "$value": "0.5px"
+      }
+    },
+    "p7": {
+      "size": {
+        "$value": "12px"
+      },
+      "weight": {
+        "$value": 500
+      },
+      "lh": {
+        "$value": 1.333
+      },
+      "ls": {
+        "$value": "0px"
+      }
+    },
+    "p8": {
+      "size": {
+        "$value": "12px"
+      },
+      "weight": {
+        "$value": 400
+      },
+      "lh": {
+        "$value": 1.333
+      },
+      "ls": {
+        "$value": "0px"
+      }
+    },
+    "p9": {
+      "size": {
+        "$value": "14px"
+      },
+      "weight": {
+        "$value": 400
+      },
+      "lh": {
+        "$value": 1.571
+      },
+      "ls": {
+        "$value": "0px"
+      }
+    },
+    "p10": {
+      "size": {
+        "$value": "10px"
+      },
+      "weight": {
+        "$value": 400
+      },
+      "lh": {
+        "$value": 1.2
+      },
+      "ls": {
+        "$value": "0px"
+      }
+    },
+    "cta": {
+      "size": {
+        "$value": "14px"
+      },
+      "weight": {
+        "$value": 700
+      },
+      "lh": {
+        "$value": 1.286
+      },
+      "ls": {
+        "$value": "0.5px"
+      }
+    },
+    "tag": {
+      "size": {
+        "$value": "10px"
+      },
+      "weight": {
+        "$value": 700
+      },
+      "lh": {
+        "$value": 1.2
+      },
+      "ls": {
+        "$value": "0.5px"
+      }
+    },
+    "$description": "Aurora typography scale. Each style exposes size/weight/line-height/letter-spacing."
+  },
+  "spacing": {
+    "1": {
+      "$value": "5px",
+      "$type": "dimension"
+    },
+    "2": {
+      "$value": "10px",
+      "$type": "dimension"
+    },
+    "3": {
+      "$value": "15px",
+      "$type": "dimension"
+    },
+    "4": {
+      "$value": "20px",
+      "$type": "dimension"
+    },
+    "5": {
+      "$value": "24px",
+      "$type": "dimension"
+    },
+    "6": {
+      "$value": "30px",
+      "$type": "dimension"
+    },
+    "8": {
+      "$value": "40px",
+      "$type": "dimension"
+    },
+    "10": {
+      "$value": "50px",
+      "$type": "dimension"
+    },
+    "12": {
+      "$value": "60px",
+      "$type": "dimension"
+    },
+    "16": {
+      "$value": "80px",
+      "$type": "dimension"
+    },
+    "20": {
+      "$value": "100px",
+      "$type": "dimension"
+    },
+    "30": {
+      "$value": "150px",
+      "$type": "dimension"
+    }
+  },
+  "radius": {
+    "2xs": {
+      "$value": "5px",
+      "$type": "dimension"
+    },
+    "xs": {
+      "$value": "4px",
+      "$type": "dimension"
+    },
+    "sm": {
+      "$value": "8px",
+      "$type": "dimension"
+    },
+    "card": {
+      "$value": "10px",
+      "$type": "dimension"
+    },
+    "md": {
+      "$value": "12px",
+      "$type": "dimension"
+    },
+    "chip": {
+      "$value": "15px",
+      "$type": "dimension"
+    },
+    "lg": {
+      "$value": "16px",
+      "$type": "dimension"
+    },
+    "xl": {
+      "$value": "20px",
+      "$type": "dimension"
+    },
+    "2xl": {
+      "$value": "30px",
+      "$type": "dimension"
+    },
+    "3xl": {
+      "$value": "40px",
+      "$type": "dimension"
+    },
+    "pill": {
+      "$value": "50px",
+      "$type": "dimension"
+    },
+    "avatar": {
+      "$value": "100px",
+      "$type": "dimension"
+    },
+    "full": {
+      "$value": "1000px",
+      "$type": "dimension"
+    }
+  },
+  "blur": {
+    "$description": "Backdrop blur scale. Extended from the original weak/medium/strong. Legacy names aliased for compat.",
+    "xs": {
+      "$value": "4px",
+      "$type": "dimension"
+    },
+    "sm": {
+      "$value": "10px",
+      "$type": "dimension"
+    },
+    "md": {
+      "$value": "30px",
+      "$type": "dimension"
+    },
+    "lg": {
+      "$value": "80px",
+      "$type": "dimension"
+    },
+    "xl": {
+      "$value": "120px",
+      "$type": "dimension"
+    },
+    "2xl": {
+      "$value": "160px",
+      "$type": "dimension"
+    },
+    "3xl": {
+      "$value": "200px",
+      "$type": "dimension"
+    },
+    "full": {
+      "$value": "300px",
+      "$type": "dimension",
+      "$description": "Used by aurora-bg drifting blobs"
+    },
+    "weak": {
+      "$value": "{blur.sm}",
+      "$type": "dimension"
+    },
+    "medium": {
+      "$value": "{blur.md}",
+      "$type": "dimension"
+    },
+    "strong": {
+      "$value": "{blur.lg}",
+      "$type": "dimension"
+    }
+  },
+  "cta": {
+    "$description": "CTA system — sourced from Figma Aurora App Design System. Node IDs: Primary=3885:28575, Secondary=3885:28583, Tertiary=716:3369, Twins=1016:4406. Text on Primary uses the Aurora gradient (yellow→pink), clipped via CSS background-clip:text.",
+    "gradient": {
+      "$value": "linear-gradient(135deg, #FFDB17 0%, #FF3278 100%)",
+      "$description": "King CTA Text • Coloured — Aurora's signature yellow-to-pink gradient. Used as gradient text on Primary standalone, and as gradient bg on Twins right button."
+    },
+    "gradient-alt": {
+      "$value": "linear-gradient(81deg, #FFDB17 0%, #FF3278 100%)",
+      "$description": "Alternate angle (no-icon variant)."
+    },
+    "shared": {
+      "font-family": {
+        "$value": "{font.family.primary}"
+      },
+      "font-size-lg": {
+        "$value": "14px",
+        "$type": "dimension"
+      },
+      "font-size-sm": {
+        "$value": "12px",
+        "$type": "dimension"
+      },
+      "font-weight": {
+        "$value": 700
+      },
+      "letter-spacing-lg": {
+        "$value": "0.5px"
+      },
+      "letter-spacing-sm": {
+        "$value": "0.5px"
+      },
+      "text-transform": {
+        "$value": "uppercase"
+      }
+    },
+    "primary": {
+      "$description": "White bg, gradient text (yellow→pink). 50px Big / 40px Small. 27px backdrop-blur even when enabled. Radius 5px. Max-width 335px (Big fixed), hug (Small).",
+      "bg": {
+        "$value": "#FFFFFF",
+        "$type": "color"
+      },
+      "text-gradient": {
+        "$value": "{cta.gradient}"
+      },
+      "backdrop-blur": {
+        "$value": "27px",
+        "$type": "dimension"
+      },
+      "radius": {
+        "$value": "5px",
+        "$type": "dimension"
+      },
+      "height-lg": {
+        "$value": "50px",
+        "$type": "dimension"
+      },
+      "height-sm": {
+        "$value": "40px",
+        "$type": "dimension"
+      },
+      "max-width": {
+        "$value": "335px",
+        "$type": "dimension"
+      },
+      "padding-x-lg": {
+        "$value": "20px",
+        "$type": "dimension"
+      },
+      "padding-y-lg": {
+        "$value": "15px",
+        "$type": "dimension"
+      },
+      "padding-x-sm": {
+        "$value": "20px",
+        "$type": "dimension"
+      },
+      "padding-y-sm": {
+        "$value": "10px",
+        "$type": "dimension"
+      },
+      "gap": {
+        "$value": "5px",
+        "$type": "dimension"
+      },
+      "disabled": {
+        "bg": {
+          "$value": "rgba(255,255,255,0.10)",
+          "$type": "color"
+        },
+        "text": {
+          "$value": "rgba(255,255,255,0.20)",
+          "$type": "color"
+        },
+        "blur": {
+          "$value": "30px",
+          "$type": "dimension"
+        },
+        "opacity": {
+          "$value": 0.2
+        }
+      }
+    },
+    "secondary": {
+      "$description": "Glass: white 10% opacity + 30px backdrop-blur. White text. 40px Big / 30px Small. SKU / banner buttons. Can have leading icon. 7 state variants.",
+      "bg": {
+        "$value": "rgba(255,255,255,0.10)",
+        "$type": "color"
+      },
+      "backdrop-blur": {
+        "$value": "30px",
+        "$type": "dimension"
+      },
+      "text": {
+        "$value": "#FFFFFF",
+        "$type": "color"
+      },
+      "radius": {
+        "$value": "5px",
+        "$type": "dimension"
+      },
+      "height-lg": {
+        "$value": "40px",
+        "$type": "dimension"
+      },
+      "height-sm": {
+        "$value": "30px",
+        "$type": "dimension"
+      },
+      "padding-x-lg": {
+        "$value": "20px",
+        "$type": "dimension"
+      },
+      "padding-y-lg": {
+        "$value": "10px",
+        "$type": "dimension"
+      },
+      "padding-x-sm": {
+        "$value": "15px",
+        "$type": "dimension"
+      },
+      "padding-y-sm": {
+        "$value": "7px",
+        "$type": "dimension"
+      },
+      "font-size-lg": {
+        "$value": "14px",
+        "$type": "dimension"
+      },
+      "font-size-sm": {
+        "$value": "12px",
+        "$type": "dimension"
+      },
+      "states": {
+        "disabled": {
+          "bg": {
+            "$value": "rgba(255,255,255,0.10)",
+            "$type": "color"
+          },
+          "text": {
+            "$value": "rgba(255,255,255,0.20)",
+            "$type": "color"
+          }
+        },
+        "booked": {
+          "$description": "Solid booking confirmed state. Checkmark icon.",
+          "bg": {
+            "$value": "rgba(15,228,152,0.20)",
+            "$type": "color"
+          },
+          "text": {
+            "$value": "#FFFFFF",
+            "$type": "color"
+          },
+          "icon-color": {
+            "$value": "#0FE498",
+            "$type": "color"
+          }
+        },
+        "waitlist": {
+          "$description": "Slots open. Gold ring badge + JOIN WAITLIST sub-label.",
+          "bg": {
+            "$value": "rgba(255,255,255,0.20)",
+            "$type": "color"
+          },
+          "badge-color": {
+            "$value": "#F7C744",
+            "$type": "color"
+          },
+          "sub-text": {
+            "$value": "rgba(255,255,255,0.40)",
+            "$type": "color"
+          }
+        },
+        "waitlisted": {
+          "$description": "User is on waitlist. Green ring badge + WAITLISTED sub-label.",
+          "bg": {
+            "$value": "rgba(15,228,152,0.20)",
+            "$type": "color"
+          },
+          "badge-color": {
+            "$value": "#0FE498",
+            "$type": "color"
+          },
+          "sub-text": {
+            "$value": "rgba(255,255,255,0.40)",
+            "$type": "color"
+          }
+        },
+        "waitlist-full": {
+          "bg": {
+            "$value": "rgba(255,255,255,0.10)",
+            "$type": "color"
+          },
+          "text": {
+            "$value": "rgba(255,255,255,0.40)",
+            "$type": "color"
+          }
+        },
+        "negative": {
+          "$description": "Destructive / unavailable action. Coral text on coral tint.",
+          "bg": {
+            "$value": "rgba(255,89,66,0.10)",
+            "$type": "color"
+          },
+          "text": {
+            "$value": "#FF5942",
+            "$type": "color"
+          }
+        }
+      }
+    },
+    "tertiary": {
+      "$description": "Transparent, white text, 50px backdrop-blur. 14px (Big) / 12px (Small), 700 bold, ALL CAPS, 0.5px tracking. No visible container.",
+      "bg": {
+        "$value": "transparent",
+        "$type": "color"
+      },
+      "text": {
+        "$value": "#FFFFFF",
+        "$type": "color"
+      },
+      "backdrop-blur": {
+        "$value": "50px",
+        "$type": "dimension"
+      },
+      "radius": {
+        "$value": "5px",
+        "$type": "dimension"
+      },
+      "height-lg": {
+        "$value": "40px",
+        "$type": "dimension"
+      },
+      "height-sm": {
+        "$value": "30px",
+        "$type": "dimension"
+      },
+      "font-size-lg": {
+        "$value": "14px",
+        "$type": "dimension"
+      },
+      "font-size-sm": {
+        "$value": "12px",
+        "$type": "dimension"
+      },
+      "letter-spacing": {
+        "$value": "0.5px"
+      },
+      "padding-x-lg": {
+        "$value": "20px",
+        "$type": "dimension"
+      },
+      "padding-y-lg": {
+        "$value": "11px",
+        "$type": "dimension"
+      },
+      "padding-x-sm": {
+        "$value": "15px",
+        "$type": "dimension"
+      },
+      "padding-y-sm": {
+        "$value": "7px",
+        "$type": "dimension"
+      },
+      "disabled": {
+        "opacity": {
+          "$value": 0.2
+        }
+      }
+    },
+    "twins": {
+      "$description": "Double-CTA row. Left=Secondary glass, Right=Primary with gradient bg + white text (inverted). 10px gap, 20px container padding. Heights: 50px or 40px.",
+      "gap": {
+        "$value": "10px",
+        "$type": "dimension"
+      },
+      "padding-x": {
+        "$value": "20px",
+        "$type": "dimension"
+      },
+      "height-lg": {
+        "$value": "50px",
+        "$type": "dimension"
+      },
+      "height-sm": {
+        "$value": "40px",
+        "$type": "dimension"
+      },
+      "primary-bg": {
+        "$value": "{cta.gradient-alt}",
+        "$description": "Gradient bg (inverted from standalone Primary which has white bg)"
+      },
+      "primary-text": {
+        "$value": "#FFFFFF",
+        "$type": "color",
+        "$description": "White text on gradient bg (inverted)"
+      }
+    }
+  },
+  "aurora-bg": {
+    "$description": "Global animated background: three drifting blurred blobs (pink, yellow, blue). Applied via body::before/after and #root::before in index.css.",
+    "blob-pink": {
+      "$value": "{color.curefit.pink}",
+      "$type": "color"
+    },
+    "blob-yellow": {
+      "$value": "{color.curefit.yellow}",
+      "$type": "color"
+    },
+    "blob-blue": {
+      "$value": "{color.curefit.blue}",
+      "$type": "color"
+    },
+    "blob-opacity": {
+      "$value": 0.35
+    },
+    "blob-size": {
+      "$value": "45vw",
+      "$type": "dimension"
+    },
+    "blob-blur": {
+      "$value": "{blur.3xl}",
+      "$type": "dimension"
+    },
+    "duration-pink": {
+      "$value": "24s",
+      "$type": "duration"
+    },
+    "duration-yellow": {
+      "$value": "32s",
+      "$type": "duration"
+    },
+    "duration-blue": {
+      "$value": "28s",
+      "$type": "duration"
+    },
+    "easing": {
+      "$value": "cubic-bezier(0.45, 0.05, 0.55, 0.95)"
+    }
+  },
+  "shadow": {
+    "subtle": {
+      "$value": "0px 2px 6px rgba(0,0,0,0.07)",
+      "$type": "shadow"
+    },
+    "low": {
+      "$value": "0px 4px 11px rgba(0,0,0,0.15)",
+      "$type": "shadow"
+    },
+    "medium": {
+      "$value": "0px 4px 14px rgba(0,0,0,0.25)",
+      "$type": "shadow"
+    },
+    "high": {
+      "$value": "0px 13px 24px rgba(0,0,0,0.22)",
+      "$type": "shadow"
+    },
+    "floating": {
+      "$value": "0px 4px 25px rgba(0,0,0,0.15)",
+      "$type": "shadow"
+    },
+    "modal": {
+      "$value": "0px 14px 24px 3px rgba(0,0,0,0.25)",
+      "$type": "shadow"
+    },
+    "divider": {
+      "$value": "0px 1px 0px rgba(0,0,0,0.3)",
+      "$type": "shadow"
+    },
+    "focus": {
+      "$value": "0 0 0 3px rgba(0,190,255,0.4)",
+      "$type": "shadow"
+    }
+  },
+  "duration": {
+    "instant": {
+      "$value": "0ms",
+      "$type": "duration"
+    },
+    "fast": {
+      "$value": "120ms",
+      "$type": "duration"
+    },
+    "normal": {
+      "$value": "200ms",
+      "$type": "duration"
+    },
+    "slow": {
+      "$value": "320ms",
+      "$type": "duration"
+    },
+    "slower": {
+      "$value": "480ms",
+      "$type": "duration"
+    }
+  },
+  "easing": {
+    "linear": {
+      "$value": "cubic-bezier(0, 0, 1, 1)"
+    },
+    "in": {
+      "$value": "cubic-bezier(0.4, 0, 1, 1)"
+    },
+    "out": {
+      "$value": "cubic-bezier(0, 0, 0.2, 1)"
+    },
+    "default": {
+      "$value": "cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    "spring": {
+      "$value": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+    }
+  },
+  "z": {
+    "base": {
+      "$value": 0
+    },
+    "dropdown": {
+      "$value": 100
+    },
+    "sticky": {
+      "$value": 200
+    },
+    "overlay": {
+      "$value": 300
+    },
+    "modal": {
+      "$value": 400
+    },
+    "toast": {
+      "$value": 500
+    },
+    "tooltip": {
+      "$value": 600
+    }
+  },
+  "state": {
+    "disabled-opacity": {
+      "$value": 0.4
+    },
+    "disabled-bg": {
+      "$value": "rgba(255,255,255,0.1)",
+      "$type": "color"
+    },
+    "selected-bg": {
+      "$value": "rgba(245,188,0,0.12)",
+      "$type": "color"
+    },
+    "pressed-bg": {
+      "$value": "rgba(255,255,255,0.08)",
+      "$type": "color"
+    },
+    "hover-bg": {
+      "$value": "rgba(255,255,255,0.04)",
+      "$type": "color"
+    }
+  },
+  "elevation": {
+    "0": {
+      "bg": {
+        "$value": "{color.bg.dark}"
+      },
+      "shadow": {
+        "$value": "none"
+      }
+    },
+    "1": {
+      "bg": {
+        "$value": "{color.bg.card}"
+      },
+      "shadow": {
+        "$value": "{shadow.subtle}"
+      }
+    },
+    "2": {
+      "bg": {
+        "$value": "{color.bg.elevated}"
+      },
+      "shadow": {
+        "$value": "{shadow.low}"
+      }
+    },
+    "3": {
+      "bg": {
+        "$value": "{color.bg.elevated}"
+      },
+      "shadow": {
+        "$value": "{shadow.medium}"
+      }
+    },
+    "4": {
+      "bg": {
+        "$value": "{color.bg.elevated}"
+      },
+      "shadow": {
+        "$value": "{shadow.high}"
+      }
+    },
+    "modal": {
+      "bg": {
+        "$value": "{color.bg.elevated}"
+      },
+      "shadow": {
+        "$value": "{shadow.modal}"
+      }
+    }
+  },
+  "gradient": {
+    "aurora-sky": {
+      "$value": "linear-gradient(225deg, #F5BC00 0%, #00BEFF 100%)"
+    },
+    "fading-stroke": {
+      "$value": "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%)"
+    },
+    "purple-glow": {
+      "$value": "radial-gradient(circle, rgba(127,91,255,0.5) 0%, rgba(127,91,255,0) 70%)"
+    },
+    "yellow-pink": {
+      "$value": "linear-gradient(135deg, #F5BC00 0%, #FF3278 100%)"
+    },
+    "scrim-bottom": {
+      "$value": "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%)"
+    }
+  }
+}

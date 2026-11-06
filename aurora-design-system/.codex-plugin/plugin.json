@@ -1,0 +1,40 @@
+{
+  "name": "aurora-design-system",
+  "version": "2.0.10",
+  "description": "Aurora Design System 2.0: one portable skill for Aurora App and Web UI.",
+  "author": {
+    "name": "curefit",
+    "email": "design-system@curefit.com",
+    "url": "https://github.com/curefit"
+  },
+  "homepage": "https://github.com/curefit/curefit-design-system",
+  "repository": "https://github.com/curefit/curefit-design-system",
+  "license": "Proprietary",
+  "keywords": [
+    "aurora",
+    "design-system",
+    "figma",
+    "codex",
+    "plugin"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Aurora Design System 2.0",
+    "shortDescription": "Aurora App and Web UI only",
+    "longDescription": "Use Aurora-only tokens, native React controls, source-backed Figma components and variants, gradient backgrounds, fading card strokes, and inspectable Code Connect evidence across projects.",
+    "developerName": "curefit",
+    "category": "Design",
+    "capabilities": [
+      "Interactive",
+      "Write",
+      "Read"
+    ],
+    "websiteURL": "https://github.com/curefit/curefit-design-system",
+    "privacyPolicyURL": "https://www.cult.fit/privacy-policy",
+    "termsOfServiceURL": "https://www.cult.fit/terms-and-conditions",
+    "defaultPrompt": [
+      "Use $aurora-design-system to build or update this UI with Aurora App and Web components only."
+    ],
+    "brandColor": "#FF3278"
+  }
+}

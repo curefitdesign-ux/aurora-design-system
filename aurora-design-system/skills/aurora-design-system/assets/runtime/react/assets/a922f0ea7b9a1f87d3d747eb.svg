@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 13216">
+<path id="Oval Copy 4" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="url(#paint0_linear_0_87)"/>
+<path id="Line Copy 7" d="M19.7788 33.3364L35.7261 31.6603" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#262626"/>
+<path id="Union" d="M19.5972 22.7874C20.8557 22.7874 21.8759 21.3591 21.8759 19.5972C21.8759 17.8353 20.8557 16.4069 19.5972 16.4069C18.3387 16.4069 17.3184 17.8353 17.3184 19.5972C17.3184 21.3591 18.3387 22.7874 19.5972 22.7874ZM30.5138 22.7874C31.7723 22.7874 32.7925 21.3591 32.7925 19.5972C32.7925 17.8353 31.7723 16.4069 30.5138 16.4069C29.2553 16.4069 28.235 17.8353 28.235 19.5972C28.235 21.3591 29.2553 22.7874 30.5138 22.7874Z" fill-rule="evenodd" clip-rule="evenodd" fill="#262626"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_87" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FAD961"/>
+<stop offset="1" stop-color="#FFBC6D"/>
+</linearGradient>
+</defs>
+</svg>

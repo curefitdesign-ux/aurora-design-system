@@ -1,0 +1,135 @@
+/* ============================================================
+   Aurora — WHITE theme (light variant)
+   Apply <body class="theme-white"> or scope with .theme-white on
+   any container. Flips surfaces / text / shadows while preserving
+   brand colors, gradient, typography, spacing, aurora-bg blobs.
+   ============================================================ */
+.aurora-root.theme-white,
+.aurora-root .theme-white {
+  /* --- Surfaces ---
+     Warmer, slightly cooler-than-paper background so cards "float".
+     Card glass stays deliberately translucent so the aurora background
+     remains visible through the surface layer. */
+  --color-bg-dark: #F7F6FA;
+  --color-bg-card: rgba(255, 255, 255, 0.30);
+  --color-bg-card-solid: #FFFFFF;
+  --color-bg-elevated: #FFFFFF;
+  --color-bg-surface: #F1EEF6;
+  --card-backdrop-blur: 40px;
+
+  /* Smart light-theme app background — a soft radial mesh behind the
+     aurora blobs. Gives depth without being loud. */
+  --bg-app-gradient: radial-gradient(
+      130% 85% at 0% 0%,
+      rgba(255, 50, 120, 0.10) 0%,
+      rgba(255, 50, 120, 0) 55%
+    ),
+    radial-gradient(
+      120% 90% at 100% 100%,
+      rgba(0, 190, 255, 0.10) 0%,
+      rgba(0, 190, 255, 0) 55%
+    ),
+    radial-gradient(
+      100% 70% at 50% 50%,
+      rgba(245, 188, 0, 0.06) 0%,
+      rgba(245, 188, 0, 0) 70%
+    ),
+    #F7F6FA;
+
+  /* Reflective border: on white cards, white alphas vanish. Use a
+     directional mix of white highlight + soft ink hairline so the
+     bevel still reads. */
+  --card-reflect-border: linear-gradient(
+    224deg,
+    rgba(255, 255, 255, 0.90) 0%,
+    rgba(255, 255, 255, 0.20) 35%,
+    rgba(0, 0, 0, 0.06) 70%,
+    rgba(0, 0, 0, 0.12) 100%
+  );
+
+  /* --- Text (white → ink) --- */
+  --color-text-white: #1C1C1E;
+  --color-text-1: #1C1C1E;
+  --color-text-2: #555555;
+  --color-text-dark: #1C1C1E;
+  --color-text-disabled: rgba(0, 0, 0, 0.25);
+
+  /* --- white-alpha → black-alpha --- */
+  --color-white-10: rgba(0, 0, 0, 0.06);
+  --color-white-20: rgba(0, 0, 0, 0.10);
+  --color-white-40: rgba(0, 0, 0, 0.25);
+  --color-white-60: rgba(0, 0, 0, 0.50);
+
+  /* --- Dividers / states --- */
+  --color-divider: rgba(0, 0, 0, 0.08);
+  --color-divider-light: rgba(0, 0, 0, 0.04);
+  --state-disabled-bg: rgba(0, 0, 0, 0.06);
+  --state-pressed-bg: rgba(0, 0, 0, 0.08);
+  --state-hover-bg: rgba(0, 0, 0, 0.04);
+  --state-selected-bg: rgba(245, 188, 0, 0.16);
+
+  /* --- Aurora blobs — more visible, larger, softer blur on white --- */
+  --aurora-bg-blob-opacity: 0.45;
+  --aurora-bg-blob-size: 55vw;
+  --aurora-bg-blob-blur: 220px;
+
+  /* --- Shadows softened --- */
+  --shadow-subtle: 0px 2px 6px rgba(0, 0, 0, 0.06);
+  --shadow-low: 0px 10px 24px rgba(34, 38, 56, 0.10);
+  --shadow-medium: 0px 4px 14px rgba(0, 0, 0, 0.10);
+  --shadow-high: 0px 13px 24px rgba(0, 0, 0, 0.12);
+  --shadow-floating: 0px 4px 25px rgba(0, 0, 0, 0.10);
+  --shadow-modal: 0px 14px 24px 3px rgba(0, 0, 0, 0.16);
+  --shadow-divider: 0px 1px 0px rgba(0, 0, 0, 0.08);
+
+  /* --- Elevation --- */
+  --elevation-0-bg: #FAFAFA;
+  --elevation-1-bg: #FFFFFF;
+  --elevation-1-shadow: 0px 2px 6px rgba(0, 0, 0, 0.06);
+  --elevation-2-bg: #FFFFFF;
+  --elevation-2-shadow: 0px 4px 11px rgba(0, 0, 0, 0.08);
+  --elevation-3-bg: #FFFFFF;
+  --elevation-3-shadow: 0px 4px 14px rgba(0, 0, 0, 0.10);
+  --elevation-4-bg: #FFFFFF;
+  --elevation-4-shadow: 0px 13px 24px rgba(0, 0, 0, 0.12);
+  --elevation-modal-bg: #FFFFFF;
+  --elevation-modal-shadow: 0px 14px 24px 3px rgba(0, 0, 0, 0.16);
+
+  /* --- CTA overrides for white theme --- */
+  --cta-primary-bg: var(--cta-gradient);
+  --cta-primary-text: #FFFFFF;
+  --cta-primary-disabled-bg: rgba(0, 0, 0, 0.06);
+  --cta-primary-disabled-text: rgba(0, 0, 0, 0.30);
+  --cta-primary-shadow: 0px 8px 20px rgba(34, 38, 56, 0.10);
+
+  --cta-secondary-bg: #FFFFFF;
+  --cta-secondary-text: #FF3278;
+  --cta-secondary-border: transparent;
+  --cta-secondary-shadow: 0px 12px 28px rgba(34, 38, 56, 0.14);
+  --cta-secondary-disabled-bg: rgba(255, 255, 255, 0.72);
+  --cta-secondary-disabled-text: rgba(255, 50, 120, 0.35);
+  --cta-secondary-disabled-border: transparent;
+  --cta-secondary-booked-bg: #FFFFFF;
+  --cta-secondary-booked-text: #0FE498;
+  --cta-secondary-booked-border: transparent;
+  --cta-secondary-waitlist-bg: #FFFFFF;
+  --cta-secondary-waitlist-badge: #F7C744;
+  --cta-secondary-waitlist-border: transparent;
+  --cta-secondary-waitlisted-bg: #FFFFFF;
+  --cta-secondary-waitlisted-badge: #0FE498;
+  --cta-secondary-waitlisted-border: transparent;
+  --cta-secondary-full-bg: rgba(255, 255, 255, 0.82);
+  --cta-secondary-full-text: rgba(255, 50, 120, 0.40);
+  --cta-secondary-full-border: transparent;
+  --cta-secondary-negative-bg: #FFFFFF;
+  --cta-secondary-negative-text: #FF5942;
+  --cta-secondary-negative-border: transparent;
+
+  --cta-tertiary-text: #FF3278;
+}
+
+html.aurora-root.theme-white,
+body.aurora-root.theme-white {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-white);
+}
