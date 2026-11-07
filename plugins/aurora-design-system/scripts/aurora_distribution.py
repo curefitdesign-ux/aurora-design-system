@@ -102,6 +102,11 @@ def sync_plugin():
     data = json.loads(manifest.read_text())
     data["version"] = (plugin / "VERSION").read_text().strip()
     manifest.write_text(json.dumps(data, indent=2) + "\n")
+    primary_manifest = plugin / "plugin.json"
+    if primary_manifest.exists():
+        primary = json.loads(primary_manifest.read_text())
+        primary["version"] = data["version"]
+        primary_manifest.write_text(json.dumps(primary, indent=2) + "\n")
     verify_plugin(plugin)
     print(f"Synchronized plugin from skills/ and dashboard/: {plugin}")
     return plugin
@@ -112,6 +117,9 @@ def verify_plugin(plugin):
     require(data.get("name") == PLUGIN, "Unexpected plugin ID")
     require(data.get("interface", {}).get("displayName") == DISPLAY_NAME, "Unexpected plugin display name")
     require(data["version"] == (plugin / "VERSION").read_text().strip(), "Manifest/VERSION mismatch")
+    if (plugin / "plugin.json").is_file():
+        primary = json.loads((plugin / "plugin.json").read_text())
+        require(primary.get("version") == data["version"], "Primary/compatibility manifest version mismatch")
     require(data.get("skills") in ("./skills/", "./skills", "skills/", "skills"), "Unexpected plugin skill directory")
     actual_skills = sorted(p.name for p in (plugin / "skills").iterdir() if p.is_dir())
     require(actual_skills == sorted(SKILLS), "Plugin must expose only the canonical Aurora skill")

@@ -50,7 +50,7 @@ Source visuals preserve the original component’s paint/theme values. `AuroraSc
 
 ## Native controls versus source visuals
 
-The native entry includes 59 interactive APIs and one dynamic review summary. The source questionnaire bottom sheet is available as `AuroraQuestionnaireSheet`, with the six original labels, exclusive selection, keyboard navigation, form/reset state, dismiss and header callbacks, and progress. Use a product dialog wrapper for modal focus trapping. Controls cover action buttons and groups, radios, checkboxes, switches, text/phone/email/password/search/chat fields, dropdowns, chips and grouped choices, the two-thumb vertical slider, counters, dates, tabs, pagination and swipe actions. They reuse the Figma source geometry and Aurora primitives, adding semantics, labels, handlers, state and form behavior. Their white theme adapts neutral paints and CTA states using Aurora ink; the dark primary action uses solid Aurora pink (#FF3278), with no text gradient. Original source scenes and icon silhouettes are retained. This adaptation does not establish white variants for every remaining static archive visual. Wire actions to the product; samples are not a backend.
+The native entry includes 59 interactive APIs and one dynamic review summary. The source questionnaire bottom sheet is available as `AuroraQuestionnaireSheet`, with the six original labels, exclusive selection, keyboard navigation, form/reset state, dismiss and header callbacks, and progress. Use a product dialog wrapper for modal focus trapping. Controls cover action buttons and groups, radios, checkboxes, switches, text/phone/email/password/search/chat fields, dropdowns, chips and grouped choices, the two-thumb vertical slider, counters, dates, tabs, pagination and swipe actions. They reuse the Figma source geometry and Aurora primitives, adding semantics, labels, handlers, state and form behavior. Their white theme uses white card fills and solid-white gradient CTA labels; neutral text and focus use Aurora ink; the dark primary action uses solid Aurora pink (#FF3278), with no text gradient. Original source scenes and icon silhouettes are retained. This adaptation does not establish white variants for every remaining static archive visual. Wire actions to the product; samples are not a backend.
 
 Search aliases in `catalog.json`, not only component names. The actual slider is `AuroraSlider`, Figma `7899:49440` Range Selector, with min/max and two values. The source named “filter slider” (`4410:29253`) is an adjustment icon. The “All Categories Tab” is a complete screen composition, not a button. `AuroraRating` displays aggregate reviews; `AuroraFloatingRating` and `AuroraMoodRating` support sentiment choice. Read the typed declarations for the exact callback and controlled/uncontrolled props.
 
@@ -72,7 +72,7 @@ Until GitHub has an authenticated account with access to the owning private repo
 
 ## Blur and fading-stroke cards
 
-Use `AuroraCard` for reusable card surfaces. Default to neutral white at 10% for glass/blur surfaces and 20% for fading strokes. Use `surfaceOpacity={10 | 20}` to adjust the surface independently. Stroke opacity is a hard constraint: `strokeOpacity` accepts only `20`, and runtime normalization also enforces 20%. The stroke uses semantic white/ink at exactly 20% in both themes. Solid cards retain the opaque theme surface.
+Use `AuroraCard` for reusable card surfaces. Default card fill is white at 10% in dark mode and 60% in white mode; white popups use 80%. Use `surfaceOpacity={10 | 20 | 40 | 60 | 80 | 100}` for actual pure-white alpha in either theme. Fading strokes stay at 20%. Stroke opacity is a hard constraint: `strokeOpacity` accepts only `20`, and runtime normalization also enforces 20%. The stroke uses semantic white/ink at exactly 20% in both themes. Solid cards retain the opaque theme surface.
 
 `surface="glass"` defaults to 30px blur; `surface="blur"` defaults to 80px; `surface="solid"` disables blur. `blur="weak" | "medium" | "strong"` selects Aurora's 10/30/80px tokens. `stroke="fading"` provides a masked border fading to transparent at both ends without covering content or intercepting clicks.
 
@@ -88,7 +88,7 @@ These are code compositions of existing Aurora tokens, not newly published Figma
 
 ## Popups and accordion lists
 
-Every popup card uses a real background blur: `AuroraCard popup` defaults to `--aurora-popup-blur: var(--blur-strong, 80px)`. The property is applied as both `backdrop-filter` and `-webkit-backdrop-filter`. It remains translucent even when `surface="solid"` is passed. Keep the 10% neutral surface and 20% neutral fading stroke. The same default applies to scoped `.aurora-popup-card`, `[popover]`, `[role="dialog"]` and `[role="alertdialog"]` containers, plus `AuroraQuestionnaireSheet`. Native OS select menus remain platform-owned.
+Every popup card uses a real background blur: `AuroraCard popup` defaults to `--aurora-popup-blur: var(--blur-strong, 80px)`. The property is applied as both `backdrop-filter` and `-webkit-backdrop-filter`. It remains translucent even when `surface="solid"` is passed. Keep a theme-aware pure-white surface (dark 10%, white 80%) and 20% neutral fading stroke. The same default applies to scoped `.aurora-popup-card`, `[popover]`, `[role="dialog"]` and `[role="alertdialog"]` containers, plus `AuroraQuestionnaireSheet`. Native OS select menus remain platform-owned.
 
 ```tsx
 <AuroraCard popup stroke="fading">Popup content</AuroraCard>
@@ -108,3 +108,7 @@ Hard constraint: use the 1px neutral 20% fading stroke on almost all composed ca
 Hard constraint: the main page background must keep the previous Aurora gradient/cloud composition by default. Figma variants are optional. Surface alpha, exactly 20% fading strokes and 80px popup blur remain independent.
 
 For non-React pages, `aurora-root` automatically supplies the previous Aurora gradient from the theme tokens. React scopes also provide the prior clouds. Figma variants remain available as vector compositions.
+
+## Light theme intensity and labels
+
+The light-theme adapter halves the decorative cloud, radial mesh and optional artwork opacity. It keeps foreground opacity intact, uses pure-white card/popup fills rather than ink-alpha control tokens, and gives every gradient-filled CTA solid white text. These are current user-approved runtime rules, not retrospective claims about unmodified Figma exports.

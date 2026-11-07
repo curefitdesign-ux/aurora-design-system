@@ -56,14 +56,24 @@ Report files changed, source revision and Figma nodes used, checks performed, an
 
 ## Primary CTA preference
 
-In dark theme, primary CTA text must be solid Aurora pink (`--color-curefit-pink`, `#FF3278`), never gradient text. Apply this to standalone and grouped primary actions. Use the packaged theme adapter; preserve the existing white-theme and disabled-state treatment.
+In dark theme, primary CTA text must be solid Aurora pink (`--color-curefit-pink`, `#FF3278`), never gradient text. Apply this to standalone and grouped primary actions. Use the packaged theme adapter; use solid white labels on gradient-filled white-theme CTAs, and preserve disabled-state treatment.
 
 For blur/glass/solid cards with fading strokes, use the packaged `AuroraCard` API documented in [library usage](references/library.md#blur-and-fading-stroke-cards); use Aurora blur and palette tokens only.
 
-Default secondary surfaces to neutral Aurora white shades (10% and 20%), using their white-theme ink equivalents. Keep yellow and secondary accent colors sparse and purposeful; do not spread them across cards or secondary controls. Preserve solid pink text for dark primary CTAs.
+Default secondary surfaces to neutral Aurora white shades (10% and 20%), keeping light-theme card fills pure white with independent alpha. Keep yellow and secondary accent colors sparse and purposeful; do not spread them across cards or secondary controls. Preserve solid pink text for dark primary CTAs.
 
 All popup cards, menus, dialogs and bottom sheets must blur the background: use `AuroraCard popup` or the scoped `aurora-popup-card` surface with the default Aurora strong blur (80px). Keep foreground text sharp. Show the blur value in component documentation; opacity alone is not blur. Use `AuroraAccordion` for accordion lists, with consistent 20px insets and aligned title, trailing detail and 24px icon columns. See [popup and accordion usage](references/library.md#popups-and-accordion-lists).
 
 Hard constraint: almost all composed cards must have a 1px neutral fading stroke with exactly 20% peak opacity, in dark and white themes. Use `AuroraCard` (fading is the default) or `aurora-fading-card`. This includes popup cards and sheets. Keep opacity on the stroke only; surface opacity and 80px popup blur are independent. Allow a borderless exception only for nested cards where a second border is unnecessary. Do not use 10% or full-opacity/color strokes. Preserve raw Figma evidence previews.
 
 Hard constraint: always keep the Aurora gradient visible on the main page background. Restore and retain the previous Aurora gradient/cloud composition as the default (`background="previous"`). The four Figma variants `new`, `old`, `earthy`, and `pilate` remain optional; do not switch the default to New. `AuroraScope` provides the background automatically.
+
+## Light-theme surfaces and gradient actions
+
+In light/white mode, reduce only the decorative Aurora background color intensity by exactly 50%: previous cloud opacity is 0.225 (from 0.45), radial mesh peaks are 5% pink, 5% blue and 3% yellow (from 10%, 10%, 6%), and optional Figma background-art opacity is 0.06 (from 0.12). Keep the background visible; never halve opacity on the page, content or text.
+
+Light-theme cards use pure white, never black/ink-alpha backgrounds. The default card fill is white at 60%; stronger/popup surfaces use white at 80%. `AuroraCard surfaceOpacity={10 | 20 | 40 | 60 | 80 | 100}` selects actual white alpha independently; omit it for theme defaults. Solid cards stay opaque. Control/disabled ink-alpha tokens are separate and must not be reused as card fills. Keep the 20% neutral fading stroke and 80px popup blur independent.
+
+A gradient-filled CTA has solid white text, including paired/grouped primary actions in light mode. Dark primary CTAs retain solid Aurora pink labels. Preserve disabled fills and labels. This user-approved paint contract supersedes the earlier white-theme ink-label adaptation; do not describe white text over the bright source gradient as WCAG AA certified.
+
+When primary and secondary CTAs are paired, use matching authored 40px variants (Primary small, Secondary large), equal widths and a shared spacing-token gap; stack both at equal width when the row is too narrow. Keep foreground and disabled semantics intact.

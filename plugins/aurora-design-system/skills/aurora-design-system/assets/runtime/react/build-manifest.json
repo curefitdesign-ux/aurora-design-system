@@ -10,7 +10,7 @@
     "mcpEvidence": 80,
     "archiveEvidence": 1191
   },
-  "coverageSha256": "78079cbb2edf07de7a1abbac0e8908c79f26b012d18fb87c4907c1d343d88a69",
+  "coverageSha256": "08db3348f6acd7471507176250b9affa58b18ff507db478fa1de32ddcef8df05",
   "entry": "react/index.js",
   "manifestSha256": "39e9e0f335997a7c44ee63396c9b9451b0447370c7cc24154579cbffb62d266f",
   "nativeEntry": "react/native.js",
@@ -23,7 +23,7 @@
   "scope": "Working native components, tokens, fonts and required component assets only. Static Figma screen renders are excluded; catalog metadata is retained.",
   "sourceArchiveIncluded": false,
   "stylesheet": "react/styles.css",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "distributionProfile": "components-only",
   "sourceSnapshotCounts": {
     "archiveEvidence": 1191,

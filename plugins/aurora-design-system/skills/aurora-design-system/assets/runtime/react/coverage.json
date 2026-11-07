@@ -47901,7 +47901,7 @@
     },
     {
       "path": "packages/aurora-library/src/surfaces.css",
-      "sha256": "fe710c9cfb23443f16daa08e83007da667ca373617f132a4886e0447890b97dc"
+      "sha256": "11e42df99bd2554c536da40e6253ad3392b132333631e5c80aa8a678cd7e1b08"
     },
     {
       "path": "packages/aurora-library/src/surfaces/AuroraBackground.tsx",
@@ -47909,7 +47909,7 @@
     },
     {
       "path": "packages/aurora-library/src/surfaces/AuroraCard.tsx",
-      "sha256": "9c2c1bc74654f0be5602f2c3ec5bc2bdcb965bc4795aae169b31215e2409a4b8"
+      "sha256": "6c329d7c29f01bc74939392fca9eecb0aeef5c381f8cd65a7c63ccd51ad92e85"
     },
     {
       "path": "packages/aurora-library/src/surfaces/BackgroundArtwork.tsx",
@@ -47945,7 +47945,7 @@
     },
     {
       "path": "skills/aurora-design-system/assets/runtime/aurora.css",
-      "sha256": "13c42a82593aa64a12a9f4ca08bc324c15f450c7faf27b55c8b923f5aee3d102"
+      "sha256": "857d4d73ecb5d3e257108baa168c872c3605520210f18e9b0455b8d2f49a0a3e"
     },
     {
       "path": "skills/aurora-design-system/assets/runtime/compatibility.css",
@@ -47962,6 +47962,10 @@
     {
       "path": "skills/aurora-design-system/assets/runtime/components/cta.css",
       "sha256": "5fa6a43578225c2e383695bc96e09efef6eaac0d069c26099abad9b511e97184"
+    },
+    {
+      "path": "skills/aurora-design-system/assets/runtime/light-theme.css",
+      "sha256": "d8c632d2bcd50dd231c707b1cec181e35dd3534a788206912cb25af7332f456a"
     },
     {
       "path": "skills/aurora-design-system/assets/runtime/themes/white.css",

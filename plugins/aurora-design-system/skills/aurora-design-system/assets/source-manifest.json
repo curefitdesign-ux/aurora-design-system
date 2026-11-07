@@ -18,8 +18,9 @@
     "Require aurora-bg-global class for body/root background pseudo-elements; explicit aurora-bg children use absolute position inside their container.",
     "Remove legacy card blur utility aliases; scope white theme declarations to an Aurora root or its descendant.",
     "Restore existing disabled-primary token values after theme/twins gradient selectors; fix selector specificity without changing the token values.",
-    "Dark primary/twins CTA labels use solid Aurora pink #FF3278. White-theme labels and focus use Aurora ink; preserve upstream source hashes, brand gradient/fills and geometry. Native controls use the same primary-label adaptation while raw Figma source visual scenes remain unchanged. Disabled states remain exempt.",
-    "User preference: dark primary CTA labels use solid Aurora pink #FF3278 without text gradients; white-theme and disabled treatments remain separate."
+    "Dark primary/twins CTA labels use solid Aurora pink #FF3278. White-theme gradient labels use solid white and focus uses Aurora ink; preserve upstream source hashes, brand gradient/fills and geometry. Native controls use the same primary-label adaptation while raw Figma source visual scenes remain unchanged. Disabled states remain exempt.",
+    "User preference: dark primary CTA labels use solid Aurora pink #FF3278 without text gradients; white-theme and disabled treatments remain separate.",
+    "2026-11-07 user-approved light theme: halve decorative Aurora cloud/mesh/art alpha; use pure-white card fills with independent alpha (default 60%, raised/popups 80%); gradient-filled CTA labels are solid white. Original source theme evidence remains unchanged."
   ],
   "coverage": [
     "tokens",
@@ -97,7 +98,7 @@
     },
     {
       "path": "aurora.css",
-      "sha256": "13c42a82593aa64a12a9f4ca08bc324c15f450c7faf27b55c8b923f5aee3d102",
+      "sha256": "857d4d73ecb5d3e257108baa168c872c3605520210f18e9b0455b8d2f49a0a3e",
       "sourcePath": "component-only profile of pinned Aurora runtime"
     },
     {
@@ -118,6 +119,11 @@
     {
       "path": "components/cta.css",
       "sha256": "5fa6a43578225c2e383695bc96e09efef6eaac0d069c26099abad9b511e97184",
+      "sourcePath": "component-only profile of pinned Aurora runtime"
+    },
+    {
+      "path": "light-theme.css",
+      "sha256": "d8c632d2bcd50dd231c707b1cec181e35dd3534a788206912cb25af7332f456a",
       "sourcePath": "component-only profile of pinned Aurora runtime"
     },
     {
@@ -482,7 +488,7 @@
     },
     {
       "path": "react/build-manifest.json",
-      "sha256": "7fc98136a14c2008810c9ce4eee99b59921be2b77d1ffa3402431502426f2231",
+      "sha256": "a48631812b7d99e1503194bf676f2b2bf7c1282321962ec47e862b3c20145c2a",
       "sourcePath": "component-only profile of pinned Aurora runtime"
     },
     {
@@ -497,7 +503,7 @@
     },
     {
       "path": "react/coverage.json",
-      "sha256": "78079cbb2edf07de7a1abbac0e8908c79f26b012d18fb87c4907c1d343d88a69",
+      "sha256": "08db3348f6acd7471507176250b9affa58b18ff507db478fa1de32ddcef8df05",
       "sourcePath": "component-only profile of pinned Aurora runtime"
     },
     {
@@ -622,12 +628,12 @@
     },
     {
       "path": "react/native.d.ts",
-      "sha256": "bcae048e778cf71e3585e498c55e5a9ec27eddfd55b9e1c8a8a02cf5863f5d53",
+      "sha256": "4fbac7604a62ddd80bd46642c2f6c8323a076c125c43e397651b5d8d89ff6b41",
       "sourcePath": "component-only profile of pinned Aurora runtime"
     },
     {
       "path": "react/native.js",
-      "sha256": "5ae440c7d3fceeadb1bbde9fd3911387b28fa269f91a507d01883d844a2dde75",
+      "sha256": "b13fcd1757ccbcb2381f5f32bffedefb74563671d3519b0f09b2e76dae4627a9",
       "sourcePath": "component-only profile of pinned Aurora runtime"
     },
     {
@@ -637,7 +643,7 @@
     },
     {
       "path": "react/styles.css",
-      "sha256": "c55e19c75422de992aeb619394a9934d9ec951f7d7bfb00f69b6f8082dc0e34b",
+      "sha256": "8f8335ac7d72978d778f6f7ee1d6a5a83037af8af86297ae18b6271390cd25c5",
       "sourcePath": "component-only profile of pinned Aurora runtime"
     },
     {
@@ -689,7 +695,7 @@
         "mcpEvidence": 80,
         "archiveEvidence": 1191
       },
-      "coverageSha256": "78079cbb2edf07de7a1abbac0e8908c79f26b012d18fb87c4907c1d343d88a69",
+      "coverageSha256": "08db3348f6acd7471507176250b9affa58b18ff507db478fa1de32ddcef8df05",
       "entry": "react/index.js",
       "manifestSha256": "39e9e0f335997a7c44ee63396c9b9451b0447370c7cc24154579cbffb62d266f",
       "nativeEntry": "react/native.js",
@@ -702,7 +708,7 @@
       "scope": "Working native components, tokens, fonts and required component assets only. Static Figma screen renders are excluded; catalog metadata is retained.",
       "sourceArchiveIncluded": false,
       "stylesheet": "react/styles.css",
-      "version": "2.0.12",
+      "version": "2.0.13",
       "distributionProfile": "components-only",
       "sourceSnapshotCounts": {
         "archiveEvidence": 1191,

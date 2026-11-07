@@ -1,0 +1,36 @@
+/* User-approved light-theme adapter, 2026-11-07. Owning source theme files
+   remain unchanged. Only decorative Aurora color layers are halved; content
+   ink, card alpha, stroke alpha, blur and disabled treatments stay independent. */
+.aurora-root {
+  --color-bg-popup: var(--color-white-10);
+}
+.aurora-root.theme-white,
+.aurora-root .theme-white {
+  --bg-app-gradient: radial-gradient(
+      130% 85% at 0% 0%,
+      color-mix(in srgb, var(--color-curefit-pink) 5%, transparent) 0%,
+      transparent 55%
+    ), radial-gradient(
+      120% 90% at 100% 100%,
+      color-mix(in srgb, var(--color-curefit-blue) 5%, transparent) 0%,
+      transparent 55%
+    ), radial-gradient(
+      100% 70% at 50% 50%,
+      color-mix(in srgb, var(--color-curefit-yellow) 3%, transparent) 0%,
+      transparent 70%
+    ), var(--color-bg-dark);
+  /* Previous source opacity .45 → .225, exactly a 50% reduction. */
+  --aurora-bg-blob-opacity: 0.225;
+  --color-bg-card: color-mix(in srgb, var(--color-light-primary) 60%, transparent);
+  --color-bg-card-strong: color-mix(in srgb, var(--color-light-primary) 80%, transparent);
+  --color-bg-popup: var(--color-bg-card-strong);
+  /* Gradient-filled CTAs keep solid white labels; dark Primary remains pink. */
+  --cta-primary-text: var(--color-light-primary);
+  --aurora-primary-label-color: var(--color-light-primary);
+  --cta-twins-primary-text: var(--color-light-primary);
+}
+.aurora-root :where(.aurora-fading-card) { background-color: var(--color-bg-card); }
+.aurora-root.theme-white :is(.aurora-popup-card, .aurora-questionnaire-sheet),
+.aurora-root .theme-white :is(.aurora-popup-card, .aurora-questionnaire-sheet) {
+  background-color: var(--color-bg-popup);
+}

@@ -122,8 +122,9 @@ export interface AuroraCardProps extends HTMLAttributes<HTMLDivElement> {
   blur?: 'weak' | 'medium' | 'strong';
   /** @deprecated Card strokes are neutral; legacy accent values normalize to neutral. */
   strokeColor?: 'neutral' | 'pink' | 'blue' | 'yellow';
-  /** Aurora white-alpha tokens, adapted to ink in the white theme. */
-  surfaceOpacity?: 10 | 20;
+  /** Explicit pure-white surface alpha in either theme. Omit for the theme's
+   * default: dark 10%, white 60%; popup default white 80%. Never dims content. */
+  surfaceOpacity?: 10 | 20 | 40 | 60 | 80 | 100;
   /** Fixed policy: fading stroke peak opacity is exactly 20%. */
   strokeOpacity?: 20;
   /** Generic composition padding; full Figma card layouts define their own spacing. */

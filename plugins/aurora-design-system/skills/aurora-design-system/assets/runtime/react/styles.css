@@ -2907,6 +2907,75 @@
 .aurora-library .aurora-root {
   min-block-size: 100svh;
   background: var(--bg-app-gradient);
+  --color-bg-popup: var(--color-white-10);
+}
+.aurora-library .aurora-root.theme-white,
+.aurora-library .aurora-root .theme-white {
+  --bg-app-gradient:
+    radial-gradient(
+      
+      130% 85% at 0% 0%,
+      var(--color-curefit-pink) 0%,
+      transparent 55% ),
+    radial-gradient(
+      
+      120% 90% at 100% 100%,
+      var(--color-curefit-blue) 0%,
+      transparent 55% ),
+    radial-gradient(
+      
+      100% 70% at 50% 50%,
+      var(--color-curefit-yellow) 0%,
+      transparent 70% ),
+    var(--color-bg-dark);
+  --aurora-bg-blob-opacity: 0.225;
+  --color-bg-card: var(--color-light-primary);
+  --color-bg-card-strong: var(--color-light-primary);
+  --color-bg-popup: var(--color-bg-card-strong);
+  --cta-primary-text: var(--color-light-primary);
+  --aurora-primary-label-color: var(--color-light-primary);
+  --cta-twins-primary-text: var(--color-light-primary);
+}
+@supports (color: color-mix(in lab, red, red)) {
+  .aurora-library .aurora-root.theme-white,
+  .aurora-library .aurora-root .theme-white {
+    --bg-app-gradient:
+      radial-gradient(
+        
+        130% 85% at 0% 0%,
+        color-mix(in srgb, var(--color-curefit-pink) 5%, transparent) 0%,
+        transparent 55% ),
+      radial-gradient(
+        
+        120% 90% at 100% 100%,
+        color-mix(in srgb, var(--color-curefit-blue) 5%, transparent) 0%,
+        transparent 55% ),
+      radial-gradient(
+        
+        100% 70% at 50% 50%,
+        color-mix(in srgb, var(--color-curefit-yellow) 3%, transparent) 0%,
+        transparent 70% ),
+      var(--color-bg-dark);
+  }
+}
+@supports (color: color-mix(in lab, red, red)) {
+  .aurora-library .aurora-root.theme-white,
+  .aurora-library .aurora-root .theme-white {
+    --color-bg-card: color-mix(in srgb, var(--color-light-primary) 60%, transparent);
+  }
+}
+@supports (color: color-mix(in lab, red, red)) {
+  .aurora-library .aurora-root.theme-white,
+  .aurora-library .aurora-root .theme-white {
+    --color-bg-card-strong: color-mix(in srgb, var(--color-light-primary) 80%, transparent);
+  }
+}
+.aurora-library .aurora-root :where(.aurora-fading-card) {
+  background-color: var(--color-bg-card);
+}
+.aurora-library .aurora-root.theme-white :is(.aurora-popup-card, .aurora-questionnaire-sheet),
+.aurora-library .aurora-root .theme-white :is(.aurora-popup-card, .aurora-questionnaire-sheet) {
+  background-color: var(--color-bg-popup);
 }
 .aurora-library .aurora-root .aurora-surface-background,
 .aurora-library .aurora-root.aurora-surface-background {
@@ -2937,7 +3006,7 @@
   background: var(--color-bg-card-solid);
 }
 .aurora-library .theme-white .aurora-surface-background__art {
-  opacity: .12;
+  opacity: .06;
 }
 .aurora-library .aurora-root .aurora-surface-card,
 .aurora-library .aurora-root.aurora-surface-card {
@@ -2962,11 +3031,48 @@
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
 }
-.aurora-library .aurora-surface-card[data-aurora-surface-opacity="10"]:not([data-aurora-surface=solid]) {
-  background-color: var(--color-white-10);
+.aurora-library .aurora-root .aurora-surface-card[data-aurora-surface-opacity="10"]:not([data-aurora-surface=solid]) {
+  background-color: var(--color-light-primary);
 }
-.aurora-library .aurora-surface-card[data-aurora-surface-opacity="20"]:not([data-aurora-surface=solid]) {
-  background-color: var(--color-white-20);
+@supports (color: color-mix(in lab, red, red)) {
+  .aurora-library .aurora-root .aurora-surface-card[data-aurora-surface-opacity="10"]:not([data-aurora-surface=solid]) {
+    background-color: color-mix(in srgb, var(--color-light-primary) 10%, transparent);
+  }
+}
+.aurora-library .aurora-root .aurora-surface-card[data-aurora-surface-opacity="20"]:not([data-aurora-surface=solid]) {
+  background-color: var(--color-light-primary);
+}
+@supports (color: color-mix(in lab, red, red)) {
+  .aurora-library .aurora-root .aurora-surface-card[data-aurora-surface-opacity="20"]:not([data-aurora-surface=solid]) {
+    background-color: color-mix(in srgb, var(--color-light-primary) 20%, transparent);
+  }
+}
+.aurora-library .aurora-root .aurora-surface-card[data-aurora-surface-opacity="40"]:not([data-aurora-surface=solid]) {
+  background-color: var(--color-light-primary);
+}
+@supports (color: color-mix(in lab, red, red)) {
+  .aurora-library .aurora-root .aurora-surface-card[data-aurora-surface-opacity="40"]:not([data-aurora-surface=solid]) {
+    background-color: color-mix(in srgb, var(--color-light-primary) 40%, transparent);
+  }
+}
+.aurora-library .aurora-root .aurora-surface-card[data-aurora-surface-opacity="60"]:not([data-aurora-surface=solid]) {
+  background-color: var(--color-light-primary);
+}
+@supports (color: color-mix(in lab, red, red)) {
+  .aurora-library .aurora-root .aurora-surface-card[data-aurora-surface-opacity="60"]:not([data-aurora-surface=solid]) {
+    background-color: color-mix(in srgb, var(--color-light-primary) 60%, transparent);
+  }
+}
+.aurora-library .aurora-root .aurora-surface-card[data-aurora-surface-opacity="80"]:not([data-aurora-surface=solid]) {
+  background-color: var(--color-light-primary);
+}
+@supports (color: color-mix(in lab, red, red)) {
+  .aurora-library .aurora-root .aurora-surface-card[data-aurora-surface-opacity="80"]:not([data-aurora-surface=solid]) {
+    background-color: color-mix(in srgb, var(--color-light-primary) 80%, transparent);
+  }
+}
+.aurora-library .aurora-root .aurora-surface-card[data-aurora-surface-opacity="100"]:not([data-aurora-surface=solid]) {
+  background-color: var(--color-light-primary);
 }
 .aurora-library .aurora-surface-card::before {
   background:
@@ -2999,7 +3105,7 @@
   --aurora-popup-blur: var(--blur-strong, 80px);
 }
 .aurora-library :is(.aurora-surface-card[data-aurora-popup=true], .aurora-popup-card, [role=dialog], [role=alertdialog], dialog, [role=menu], [role=listbox], [role=tooltip], [popover]) {
-  background-color: var(--color-white-10);
+  background-color: var(--color-bg-popup, var(--color-white-10));
   -webkit-backdrop-filter: blur(var(--aurora-popup-blur));
   backdrop-filter: blur(var(--aurora-popup-blur));
 }
@@ -3022,6 +3128,10 @@
 }
 .aurora-library .aurora-surface-background__clouds > .aurora-bg-blob--blue {
   transform: translate(-50%, -50%) translate(0, 25vh);
+}
+.aurora-library .aurora-root.theme-white .aurora-surface-card[data-aurora-surface=blur][data-aurora-surface-opacity=default],
+.aurora-library .aurora-root .theme-white .aurora-surface-card[data-aurora-surface=blur][data-aurora-surface-opacity=default] {
+  background-color: var(--color-bg-card-strong);
 }
 @layer base {
   .aurora-library .aurora-native-button {

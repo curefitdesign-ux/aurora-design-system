@@ -1920,7 +1920,7 @@ import { useId as Ta, useState as Ea } from "react";
 import { forwardRef as Na } from "react";
 import { jsx as Aa } from "react/jsx-runtime";
 var r5 = Na(
-  function({ children: e, className: a, stroke: r = "fading", surface: o = "glass", popup: i = !1, blur: n = i || o === "blur" ? "strong" : "medium", strokeColor: L = "neutral", surfaceOpacity: c = 10, strokeOpacity: C = 20, padding: p = "default", ...l }, s) {
+  function({ children: e, className: a, stroke: r = "fading", surface: o = "glass", popup: i = !1, blur: n = i || o === "blur" ? "strong" : "medium", strokeColor: L = "neutral", surfaceOpacity: c, strokeOpacity: C = 20, padding: p = "default", ...l }, s) {
     return /* @__PURE__ */ Aa(
       "div",
       {
@@ -1932,7 +1932,7 @@ var r5 = Na(
         "data-aurora-popup": i || void 0,
         "data-aurora-blur": n,
         "data-aurora-stroke-color": "neutral",
-        "data-aurora-surface-opacity": c,
+        "data-aurora-surface-opacity": c ?? "default",
         "data-aurora-stroke-opacity": 20,
         "data-aurora-padding": p,
         children: e
