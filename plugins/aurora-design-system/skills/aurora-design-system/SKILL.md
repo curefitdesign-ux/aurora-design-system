@@ -77,3 +77,9 @@ Light-theme cards use pure white, never black/ink-alpha backgrounds. The default
 A gradient-filled CTA has solid white text, including paired/grouped primary actions in light mode. Dark primary CTAs retain solid Aurora pink labels. Preserve disabled fills and labels. This user-approved paint contract supersedes the earlier white-theme ink-label adaptation; do not describe white text over the bright source gradient as WCAG AA certified.
 
 When primary and secondary CTAs are paired, use matching authored 40px variants (Primary small, Secondary large), equal widths and a shared spacing-token gap; stack both at equal width when the row is too narrow. Keep foreground and disabled semantics intact.
+
+## Compact responsive dashboards
+
+Use Aurora spacing tokens for slightly compact dashboard compositions: 20px desktop page insets and section gaps, 15px card insets and title/content gaps, and 10px related-control gaps. Keep authored atom typography and geometry. On mobile use 15px page insets and section gaps, single-column cards, wrapping navigation/header actions, and two-column KPI summaries. Give every shrinkable grid/flex child `min-inline-size:0`; use `minmax(min(100%,300px),1fr)` for card grids so 320px screens fit. These are composition rules, not new Aurora source tokens.
+
+At 899px and below, move navigation above content and filters/activity into normal document flow. Drawers fill the viewport. Keep wide tables inside a labeled, keyboard-focusable horizontal scroll region with a visible mobile scroll hint; retain column widths, selection, sorting and record actions instead of hiding data. Prevent page-wide horizontal overflow. Mobile controls and navigation targets have at least 44px touch height; paired CTAs remain equal size and stack when needed. Verify 320px/390px mobile, tablet and desktop in both themes; confirm drawer/filters and table scrolling as well as appearance.

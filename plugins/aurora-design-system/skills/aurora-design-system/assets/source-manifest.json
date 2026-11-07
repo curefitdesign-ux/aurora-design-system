@@ -488,7 +488,7 @@
     },
     {
       "path": "react/build-manifest.json",
-      "sha256": "a48631812b7d99e1503194bf676f2b2bf7c1282321962ec47e862b3c20145c2a",
+      "sha256": "05a097ad481959985ba234a5e74ba970c29cfb5ecfe193231f4b466d640f3692",
       "sourcePath": "component-only profile of pinned Aurora runtime"
     },
     {
@@ -708,7 +708,7 @@
       "scope": "Working native components, tokens, fonts and required component assets only. Static Figma screen renders are excluded; catalog metadata is retained.",
       "sourceArchiveIncluded": false,
       "stylesheet": "react/styles.css",
-      "version": "2.0.13",
+      "version": "2.0.14",
       "distributionProfile": "components-only",
       "sourceSnapshotCounts": {
         "archiveEvidence": 1191,

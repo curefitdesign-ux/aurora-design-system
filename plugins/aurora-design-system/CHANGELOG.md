@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.14
+
+- Document compact responsive dashboards using Aurora spacing and atoms.
+- Preserve the 2.0.13 light background, white translucent cards and white gradient CTA label contract.
+- Record mobile table containment, stacked cards, full-width drawers and equal paired touch targets.
+
+
 ## 2.0.2
 
 - Include all approved Aurora Web targets and source states alongside the Aurora App library.
