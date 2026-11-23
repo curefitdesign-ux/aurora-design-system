@@ -1,0 +1,26 @@
+{
+  "workspace_id": "561d998c-fbc0-4c80-84d0-4bf48609e343",
+  "workspace_name": "curefitcodex",
+  "plugins": [
+    {
+      "name": "Aurora Design System 2.0",
+      "plugin_id": "Plugin_73c097ae65348191b91125442b959688",
+      "version": "2.0.14",
+      "release_id": "pluginrel_6b03fb1df6688191a0bbf0bda85e5c1d",
+      "url": "https://chatgpt.com/plugins/Plugin_73c097ae65348191b91125442b959688",
+      "last_verified_discoverability": "LISTED"
+    },
+    {
+      "name": "Aurora Taste",
+      "plugin_id": "Plugin_dc3a3d240b5481919b3d5ad61e554143",
+      "version": "1.0.0",
+      "release_id": "pluginrel_6b03fb3189e881919812de1943566f07",
+      "url": "https://chatgpt.com/plugins/Plugin_dc3a3d240b5481919b3d5ad61e554143",
+      "last_verified_discoverability": "LISTED"
+    }
+  ],
+  "sharing_verification": "Saved Visible in curefitcodex directory for each plugin in Dia; independently refetched backend sharing for both: LISTED.",
+  "last_verified_on": "2026-11-23",
+  "publication_method": "Workspace plugin upload, followed by Share > Visible in curefitcodex directory > Save.",
+  "update_policy": "Update these existing plugin IDs and preserve LISTED discoverability. GitHub pushes do not automatically update these uploaded workspace plugins."
+}

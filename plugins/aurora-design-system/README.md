@@ -1,10 +1,14 @@
 # Aurora Design System 2.0 Plugin
 
-Version 2.0.12 is an offline component-only package. It includes 60 native APIs (with source aliases), Aurora tokens, CSS, fonts, vector backgrounds, icons and small assets required by controls. Heavy reference images and static Figma screen renders are excluded. There is no bootstrap or required download. React 18.2–19 and Python 3.9+ are supplied by the consuming environment.
+Version 2.0.14 is an offline component-only package. It includes 60 native APIs (with source aliases), Aurora tokens, CSS, fonts, vector backgrounds, icons and small assets required by controls. Heavy reference images and static Figma screen renders are excluded. There is no bootstrap or required download. React 18.2–19 and Python 3.9+ are supplied by the consuming environment.
 
 The full source catalog remains searchable, but only entries marked `compiled-export` are bundled code. `source-metadata-only` entries link to Aurora sources for implementation; they are not functioning components. Both `index.js` and `native.js` expose the native API.
 
-## Public installation
+## Workspace installation
+
+Aurora Design System **2.0.14** is published and verified as **Visible in curefitcodex directory** as of November 23, 2026. [Open the workspace plugin](https://chatgpt.com/plugins/Plugin_73c097ae65348191b91125442b959688) or find it under **Plugins → curefitcodex**. Use **Open in desktop app** when prompted; the component runtime requires a supported local/desktop executor. Members do not need GitHub repository access. [Workspace access and update ownership](https://github.com/curefitdesign-ux/aurora-cross-platform-ui-skill/blob/main/distribution/public/docs/workspace-access.md).
+
+## Repository installation
 
 ```bash
 codex plugin marketplace add https://github.com/curefitdesign-ux/aurora-design-system.git
